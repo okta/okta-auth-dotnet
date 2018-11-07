@@ -43,12 +43,38 @@ namespace Okta.Authn.Models
 
         Task<AuthenticationResponse> ActivateFactorAsync(ActivateU2FFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken));
 
+        /// <summary>
+        /// <see cref="https://developer.okta.com/docs/api/resources/authn#answer-recovery-question"/>
+        /// </summary>
+        /// <param name="answerOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<AuthenticationResponse> AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = default(CancellationToken));
 
+        /// <summary>
+        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-recovery-token"/>
+        /// </summary>
+        /// <param name="verifyRecoveryTokenOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<AuthenticationResponse> VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = default(CancellationToken));
 
-        Task<AuthenticationResponse> VerifyRecoveryFactorAsync(VerifyFactorRecoveryOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-recovery-factor"/>
+        /// </summary>
+        /// <param name="verifyFactorRecoveryOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<AuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         Task<AuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Unlock account (Use only for Email/SMS) <see cref="https://developer.okta.com/docs/api/resources/authn#unlock-account"/>
+        /// </summary>
+        /// <param name="unlockAccountOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<AuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

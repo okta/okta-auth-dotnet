@@ -15,6 +15,8 @@ namespace Okta.Authn.Models
 
         public static FactorType Question = new FactorType("question");
 
+        public static FactorType Email = new FactorType("email");
+
         public static FactorType Call = new FactorType("call");
         
         public static FactorType Push = new FactorType("push");

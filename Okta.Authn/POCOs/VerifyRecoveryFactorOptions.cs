@@ -5,7 +5,7 @@ using Okta.Authn.Models;
 
 namespace Okta.Authn.POCOs
 {
-    public class VerifyFactorRecoveryOptions
+    public class VerifyRecoveryFactorOptions
     {
         public string StateToken { get; set; }
 

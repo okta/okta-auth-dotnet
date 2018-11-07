@@ -16,9 +16,9 @@ namespace Okta.Authn.Models
             set => this["provider"] = value;
         }
 
-        public string FactorType
+        public FactorType FactorType
         {
-            get => GetStringProperty("factorType");
+            get => GetEnumProperty<FactorType>("factorType");
             set => this["factorType"] = value;
         }
 

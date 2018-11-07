@@ -401,7 +401,7 @@ namespace Okta.Authn
         /// <param name="verifyRecoveryFactorOptions">The Verify Recovery Factor request options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The Authentication Response</returns>
-        public async Task<AuthenticationResponse> VerifyRecoveryFactorAsync(VerifyFactorRecoveryOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<AuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyRecoveryFactorRequest = new VerifyFactorRecoveryRequest()
             {
@@ -433,6 +433,22 @@ namespace Okta.Authn
             {
                 Uri = $"/api/v1/authn/recovery/factors/{resendRecoveryChallengeOptions.FactorType.ToString().ToLower()}/resend",
                 Payload = recoveryChallengeRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        public async Task<AuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var unlockAccountRequest = new UnlockAccountRequest()
+            {
+                FactorType = unlockAccountOptions.FactorType,
+                RelayState = unlockAccountOptions.RelayState,
+                Username = unlockAccountOptions.UserName,
+            };
+
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn/recovery/unlock",
+                Payload = unlockAccountRequest,
             }, cancellationToken).ConfigureAwait(false);
         }
     }

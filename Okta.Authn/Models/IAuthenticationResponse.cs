@@ -27,5 +27,11 @@ namespace Okta.Authn.Models
         /// Some times the response has a single factor instead of a list
         /// </summary>
         Factor Factor { get; }
+
+        string RecoveryType { get; }
+
+        FactorType FactorType { get; }
+
+        string FactorResult { get; }
     }
 }

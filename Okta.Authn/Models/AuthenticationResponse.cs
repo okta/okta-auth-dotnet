@@ -33,5 +33,15 @@ namespace Okta.Authn.Models
         /// <inheritdoc/>
         public Factor Factor => Embedded.GetProperty<Factor>("factor");
 
+        /// <inheritdoc/>
+        /// ///  TODO: Should it be a StringEnum?
+        public string RecoveryType => GetStringProperty("recoveryType");
+
+        /// <inheritdoc/>
+        public FactorType FactorType => GetEnumProperty<FactorType>("factorType");
+
+        /// <inheritdoc/>
+        ///  TODO: Should it be a StringEnum?
+        public string FactorResult => GetStringProperty("factorResult");
     }
 }
