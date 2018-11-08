@@ -12,7 +12,7 @@ namespace Okta.Authn.POCOs
         public string RelayState { get; set; }
 
         /// <summary>
-        /// Email/SMS
+        /// Email/SMS or null
         /// </summary>
         public FactorType FactorType { get; set; }
     }

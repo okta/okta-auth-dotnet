@@ -1,8 +1,9 @@
-﻿using Okta.Sdk.Abstractions;
+﻿using Okta.Authn.Abstractions;
+using Okta.Sdk.Abstractions;
 
 namespace Okta.Authn.Models
 {
-    public class AuthenticationRequest : BaseResource, IAuthenticationRequest
+    public class AuthenticationRequest : Resource
     {
         public string Username
         {

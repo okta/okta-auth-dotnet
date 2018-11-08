@@ -81,7 +81,7 @@ namespace Okta.Authn
         {
         }
         
-        public async Task<AuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions,
+        public async Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions,
             CancellationToken cancellationToken = default(CancellationToken))
         {
             var authenticationRequest = new AuthenticationRequest()
@@ -104,7 +104,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var changePasswordRequest = new ChangePasswordRequest()
             {
@@ -120,7 +121,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> ForgotPasswordAsync(ForgotPasswordOptions forgotPasswordOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ForgotPasswordAsync(ForgotPasswordOptions forgotPasswordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var forgotPasswordRequest = new ForgotPasswordRequest()
             {
@@ -136,7 +138,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> ResetPasswordAsync(ResetPasswordOptions resetPasswordOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ResetPasswordAsync(ResetPasswordOptions resetPasswordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var resetPasswordRequest = new ResetPasswordRequest()
             {
@@ -151,7 +154,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollSMSFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSMSFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
             profile.SetProperty("phoneNumber", factorOptions.PhoneNumber);
@@ -168,7 +172,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollSmsFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
             profile.SetProperty("question", factorOptions.Question);
@@ -186,7 +191,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollQuestionFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
             profile.SetProperty("phoneNumber", factorOptions.PhoneNumber);
@@ -203,7 +209,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollCallFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollPushFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollPushFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollPushFactor = new EnrollFactorRequest()
             {
@@ -215,7 +222,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollPushFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollRsaFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollRsaFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
             profile.SetProperty("credentialId", factorOptions.CredentialId);
@@ -232,7 +240,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollRsaFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions,
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions,
             CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
@@ -251,7 +260,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollSymantecFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollYubiKeyFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollYubiKeyFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollYubiKeyFactor = new EnrollFactorRequest()
             {
@@ -263,7 +273,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollYubiKeyFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollDuoFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollDuoFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollDuoFactor = new EnrollFactorRequest()
             {
@@ -275,7 +286,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollDuoFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollU2fFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollU2fFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollU2Factor = new EnrollFactorRequest()
             {
@@ -287,7 +299,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollU2Factor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> Enroll(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> Enroll(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
             profile.SetProperty("credentialId", factorOptions.CredentialId);
@@ -303,7 +316,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollTotpFactor, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> EnrollFactorAsync(EnrollFactorRequest request, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollFactorRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             return await PostAsync<AuthenticationResponse>(new HttpRequest
             {
@@ -312,13 +326,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Activates factor. For U2F use <see cref="ActivateU2fFactor"/>
-        /// </summary>
-        /// <param name="activateFactorOptions">The Activate Factor options</param>
-        /// <param name="cancellationToken">The cancellation token</param>
-        /// <returns>The Authentication Response</returns>
-        public async Task<AuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateFactorRequest()
             {
@@ -330,13 +339,8 @@ namespace Okta.Authn
             return await ActivateFactorAsync(activateFactorRequest, activateFactorOptions.FactorId, cancellationToken);
         }
 
-        /// <summary>
-        /// Activates U2F ActivateU2f factor
-        /// </summary>
-        /// <param name="activateFactorOptions">The Activate Factor options</param>
-        /// <param name="cancellationToken">The cancellation token</param>
-        /// <returns>The Authentication Response</returns>
-        public async Task<AuthenticationResponse> ActivateU2fFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ActivateU2fFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateU2FFactorRequest()
             {
@@ -348,7 +352,8 @@ namespace Okta.Authn
             return await ActivateFactorAsync(activateFactorRequest, activateFactorOptions.FactorId, cancellationToken);
         }
 
-        public async Task<AuthenticationResponse> ActivateFactorAsync(ActivateFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
         {
             return await PostAsync<AuthenticationResponse>(new HttpRequest
             {
@@ -357,7 +362,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> ActivateFactorAsync(ActivateU2FFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateU2FFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
         {
             return await PostAsync<AuthenticationResponse>(new HttpRequest
             {
@@ -366,7 +372,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var answerRecoveryRequest = new AnswerRecoveryQuestionRequest()
             {
@@ -381,7 +388,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var recoveryTokenRequest = new VerifyRecoveryTokenRequest()
             {
@@ -395,13 +403,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Verifies Recovery for a factor (SMS/Call)
-        /// </summary>
-        /// <param name="verifyRecoveryFactorOptions">The Verify Recovery Factor request options</param>
-        /// <param name="cancellationToken">The cancellation token</param>
-        /// <returns>The Authentication Response</returns>
-        public async Task<AuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyRecoveryFactorRequest = new VerifyFactorRecoveryRequest()
             {
@@ -415,14 +418,9 @@ namespace Okta.Authn
                 Payload = verifyRecoveryFactorRequest,
             }, cancellationToken).ConfigureAwait(false);
         }
-
-        /// <summary>
-        /// Re sends recovery challenge for a factor (SMS/Call)
-        /// </summary>
-        /// <param name="resendRecoveryChallengeOptions">The Recovery Request options</param>
-        /// <param name="cancellationToken">The cancellation token</param>
-        /// <returns>The Authentication Response</returns>
-        public async Task<AuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
+        
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var recoveryChallengeRequest = new ResendRecoveryChallengeRequest()
             {
@@ -436,7 +434,8 @@ namespace Okta.Authn
             }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<AuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default(CancellationToken))
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var unlockAccountRequest = new UnlockAccountRequest()
             {
@@ -445,10 +444,181 @@ namespace Okta.Authn
                 Username = unlockAccountOptions.UserName,
             };
 
+            return await UnlockAccountAsync(unlockAccountRequest, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> UnlockAccountAsync(UnlockAccountRequest unlockAccountRequest, CancellationToken cancellationToken = default(CancellationToken))
+        {
             return await PostAsync<AuthenticationResponse>(new HttpRequest
             {
                 Uri = $"/api/v1/authn/recovery/unlock",
                 Payload = unlockAccountRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> GetTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var transactionStateRequest = new TransactionStateRequest()
+            {
+                StateToken = transactionStateOptions.StateToken,
+            };
+
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn",
+                Payload = transactionStateRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> GetPreviousTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var transactionStateRequest = new TransactionStateRequest()
+            {
+                StateToken = transactionStateOptions.StateToken,
+            };
+
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn/previous",
+                Payload = transactionStateRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> SkipTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var transactionStateRequest = new TransactionStateRequest()
+            {
+                StateToken = transactionStateOptions.StateToken,
+            };
+
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn/skip",
+                Payload = transactionStateRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> CancelTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var transactionStateRequest = new TransactionStateRequest()
+            {
+                StateToken = transactionStateOptions.StateToken,
+            };
+
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn/cancel",
+                Payload = transactionStateRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyU2fFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifyU2fFactorRequest = new VerifyU2fFactorRequest()
+            {
+                StateToken = verifyU2FFactorOptions.StateToken,
+                ClientData = verifyU2FFactorOptions.ClientData,
+                RememberDevice = verifyU2FFactorOptions.RememberDevice,
+                SignatureData = verifyU2FFactorOptions.SignatureData,
+            };
+
+            return await VerifyFactorAsync(verifyU2fFactorRequest, verifyU2FFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyDuoFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifyDuoFactorRequest = new VerifyDuoFactorRequest()
+            {
+                StateToken = verifyDuoFactorOptions.StateToken,
+            };
+
+            return await VerifyFactorAsync(verifyDuoFactorRequest, verifyDuoFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyCallFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifyCallFactorRequest = new VerifyCallFactorRequest()
+            {
+                StateToken = verifyCallFactorOptions.StateToken,
+                PassCode = verifyCallFactorOptions.PassCode,
+                RememberDevice = verifyCallFactorOptions.RememberDevice,
+            };
+
+            return await VerifyFactorAsync(verifyCallFactorRequest, verifyCallFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyPushFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifyPushFactorRequest = new VerifyPushFactorRequest()
+            {
+                StateToken = verifyPushFactorOptions.StateToken,
+                RememberDevice = verifyPushFactorOptions.RememberDevice,
+                AutoPush = verifyPushFactorOptions.AutoPush,
+            };
+            
+            return await VerifyFactorAsync(verifyPushFactorRequest, verifyPushFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyTotpFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifyTotpFactorRequest = new VerifyTotpFactorRequest()
+            {
+                StateToken = verifyTotpFactorOptions.StateToken,
+                PassCode = verifyTotpFactorOptions.PassCode,
+                RememberDevice = verifyTotpFactorOptions.RememberDevice,
+            };
+
+            return await VerifyFactorAsync(verifyTotpFactorRequest, verifyTotpFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifySmsFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifySmsFactorRequest = new VerifySmsFactorRequest()
+            {
+                StateToken = verifySmsFactorOptions.StateToken,
+                PassCode = verifySmsFactorOptions.PassCode,
+                RememberDevice = verifySmsFactorOptions.RememberDevice,
+            };
+            
+            return await VerifyFactorAsync(verifySmsFactorRequest, verifySmsFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifySecurityQuestionFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var verifySecurityQuestionFactorRequest = new VerifySecurityQuestionFactorRequest()
+            {
+                StateToken = verifySecurityQuestionFactorOptions.StateToken,
+                RememberDevice = verifySecurityQuestionFactorOptions.RememberDevice,
+                Answer = verifySecurityQuestionFactorOptions.Answer,
+            };
+
+            return await VerifyFactorAsync(verifySecurityQuestionFactorRequest, verifySecurityQuestionFactorOptions.FactorId, cancellationToken);
+        }
+
+        private async Task<IAuthenticationResponse> VerifyFactorAsync(object verifyFactorRequest, string factorId,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn/factors/{factorId}/verify",
+                Payload = verifyFactorRequest,
             }, cancellationToken).ConfigureAwait(false);
         }
     }
