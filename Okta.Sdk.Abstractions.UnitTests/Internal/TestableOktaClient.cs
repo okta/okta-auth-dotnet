@@ -3,6 +3,8 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
+using System;
+using System.Reflection;
 using Microsoft.Extensions.Logging.Abstractions;
 using Okta.Sdk.Abstractions.Configuration;
 
@@ -18,7 +20,7 @@ namespace Okta.Sdk.Abstractions.UnitTests.Internal
 
         public TestableOktaClient(IRequestExecutor requestExecutor)
             : base(
-                new DefaultDataStore(requestExecutor, new DefaultSerializer(), new ResourceFactory(null, null, null), NullLogger.Instance),
+                new DefaultDataStore(requestExecutor, new DefaultSerializer(), new ResourceFactory(null, null, null), NullLogger.Instance, new UserAgentBuilder("test", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version)),
                 DefaultFakeConfiguration,
                 new RequestContext())
         {

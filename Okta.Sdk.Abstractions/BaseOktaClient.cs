@@ -6,6 +6,7 @@
 using System;
 using System.IO;
 using System.Net.Http;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using FlexibleConfiguration;
@@ -43,11 +44,14 @@ namespace Okta.Sdk.Abstractions
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
             var resourceFactory = new ResourceFactory(this, logger, new DefaultResourceTypeResolverFactory());
+            var userAgentBuilder = new UserAgentBuilder("okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
+
             _dataStore = new DefaultDataStore(
                 requestExecutor,
                 new DefaultSerializer(),
                 resourceFactory,
-                logger);
+                logger,
+                userAgentBuilder);
         }
 
         /// <summary>
@@ -68,11 +72,14 @@ namespace Okta.Sdk.Abstractions
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
             var resourceFactory = new ResourceFactory(this, logger, new DefaultResourceTypeResolverFactory());
+            var userAgentBuilder = new UserAgentBuilder("okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
+
             _dataStore = new DefaultDataStore(
                 requestExecutor,
                 new DefaultSerializer(),
                 resourceFactory,
-                logger);
+                logger,
+                userAgentBuilder);
         }
 
         /// <summary>

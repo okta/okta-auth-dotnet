@@ -34,13 +34,14 @@ namespace Okta.Sdk.Abstractions
             IRequestExecutor requestExecutor,
             ISerializer serializer,
             ResourceFactory resourceFactory,
-            ILogger logger)
+            ILogger logger,
+            UserAgentBuilder userAgentBuilder)
         {
             _requestExecutor = requestExecutor ?? throw new ArgumentNullException(nameof(requestExecutor));
             _serializer = serializer ?? throw new ArgumentNullException(nameof(serializer));
             _resourceFactory = resourceFactory ?? throw new ArgumentNullException(nameof(resourceFactory));
             _logger = logger;
-            _userAgentBuilder = new UserAgentBuilder();
+            _userAgentBuilder = userAgentBuilder;
         }
 
         /// <inheritdoc/>

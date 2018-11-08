@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
@@ -36,12 +37,9 @@ namespace Okta.Authn
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
             var resourceFactory = new ResourceFactory(this, logger, new ResourceTypeResolverFactory());
+            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet-sdk", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version);
 
-            _dataStore = new DefaultDataStore(
-                requestExecutor,
-                new DefaultSerializer(),
-                resourceFactory,
-                logger);
+            _dataStore = new DefaultDataStore(requestExecutor, new DefaultSerializer(), resourceFactory, logger, userAgentBuilder);
         }
 
         /// <summary>
@@ -62,11 +60,14 @@ namespace Okta.Authn
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
             var resourceFactory = new ResourceFactory(this, logger, new ResourceTypeResolverFactory());
+            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet-sdk", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
+
             _dataStore = new DefaultDataStore(
                 requestExecutor,
                 new DefaultSerializer(),
                 resourceFactory,
-                logger);
+                logger,
+                userAgentBuilder);
         }
 
         /// <summary>
@@ -612,7 +613,7 @@ namespace Okta.Authn
             return await VerifyFactorAsync(verifySecurityQuestionFactorRequest, verifySecurityQuestionFactorOptions.FactorId, cancellationToken);
         }
 
-        private async Task<IAuthenticationResponse> VerifyFactorAsync(object verifyFactorRequest, string factorId,
+        private async Task<IAuthenticationResponse> VerifyFactorAsync(Resource verifyFactorRequest, string factorId,
             CancellationToken cancellationToken = default(CancellationToken))
         {
             return await PostAsync<AuthenticationResponse>(new HttpRequest
@@ -621,5 +622,22 @@ namespace Okta.Authn
                 Payload = verifyFactorRequest,
             }, cancellationToken).ConfigureAwait(false);
         }
+
+        public async Task<IAuthenticationResponse> ResendChallengeAsync(ResendChallengeOptions resendChallengeOptions,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var resendChallengeRequest = new ResendChallengeRequest()
+            {
+                StateToken = resendChallengeOptions.StateToken,
+            };
+
+            return await PostAsync<AuthenticationResponse>(new HttpRequest
+            {
+                Uri = $"/api/v1/authn/factors/{resendChallengeOptions.FactorId}/verify/resend",
+                Payload = resendChallengeRequest,
+            }, cancellationToken).ConfigureAwait(false);
+        }
+
+       
     }
 }

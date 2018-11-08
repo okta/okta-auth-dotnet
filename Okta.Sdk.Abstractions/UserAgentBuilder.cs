@@ -15,20 +15,20 @@ namespace Okta.Sdk.Abstractions
     /// </summary>
     public sealed class UserAgentBuilder
     {
-        /// <summary>
-        /// The standard User-Agent token of the Okta SDK.
-        /// </summary>
-        public const string OktaSdkUserAgentName = "okta-sdk-dotnet";
-
         // Lazy ensures this only runs once and is cached.
         private readonly Lazy<string> _cachedUserAgent;
 
+        private string _oktaSdkUserAgentName = "";
+
+        private Version _sdkVersion;
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAgentBuilder"/> class.
         /// </summary>
-        public UserAgentBuilder()
+        public UserAgentBuilder(string sdkUserAgentName, Version sdkVersion)
         {
             _cachedUserAgent = new Lazy<string>(Generate);
+            _oktaSdkUserAgentName = sdkUserAgentName;
+            _sdkVersion = sdkVersion;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace Okta.Sdk.Abstractions
 
         private string Generate()
         {
-            var sdkToken = $"{OktaSdkUserAgentName}/{GetSdkVersion()}";
+            var sdkToken = $"{_oktaSdkUserAgentName}/{GetSdkVersion()}";
 
             var runtimeToken = $"runtime/{Sanitize(RuntimeInformation.FrameworkDescription)}";
 
@@ -53,12 +53,9 @@ namespace Okta.Sdk.Abstractions
             .Trim();
         }
 
-        private static string GetSdkVersion()
+        private string GetSdkVersion()
         {
-            var sdkVersion = typeof(BaseOktaClient).GetTypeInfo()
-                .Assembly.GetName().Version;
-
-            return $"{sdkVersion.Major}.{sdkVersion.Minor}.{sdkVersion.Build}";
+            return $"{_sdkVersion.Major}.{_sdkVersion.Minor}.{_sdkVersion.Build}";
         }
 
         private static readonly char[] IllegalCharacters = new char[] { '/', ':', ';' };

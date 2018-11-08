@@ -264,7 +264,7 @@ namespace Okta.Authn.Models
         Task<IAuthenticationResponse> VerifyPushFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-totp-factor"/>
+        /// <see cref=""/>
         /// </summary>
         /// <param name="verifyTotpFactorOptions"></param>
         /// <param name="cancellationToken"></param>
@@ -286,6 +286,14 @@ namespace Okta.Authn.Models
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         Task<IAuthenticationResponse> VerifySecurityQuestionFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-security-question-factor"/>
+        /// </summary>
+        /// <param name="resendChallengeOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>   
+        Task<IAuthenticationResponse> ResendChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
 
 
 
