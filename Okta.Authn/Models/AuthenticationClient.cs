@@ -9,7 +9,6 @@ using Okta.Authn.Models;
 using Okta.Authn.POCOs;
 using Okta.Sdk.Abstractions;
 using Okta.Sdk.Abstractions.Configuration;
-using VerifyRecoveryTokenRequest = Okta.Authn.Models.VerifyRecoveryTokenRequest;
 
 namespace Okta.Authn
 {
@@ -37,7 +36,7 @@ namespace Okta.Authn
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
             var resourceFactory = new ResourceFactory(this, logger, new ResourceTypeResolverFactory());
-            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet-sdk", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version);
+            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version);
 
             _dataStore = new DefaultDataStore(requestExecutor, new DefaultSerializer(), resourceFactory, logger, userAgentBuilder);
         }
@@ -60,7 +59,7 @@ namespace Okta.Authn
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
             var resourceFactory = new ResourceFactory(this, logger, new ResourceTypeResolverFactory());
-            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet-sdk", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
+            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
 
             _dataStore = new DefaultDataStore(
                 requestExecutor,

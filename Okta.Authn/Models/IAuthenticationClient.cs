@@ -128,6 +128,12 @@ namespace Okta.Authn.Models
         /// <returns></returns>
         Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
+        /// <summary>
+        /// <see cref="https://developer.okta.com/docs/api/resources/authn#activate-u2f-factor"/>
+        /// </summary>
+        /// <param name="activateFactorOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         Task<IAuthenticationResponse> ActivateU2fFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
@@ -234,7 +240,7 @@ namespace Okta.Authn.Models
         /// <summary>
         /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-u2f-factor"/>
         /// </summary>
-        /// <param name="transactionStateOptions"></param>
+        /// <param name="verifyU2FFactorOptions"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         Task<IAuthenticationResponse> VerifyU2fFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
@@ -242,7 +248,7 @@ namespace Okta.Authn.Models
         /// <summary>
         /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-duo-factor"/>
         /// </summary>
-        /// <param name="verifyU2FFactorOptions"></param>
+        /// <param name="verifyDuoFactorOptions"></param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
         Task<IAuthenticationResponse> VerifyDuoFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
