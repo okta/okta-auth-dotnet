@@ -2,10 +2,12 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
+using Okta.Authn.IntegrationTests.Internal;
 using Okta.Authn.Models;
 using Okta.Authn.POCOs;
 using Okta.Sdk;
 using Xunit;
+using ChangePasswordOptions = Okta.Authn.POCOs.ChangePasswordOptions;
 using OktaApiException = Okta.Sdk.Abstractions.OktaApiException;
 
 namespace Okta.Authn.IntegrationTests
@@ -15,59 +17,133 @@ namespace Okta.Authn.IntegrationTests
         [Fact]
         public async Task AuthenticateUserWithExpiredPassword()
         {
-            var client = TestAuthenticationClient.Create();
+            var oktaClient = new OktaClient();
+            var guid = Guid.NewGuid();
+
+            var createdUser = await oktaClient.Users.CreateUserAsync(new CreateUserWithPasswordOptions
+            {
+                Profile = new UserProfile
+                {
+                    FirstName = "John",
+                    LastName = "Test",
+                    Email = $"john-expired-pass-dotnet-authn-{guid}@example.com",
+                    Login = $"john-expired-pass-dotnet-authn-{guid}@example.com",
+                },
+                Password = "Okta1234!",
+                Activate = true,
+            });
+
+            await createdUser.ExpirePasswordAsync();
+
+            var authClient = TestAuthenticationClient.Create();
 
             var authnOptions = new AuthenticateOptions()
             {
-                Username = "tom-authn@test.com",
+                Username = $"john-expired-pass-dotnet-authn-{guid}@example.com",
                 Password = "Okta1234!",
                 MultiOptionalFactorEnroll = true,
                 WarnBeforePasswordExpired = true,
             };
 
-            var authnResponse = await client.AuthenticateAsync(authnOptions);
+            try
+            {
+                var authnResponse = await authClient.AuthenticateAsync(authnOptions);
 
-            authnResponse.Should().NotBeNull();
-            authnResponse.StateToken.Should().NotBeNullOrEmpty();
-            authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.PasswordExpired);
-            authnResponse.Links.Should().NotBeNull();
+                authnResponse.Should().NotBeNull();
+                authnResponse.StateToken.Should().NotBeNullOrEmpty();
+                authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.PasswordExpired);
+                authnResponse.Links.Should().NotBeNull();
+            }
+            finally
+            {
+                await createdUser.DeactivateAsync();
+                await createdUser.DeactivateOrDeleteAsync();
+            }
         }
 
         [Fact]
         public async Task AuthenticateUser()
         {
-            var client = TestAuthenticationClient.Create();
+            var oktaClient = new OktaClient();
+            var guid = Guid.NewGuid();
+            
+            var createdUser = await oktaClient.Users.CreateUserAsync(new CreateUserWithPasswordOptions
+            {
+                Profile = new UserProfile
+                {
+                    FirstName = "John",
+                    LastName = "Test",
+                    Email = $"john-authenticate-dotnet-authn-{guid}@example.com",
+                    Login = $"john-authenticate-dotnet-authn-{guid}@example.com",
+                },
+                Password = "Okta4321!",
+                Activate = true,
+            });
+
+            var authClient = TestAuthenticationClient.Create();
 
             var authnOptions = new AuthenticateOptions()
             {
-                Username = "tom-success@test.com",
+                Username = $"john-authenticate-dotnet-authn-{guid}@example.com",
                 Password = "Okta4321!",
                 MultiOptionalFactorEnroll = true,
                 WarnBeforePasswordExpired = true,
             };
 
-            var authnResponse = await client.AuthenticateAsync(authnOptions);
+            try
+            { 
+                var authnResponse = await authClient.AuthenticateAsync(authnOptions);
 
-            authnResponse.Should().NotBeNull();
-            authnResponse.SessionToken.Should().NotBeNullOrEmpty();
-            authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.Success);
+                authnResponse.Should().NotBeNull();
+                authnResponse.SessionToken.Should().NotBeNullOrEmpty();
+                authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.Success);
+            }
+            finally
+            {
+                await createdUser.DeactivateAsync();
+                await createdUser.DeactivateOrDeleteAsync();
+            }
         }
 
         [Fact]
         public async Task AuthenticateUserWithInvalidCredentials()
         {
-            var client = TestAuthenticationClient.Create();
+            var oktaClient = new OktaClient();
+            var guid = Guid.NewGuid();
+
+            var createdUser = await oktaClient.Users.CreateUserAsync(new CreateUserWithPasswordOptions
+            {
+                Profile = new UserProfile
+                {
+                    FirstName = "John",
+                    LastName = "Test",
+                    Email = $"john-invalid-cred-dotnet-authn-{guid}@example.com",
+                    Login = $"john-invalid-cred-dotnet-authn-{guid}@example.com",
+                },
+                Password = "Okta4321!",
+                Activate = true,
+            });
+
+            var authClient = TestAuthenticationClient.Create();
 
             var authnOptions = new AuthenticateOptions()
             {
-                Username = "tom-success@test.com",
+                Username = $"john-invalid-cred-dotnet-authn-{guid}@example.com",
                 Password = "Okta4321!!!",
                 MultiOptionalFactorEnroll = true,
                 WarnBeforePasswordExpired = true,
             };
 
-            Func<Task> act = async () => await client.AuthenticateAsync(authnOptions);
-            act.Should().Throw<OktaApiException>();
+            try
+            {
+                Func<Task> act = async () => await authClient.AuthenticateAsync(authnOptions);
+                act.Should().Throw<OktaApiException>();
+            }
+            finally
+            {
+                await createdUser.DeactivateAsync();
+                await createdUser.DeactivateOrDeleteAsync();
+            }
         }
 
         [Fact]
@@ -91,6 +167,65 @@ namespace Okta.Authn.IntegrationTests
             authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnroll);
         }
 
+        [Fact]
+        public async Task ChangePassword()
+        {
+            var oktaClient = new OktaClient();
+            var guid = Guid.NewGuid();
+
+            var createdUser = await oktaClient.Users.CreateUserAsync(new CreateUserWithPasswordOptions
+            {
+                Profile = new UserProfile
+                {
+                    FirstName = "John",
+                    LastName = "Test",
+                    Email = $"john-change-pass-dotnet-authn-{guid}@example.com",
+                    Login = $"john-change-pass-dotnet-authn-{guid}@example.com",
+                },
+                Password = "Okta4321!",
+                Activate = true,
+            });
+
+            var authClient = TestAuthenticationClient.Create();
+
+            var authnOptions = new AuthenticateOptions()
+            {
+                Username = $"john-change-pass-dotnet-authn-{guid}@example.com",
+                Password = "Okta4321!",
+                MultiOptionalFactorEnroll = true,
+                WarnBeforePasswordExpired = true,
+            };
+
+            try
+            {
+                var authnResponse = await authClient.AuthenticateAsync(authnOptions);
+                authnResponse.Should().NotBeNull();
+                authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.Success);
+
+                await createdUser.ExpirePasswordAsync();
+
+                var authnResponse1 = await authClient.AuthenticateAsync(authnOptions);
+                authnResponse1.Should().NotBeNull();
+                authnResponse1.AuthenticationStatus.Should().Be(AuthenticationStatus.PasswordExpired);
+
+                var changePasswordOptions = new ChangePasswordOptions()
+                {
+                    StateToken = authnResponse1.StateToken,
+                    OldPassword = "Okta4321!",
+                    NewPassword = "Okta1234!",
+                };
+
+                var authnResponse2 = await authClient.ChangePasswordAsync(changePasswordOptions);
+                authnResponse2.Should().NotBeNull();
+                authnResponse2.AuthenticationStatus.Should().Be(AuthenticationStatus.Success);
+            }
+            finally
+            {
+                await createdUser.DeactivateAsync();
+                await createdUser.DeactivateOrDeleteAsync();
+            }
+        }
+        
         [Fact]
         public async Task EnrollSMSFactor()
         {
