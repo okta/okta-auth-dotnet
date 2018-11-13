@@ -11,7 +11,7 @@ namespace Okta.Authn.Models
         {
         }
 
-        public static FactorType Sms = new FactorType("SMS");
+        public static FactorType Sms = new FactorType("sms");
 
         public static FactorType Question = new FactorType("question");
 

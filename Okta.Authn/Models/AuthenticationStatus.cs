@@ -22,6 +22,8 @@ namespace Okta.Authn.Models
 
         public static AuthenticationStatus MfaEnrollActivate = new AuthenticationStatus("MFA_ENROLL_ACTIVATE");
 
+        public static AuthenticationStatus MfaChallenge = new AuthenticationStatus("MFA_CHALLENGE");
+
         public static AuthenticationStatus RecoveryChallenge = new AuthenticationStatus("RECOVERY_CHALLENGE");
                 
     }

@@ -129,6 +129,14 @@ namespace Okta.Authn.Models
         Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
+        /// <see cref="https://developer.okta.com/docs/api/resources/authn#activate-push-factor"/>
+        /// </summary>
+        /// <param name="activatePushFactorOptions"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        Task<IAuthenticationResponse> ActivateFactorAsync(ActivatePushFactorOptions activatePushFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
         /// <see cref="https://developer.okta.com/docs/api/resources/authn#activate-u2f-factor"/>
         /// </summary>
         /// <param name="activateFactorOptions"></param>

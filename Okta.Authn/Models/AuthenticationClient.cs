@@ -340,6 +340,18 @@ namespace Okta.Authn
         }
 
         ///<inheritdoc/>
+        public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivatePushFactorOptions activatePushFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var activateFactorRequest = new ActivateFactorRequest()
+            {
+                FactorType = FactorType.Push,
+                StateToken = activatePushFactorOptions.StateToken,
+            };
+
+            return await ActivateFactorAsync(activateFactorRequest, activatePushFactorOptions.FactorId, cancellationToken);
+        }
+
+        ///<inheritdoc/>
         public async Task<IAuthenticationResponse> ActivateU2fFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateU2FFactorRequest()
