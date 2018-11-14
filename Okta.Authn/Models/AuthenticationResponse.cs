@@ -1,4 +1,9 @@
-﻿using System;
+﻿// <copyright file="AuthenticationResponse.cs" company="Okta, Inc">
+// Copyright (c) 2018 - present Okta, Inc. All rights reserved.
+// Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 using Okta.Authn.Abstractions;
 
@@ -44,7 +49,7 @@ namespace Okta.Authn.Models
         public FactorType FactorType => GetEnumProperty<FactorType>("factorType");
 
         /// <inheritdoc/>
-        ///  TODO: Should it be a StringEnum?
+        /// TODO: Should it be a StringEnum?
         public string FactorResult => GetStringProperty("factorResult");
     }
 }

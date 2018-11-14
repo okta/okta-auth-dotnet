@@ -6,6 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <AdditionalFiles Include="..\stylecop.json" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\OktaSdk.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  
+  <ItemGroup>
     <ProjectReference Include="..\Okta.Sdk.Abstractions\Okta.Sdk.Abstractions.csproj" />
   </ItemGroup>
 

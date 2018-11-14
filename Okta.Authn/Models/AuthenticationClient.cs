@@ -1,4 +1,9 @@
-﻿using System.Net.Http;
+﻿// <copyright file="AuthenticationClient.cs" company="Okta, Inc">
+// Copyright (c) 2018 - present Okta, Inc. All rights reserved.
+// Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
+// </copyright>
+
+using System.Net.Http;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
@@ -15,7 +20,7 @@ namespace Okta.Authn
     public class AuthenticationClient : BaseOktaClient, IAuthenticationClient
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
+        /// Initializes a new instance of the <see cref="AuthenticationClient"/> class.
         /// </summary>
         /// <param name="apiClientConfiguration">
         /// The client configuration. If <c>null</c>, the library will attempt to load
@@ -42,7 +47,7 @@ namespace Okta.Authn
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class using the specified <see cref="HttpClient"/>.
+        /// Initializes a new instance of the <see cref="AuthenticationClient"/> class using the specified <see cref="HttpClient"/>.
         /// </summary>
         /// <param name="apiClientConfiguration">
         /// The client configuration. If <c>null</c>, the library will attempt to load
@@ -70,7 +75,7 @@ namespace Okta.Authn
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
+        /// Initializes a new instance of the <see cref="AuthenticationClient"/> class.
         /// </summary>
         /// <param name="dataStore">The <see cref="IDataStore">DataStore</see> to use.</param>
         /// <param name="configuration">The client configuration.</param>
@@ -80,9 +85,8 @@ namespace Okta.Authn
             : base(dataStore, configuration, requestContext)
         {
         }
-        
-        public async Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+
+        public async Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var authenticationRequest = new AuthenticationRequest()
             {
@@ -96,15 +100,16 @@ namespace Okta.Authn
                     WarnBeforePasswordExpired = authenticateOptions.WarnBeforePasswordExpired,
                 },
             };
-            
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = "/api/v1/authn",
-                Payload = authenticationRequest,
-            }, cancellationToken).ConfigureAwait(false);
+
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = "/api/v1/authn",
+                    Payload = authenticationRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var changePasswordRequest = new ChangePasswordRequest()
@@ -114,14 +119,15 @@ namespace Okta.Authn
                 OldPassword = passwordOptions.OldPassword,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = "/api/v1/authn/credentials/change_password",
-                Payload = changePasswordRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = "/api/v1/authn/credentials/change_password",
+                    Payload = changePasswordRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ForgotPasswordAsync(ForgotPasswordOptions forgotPasswordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var forgotPasswordRequest = new ForgotPasswordRequest()
@@ -131,14 +137,15 @@ namespace Okta.Authn
                 FactorType = forgotPasswordOptions.FactorType,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = "/api/v1/authn/recovery/password",
-                Payload = forgotPasswordRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = "/api/v1/authn/recovery/password",
+                    Payload = forgotPasswordRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ResetPasswordAsync(ResetPasswordOptions resetPasswordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var resetPasswordRequest = new ResetPasswordRequest()
@@ -147,14 +154,15 @@ namespace Okta.Authn
                 NewPassword = resetPasswordOptions.NewPassword,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = "/api/v1/authn/credentials/reset_password",
-                Payload = resetPasswordRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = "/api/v1/authn/credentials/reset_password",
+                    Payload = resetPasswordRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSMSFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
@@ -172,7 +180,7 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollSmsFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
@@ -191,7 +199,7 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollQuestionFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
@@ -209,7 +217,7 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollCallFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollPushFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollPushFactor = new EnrollFactorRequest()
@@ -222,7 +230,7 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollPushFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollRsaFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
@@ -240,9 +248,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollRsaFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
             profile.SetProperty("credentialId", factorOptions.CredentialId);
@@ -260,7 +267,7 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollSymantecFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollYubiKeyFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollYubiKeyFactor = new EnrollFactorRequest()
@@ -273,7 +280,7 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollYubiKeyFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollDuoFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollDuoFactor = new EnrollFactorRequest()
@@ -286,8 +293,8 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollDuoFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollU2fFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollU2FFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var enrollU2Factor = new EnrollFactorRequest()
             {
@@ -299,11 +306,10 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollU2Factor, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> Enroll(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
-            profile.SetProperty("credentialId", factorOptions.CredentialId);
 
             var enrollTotpFactor = new EnrollFactorRequest()
             {
@@ -316,17 +322,18 @@ namespace Okta.Authn
             return await EnrollFactorAsync(enrollTotpFactor, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollFactorRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = "/api/v1/authn/factors",
-                Payload = request,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = "/api/v1/authn/factors",
+                    Payload = request,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateFactorRequest()
@@ -339,7 +346,7 @@ namespace Okta.Authn
             return await ActivateFactorAsync(activateFactorRequest, activateFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivatePushFactorOptions activatePushFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateFactorRequest()
@@ -351,7 +358,7 @@ namespace Okta.Authn
             return await ActivateFactorAsync(activateFactorRequest, activatePushFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ActivateU2fFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateU2FFactorRequest()
@@ -364,27 +371,29 @@ namespace Okta.Authn
             return await ActivateFactorAsync(activateFactorRequest, activateFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/factors/{factorId}/lifecycle/activate",
-                Payload = activateFactorRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/factors/{factorId}/lifecycle/activate",
+                    Payload = activateFactorRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateU2FFactorRequest activateFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/factors/{factorId}/lifecycle/activate",
-                Payload = activateFactorRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/factors/{factorId}/lifecycle/activate",
+                    Payload = activateFactorRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var answerRecoveryRequest = new AnswerRecoveryQuestionRequest()
@@ -393,14 +402,15 @@ namespace Okta.Authn
                 Answer = answerOptions.Answer,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/recovery/answer",
-                Payload = answerRecoveryRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/recovery/answer",
+                    Payload = answerRecoveryRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var recoveryTokenRequest = new VerifyRecoveryTokenRequest()
@@ -408,14 +418,15 @@ namespace Okta.Authn
                 RecoveryToken = verifyRecoveryTokenOptions.RecoveryToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/recovery/token",
-                Payload = recoveryTokenRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/recovery/token",
+                    Payload = recoveryTokenRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyRecoveryFactorRequest = new VerifyFactorRecoveryRequest()
@@ -424,14 +435,15 @@ namespace Okta.Authn
                 PassCode = verifyRecoveryFactorOptions.PassCode,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/recovery/factors/{verifyRecoveryFactorOptions.FactorType.ToString().ToLower()}/verify",
-                Payload = verifyRecoveryFactorRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/recovery/factors/{verifyRecoveryFactorOptions.FactorType.ToString().ToLower()}/verify",
+                    Payload = verifyRecoveryFactorRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
-        
-        ///<inheritdoc/>
+
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var recoveryChallengeRequest = new ResendRecoveryChallengeRequest()
@@ -439,14 +451,15 @@ namespace Okta.Authn
                 StateToken = resendRecoveryChallengeOptions.StateToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/recovery/factors/{resendRecoveryChallengeOptions.FactorType.ToString().ToLower()}/resend",
-                Payload = recoveryChallengeRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/recovery/factors/{resendRecoveryChallengeOptions.FactorType.ToString().ToLower()}/resend",
+                    Payload = recoveryChallengeRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var unlockAccountRequest = new UnlockAccountRequest()
@@ -459,17 +472,18 @@ namespace Okta.Authn
             return await UnlockAccountAsync(unlockAccountRequest, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> UnlockAccountAsync(UnlockAccountRequest unlockAccountRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/recovery/unlock",
-                Payload = unlockAccountRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/recovery/unlock",
+                    Payload = unlockAccountRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> GetTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var transactionStateRequest = new TransactionStateRequest()
@@ -477,14 +491,15 @@ namespace Okta.Authn
                 StateToken = transactionStateOptions.StateToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn",
-                Payload = transactionStateRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn",
+                    Payload = transactionStateRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> GetPreviousTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var transactionStateRequest = new TransactionStateRequest()
@@ -492,14 +507,15 @@ namespace Okta.Authn
                 StateToken = transactionStateOptions.StateToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/previous",
-                Payload = transactionStateRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/previous",
+                    Payload = transactionStateRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> SkipTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var transactionStateRequest = new TransactionStateRequest()
@@ -507,14 +523,15 @@ namespace Okta.Authn
                 StateToken = transactionStateOptions.StateToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/skip",
-                Payload = transactionStateRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/skip",
+                    Payload = transactionStateRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> CancelTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var transactionStateRequest = new TransactionStateRequest()
@@ -522,14 +539,15 @@ namespace Okta.Authn
                 StateToken = transactionStateOptions.StateToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/cancel",
-                Payload = transactionStateRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/cancel",
+                    Payload = transactionStateRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> VerifyU2fFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyU2fFactorRequest = new VerifyU2fFactorRequest()
@@ -543,9 +561,8 @@ namespace Okta.Authn
             return await VerifyFactorAsync(verifyU2fFactorRequest, verifyU2FFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyDuoFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyDuoFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyDuoFactorRequest = new VerifyDuoFactorRequest()
             {
@@ -555,9 +572,8 @@ namespace Okta.Authn
             return await VerifyFactorAsync(verifyDuoFactorRequest, verifyDuoFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyCallFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyCallFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyCallFactorRequest = new VerifyCallFactorRequest()
             {
@@ -569,9 +585,8 @@ namespace Okta.Authn
             return await VerifyFactorAsync(verifyCallFactorRequest, verifyCallFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyPushFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyPushFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyPushFactorRequest = new VerifyPushFactorRequest()
             {
@@ -579,13 +594,12 @@ namespace Okta.Authn
                 RememberDevice = verifyPushFactorOptions.RememberDevice,
                 AutoPush = verifyPushFactorOptions.AutoPush,
             };
-            
+
             return await VerifyFactorAsync(verifyPushFactorRequest, verifyPushFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyTotpFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifyTotpFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyTotpFactorRequest = new VerifyTotpFactorRequest()
             {
@@ -597,9 +611,8 @@ namespace Okta.Authn
             return await VerifyFactorAsync(verifyTotpFactorRequest, verifyTotpFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifySmsFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> VerifySmsFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifySmsFactorRequest = new VerifySmsFactorRequest()
             {
@@ -607,11 +620,11 @@ namespace Okta.Authn
                 PassCode = verifySmsFactorOptions.PassCode,
                 RememberDevice = verifySmsFactorOptions.RememberDevice,
             };
-            
+
             return await VerifyFactorAsync(verifySmsFactorRequest, verifySmsFactorOptions.FactorId, cancellationToken);
         }
 
-        ///<inheritdoc/>
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> VerifySecurityQuestionFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifySecurityQuestionFactorRequest = new VerifySecurityQuestionFactorRequest()
@@ -624,31 +637,29 @@ namespace Okta.Authn
             return await VerifyFactorAsync(verifySecurityQuestionFactorRequest, verifySecurityQuestionFactorOptions.FactorId, cancellationToken);
         }
 
-        private async Task<IAuthenticationResponse> VerifyFactorAsync(Resource verifyFactorRequest, string factorId,
-            CancellationToken cancellationToken = default(CancellationToken))
+        private async Task<IAuthenticationResponse> VerifyFactorAsync(Resource verifyFactorRequest, string factorId, CancellationToken cancellationToken = default(CancellationToken))
         {
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/factors/{factorId}/verify",
-                Payload = verifyFactorRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/factors/{factorId}/verify",
+                    Payload = verifyFactorRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<IAuthenticationResponse> ResendChallengeAsync(ResendChallengeOptions resendChallengeOptions,
-            CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> ResendChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var resendChallengeRequest = new ResendChallengeRequest()
             {
                 StateToken = resendChallengeOptions.StateToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(new HttpRequest
-            {
-                Uri = $"/api/v1/authn/factors/{resendChallengeOptions.FactorId}/verify/resend",
-                Payload = resendChallengeRequest,
-            }, cancellationToken).ConfigureAwait(false);
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/factors/{resendChallengeOptions.FactorId}/verify/resend",
+                    Payload = resendChallengeRequest,
+                }, cancellationToken).ConfigureAwait(false);
         }
-
-       
     }
 }
