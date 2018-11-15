@@ -110,6 +110,22 @@ namespace Okta.Authn
         }
 
         /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateWithActivationTokenOptions authenticateOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var authenticationRequest = new AuthenticationRequest()
+            {
+                ActivationToken = authenticateOptions.ActivationToken,
+            };
+
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = "/api/v1/authn",
+                    Payload = authenticationRequest,
+                }, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var changePasswordRequest = new ChangePasswordRequest()
@@ -181,6 +197,29 @@ namespace Okta.Authn
         }
 
         /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> ResendSmsEnrollFactorAsync(EnrollSMSFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var profile = new Resource();
+            profile.SetProperty("phoneNumber", factorOptions.PhoneNumber);
+            profile.SetProperty("phoneExtension", factorOptions.PhoneExtension);
+
+            var enrollSmsFactorRequest = new EnrollFactorRequest()
+            {
+                StateToken = factorOptions.StateToken,
+                FactorType = FactorType.Sms,
+                Provider = factorOptions.Provider,
+                Profile = profile,
+            };
+
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/factors/{factorOptions.FactorId}/lifecycle/resend",
+                    Payload = enrollSmsFactorRequest,
+                }, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var profile = new Resource();
@@ -215,6 +254,29 @@ namespace Okta.Authn
             };
 
             return await EnrollFactorAsync(enrollCallFactor, cancellationToken);
+        }
+
+        /// <inheritdoc/>
+        public async Task<IAuthenticationResponse> ResendCallEnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var profile = new Resource();
+            profile.SetProperty("phoneNumber", factorOptions.PhoneNumber);
+            profile.SetProperty("phoneExtension", factorOptions.PhoneExtension);
+
+            var enrollCallFactor = new EnrollFactorRequest()
+            {
+                StateToken = factorOptions.StateToken,
+                FactorType = FactorType.Call,
+                Provider = factorOptions.Provider,
+                Profile = profile,
+            };
+
+            return await PostAsync<AuthenticationResponse>(
+                new HttpRequest
+                {
+                    Uri = $"/api/v1/authn/factors/{factorOptions.FactorId}/lifecycle/resend",
+                    Payload = enrollCallFactor,
+                }, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>
@@ -309,14 +371,11 @@ namespace Okta.Authn
         /// <inheritdoc/>
         public async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var profile = new Resource();
-
             var enrollTotpFactor = new EnrollFactorRequest()
             {
                 StateToken = factorOptions.StateToken,
                 FactorType = FactorType.TokenSoftwareTotp,
                 Provider = factorOptions.Provider,
-                Profile = profile,
             };
 
             return await EnrollFactorAsync(enrollTotpFactor, cancellationToken);
@@ -359,7 +418,7 @@ namespace Okta.Authn
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> ActivateU2fFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> ActivateFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var activateFactorRequest = new ActivateU2FFactorRequest()
             {

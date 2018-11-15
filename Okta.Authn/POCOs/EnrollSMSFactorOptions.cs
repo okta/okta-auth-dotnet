@@ -16,5 +16,10 @@ namespace Okta.Authn.POCOs
         public string PhoneNumber { get; set; }
 
         public string PhoneExtension { get; set; }
+
+        /// <summary>
+        /// Gets or sets the factor id. It is used for resend a SMS.
+        /// </summary>
+        public string FactorId { get; set; }
     }
 }

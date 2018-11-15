@@ -566,6 +566,98 @@ namespace Okta.Authn.UnitTests
         }
 
         [Fact]
+        public async Task EnrollCallFactor()
+        {
+            #region raw response
+            var rawResponse = @"
+            {
+                ""stateToken"": ""007ucIX7PATyn94hsHfOLVaXAmOBkKHWnOOLG43bsb"",
+                ""expiresAt"": ""2015-11-03T10:15:57.000Z"",
+                ""status"": ""MFA_ENROLL_ACTIVATE"",
+                ""relayState"": ""/myapp/some/deep/link/i/want/to/return/to"",
+                ""_embedded"": {
+                    ""user"": {
+                        ""id"": ""00ub0oNGTSWTBKOLGLNR"",
+                        ""passwordChanged"": ""2015-09-08T20:14:45.000Z"",
+                        ""profile"": {
+                            ""login"": ""dade.murphy@example.com"",
+                            ""firstName"": ""Dade"",
+                            ""lastName"": ""Murphy"",
+                            ""locale"": ""en_US"",
+                            ""timeZone"": ""America/Los_Angeles""
+                        }
+                    },
+                    ""factor"": {
+                        ""id"": ""clf198rKSEWOSKRIVIFT"",
+                        ""factorType"": ""call"",
+                        ""provider"": ""OKTA"",
+                        ""profile"": {
+                            ""phoneNumber"": ""+1 XXX-XXX-1337""
+                        }
+                    }
+                },
+                ""_links"": {
+                    ""next"": {
+                        ""name"": ""activate"",
+                        ""href"": ""https://dotnet.oktapreview.com/api/v1/authn/factors/clf198rKSEWOSKRIVIFT/lifecycle/activate"",
+                        ""hints"": {
+                            ""allow"": [
+                            ""POST""
+                                ]
+                        }
+                    },
+                    ""cancel"": {
+                        ""href"": ""https://dotnet.oktapreview.com/api/v1/authn/cancel"",
+                        ""hints"": {
+                            ""allow"": [
+                            ""POST""
+                                ]
+                        }
+                    },
+                    ""prev"": {
+                        ""href"": ""https://dotnet.oktapreview.com/api/v1/authn/previous"",
+                        ""hints"": {
+                            ""allow"": [
+                            ""POST""
+                                ]
+                        }
+                    },
+                    ""resend"": [
+                    {
+                        ""name"": ""call"",
+                        ""href"": ""https://dotnet.oktapreview.com/api/v1/authn/factors/clf198rKSEWOSKRIVIFT/lifecycle/resend"",
+                        ""hints"": {
+                            ""allow"": [
+                            ""POST""
+                                ]
+                        }
+                    }
+                    ]
+                }
+            }";
+            #endregion
+
+            var mockRequestExecutor = new MockedStringRequestExecutor(rawResponse);
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            var enrollFactorOptions = new EnrollCallFactorOptions()
+            {
+                PhoneNumber = "+1-555-415-1337",
+                StateToken = "007ucIX7PATyn94hsHfOLVaXAmOBkKHWnOOLG43bsb",
+            };
+
+            var authnResponse = await authnClient.EnrollFactorAsync(enrollFactorOptions);
+            authnResponse.Should().NotBeNull();
+            authnResponse.StateToken.Should().Be("007ucIX7PATyn94hsHfOLVaXAmOBkKHWnOOLG43bsb");
+            authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnrollActivate);
+            authnResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
+            authnResponse.Factor.Should().NotBeNull();
+            authnResponse.Factor.Id.Should().Be("clf198rKSEWOSKRIVIFT");
+            authnResponse.Factor.Type.Should().Be(FactorType.Call);
+            authnResponse.Factor.Provider.Should().Be(OktaDefaults.OktaProvider);
+        }
+
+        [Fact]
         public async Task AllowSendingRawRequest()
         {
             var rawResponse = @"

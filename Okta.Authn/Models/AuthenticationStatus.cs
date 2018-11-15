@@ -14,7 +14,13 @@ namespace Okta.Authn.Models
         {
         }
 
+        public static AuthenticationStatus Unauthenticated = new AuthenticationStatus("UNAUTHENTICATED");
+
         public static AuthenticationStatus PasswordExpired = new AuthenticationStatus("PASSWORD_EXPIRED");
+
+        public static AuthenticationStatus PasswordWarn = new AuthenticationStatus("PASSWORD_WARN");
+
+        public static AuthenticationStatus PasswordReset = new AuthenticationStatus("PASSWORD_RESET");
 
         public static AuthenticationStatus Success = new AuthenticationStatus("SUCCESS");
 
@@ -31,5 +37,7 @@ namespace Okta.Authn.Models
         public static AuthenticationStatus MfaChallenge = new AuthenticationStatus("MFA_CHALLENGE");
 
         public static AuthenticationStatus RecoveryChallenge = new AuthenticationStatus("RECOVERY_CHALLENGE");
+
+        public static AuthenticationStatus Recovery = new AuthenticationStatus("RECOVERY");
     }
 }

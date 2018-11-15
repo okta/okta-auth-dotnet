@@ -33,6 +33,12 @@ namespace Okta.Authn.Models
             set => this["relayState"] = value;
         }
 
+        public string ActivationToken
+        {
+            get => GetStringProperty("token");
+            set => this["token"] = value;
+        }
+
         public AuthenticationRequestOptions Options
         {
             get => GetResourceProperty<AuthenticationRequestOptions>("options");
