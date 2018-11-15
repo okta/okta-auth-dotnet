@@ -35,13 +35,10 @@ namespace Okta.Authn.Models
 
         FactorType FactorType { get; }
 
-        string FactorResult { get; }
+        FactorResult FactorResult { get; }
 
         string RecoveryToken { get; }
 
-        /// <summary>
-        /// Enum?
-        /// </summary>
-        string RecoveryType { get; }
+        RecoveryType RecoveryType { get; }
     }
 }

@@ -42,14 +42,12 @@ namespace Okta.Authn.Models
         public string RecoveryToken => GetStringProperty("recoveryToken");
 
         /// <inheritdoc/>
-        /// ///  TODO: Should it be a StringEnum?
-        public string RecoveryType => GetStringProperty("recoveryType");
+        public RecoveryType RecoveryType => GetEnumProperty<RecoveryType>("recoveryType");
 
         /// <inheritdoc/>
         public FactorType FactorType => GetEnumProperty<FactorType>("factorType");
 
         /// <inheritdoc/>
-        /// TODO: Should it be a StringEnum?
-        public string FactorResult => GetStringProperty("factorResult");
+        public FactorResult FactorResult => GetEnumProperty<FactorResult>("factorResult");
     }
 }

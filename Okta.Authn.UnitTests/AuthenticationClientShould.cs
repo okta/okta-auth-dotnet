@@ -42,9 +42,8 @@ namespace Okta.Authn.UnitTests
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.RecoveryChallenge);
             authResponse.FactorType.Should().Be(FactorType.Email);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            // TODO: Add enums for RecoveryType & FactorResult
-            authResponse.RecoveryType.Should().Be("PASSWORD");
-            authResponse.FactorResult.Should().Be("WAITING");
+            authResponse.RecoveryType.Should().Be(RecoveryType.Password);
+            authResponse.FactorResult.Should().Be(FactorResult.Waiting);
 
         }
 
@@ -108,7 +107,7 @@ namespace Okta.Authn.UnitTests
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.RecoveryChallenge);
             authResponse.FactorType.Should().Be(FactorType.Call);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            authResponse.RecoveryType.Should().Be("PASSWORD");
+            authResponse.RecoveryType.Should().Be(RecoveryType.Password);
             authResponse.StateToken.Should().Be("00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh");
             authResponse.Links.Should().NotBeNull();
 
@@ -378,7 +377,7 @@ namespace Okta.Authn.UnitTests
             authResponse.Should().NotBeNull();
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnrollActivate);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            authResponse.FactorResult.Should().Be("WAITING");
+            authResponse.FactorResult.Should().Be(FactorResult.Waiting);
             authResponse.Factor.Should().NotBeNull();
             authResponse.Factor.Id.Should().Be("opfh52xcuft3J4uZc0g3");
             authResponse.Factor.Provider.Should().Be(OktaDefaults.OktaProvider);
