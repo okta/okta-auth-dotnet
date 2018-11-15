@@ -56,7 +56,7 @@ namespace Okta.Sdk.Abstractions.Configuration
         public string Token { get; set; }
 
         /// <summary>
-        /// Gets or sets the flag to disable https check.
+        /// Gets or sets a value indicating whether the https check is disabled.
         /// This allows for insecure configurations and is NOT recommended for production use.
         /// </summary>
         public bool DisableHttpsCheck

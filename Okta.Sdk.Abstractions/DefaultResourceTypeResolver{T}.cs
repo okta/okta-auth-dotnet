@@ -13,8 +13,6 @@ namespace Okta.Sdk.Abstractions
     {
         public override AbstractResourceTypeResolverFactory ResourceTypeResolverFactory
         {
-            set { this._resourceTypeResolverFactory = value; }
-
             get
             {
                 if (_resourceTypeResolverFactory == null)
@@ -24,10 +22,14 @@ namespace Okta.Sdk.Abstractions
 
                 return _resourceTypeResolverFactory;
             }
+
+            set
+            {
+                this._resourceTypeResolverFactory = value;
+            }
         }
 
         protected override Type GetResolvedTypeInternal(IDictionary<string, object> data)
             => typeof(T);
-
     }
 }

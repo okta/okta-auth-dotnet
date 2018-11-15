@@ -25,13 +25,13 @@ namespace Okta.Sdk.Abstractions
         /// </summary>
         /// <param name="client">The client.</param>
         /// <param name="logger">The logging interface.</param>
+        /// <param name="resourceTypeResolverFactory">The resource type resolver factory</param>
         public ResourceFactory(IBaseOktaClient client, ILogger logger, AbstractResourceTypeResolverFactory resourceTypeResolverFactory)
         {
             _client = client;
             _logger = logger;
             _resourceTypeResolverFactory = resourceTypeResolverFactory ?? new DefaultResourceTypeResolverFactory();
         }
-
 
         /// <summary>
         /// Creates a new dictionary with the specified behavior.

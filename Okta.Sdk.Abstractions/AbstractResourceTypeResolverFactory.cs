@@ -1,4 +1,4 @@
-﻿// <copyright file="ResourceTypeResolverFactory.cs" company="Okta, Inc">
+﻿// <copyright file="AbstractResourceTypeResolverFactory.cs" company="Okta, Inc">
 // Copyright (c) 2018 - present Okta, Inc. All rights reserved.
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
@@ -40,10 +40,10 @@ namespace Okta.Sdk.Abstractions
         protected IEnumerable<(Type Resolver, Type For)> GetAllResolvers()
         {
             var resolvers = GetAllResolvers(GetAllResourceDefinedTypes());
-            
+
             return resolvers;
         }
-         
+
         public bool RequiresResolution(Type resourceType)
             => GetResolver(resourceType) != null;
 
@@ -72,7 +72,7 @@ namespace Okta.Sdk.Abstractions
             {
                 return possiblyInterface;
             }
-            
+
             var foundConcrete = GetAllResourceDefinedTypes().FirstOrDefault(x =>
                 x.IsClass == true
                 && typeInfo.IsAssignableFrom(x)
@@ -84,6 +84,5 @@ namespace Okta.Sdk.Abstractions
         {
             return GetAllResolvers().FirstOrDefault(x => x.For == resourceType).Resolver;
         }
-            
     }
 }

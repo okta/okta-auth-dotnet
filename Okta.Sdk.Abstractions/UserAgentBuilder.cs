@@ -18,12 +18,15 @@ namespace Okta.Sdk.Abstractions
         // Lazy ensures this only runs once and is cached.
         private readonly Lazy<string> _cachedUserAgent;
 
-        private string _oktaSdkUserAgentName = "";
+        private string _oktaSdkUserAgentName = string.Empty;
 
         private Version _sdkVersion;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAgentBuilder"/> class.
         /// </summary>
+        /// <param name="sdkUserAgentName">The user agent name. i.e: okta-sdk-dotnet</param>
+        /// <param name="sdkVersion">The sdk version</param>
         public UserAgentBuilder(string sdkUserAgentName, Version sdkVersion)
         {
             _cachedUserAgent = new Lazy<string>(Generate);

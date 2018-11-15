@@ -30,6 +30,7 @@ namespace Okta.Sdk.Abstractions
         /// <param name="serializer">The <see cref="ISerializer">Serializer</see> to use.</param>
         /// <param name="resourceFactory">The <see cref="ResourceFactory"/>.</param>
         /// <param name="logger">The logging interface.</param>
+        /// <param name="userAgentBuilder">The user agent builder.</param>
         public DefaultDataStore(
             IRequestExecutor requestExecutor,
             ISerializer serializer,

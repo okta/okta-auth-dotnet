@@ -13,7 +13,6 @@ using FlexibleConfiguration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Okta.Sdk.Abstractions.Configuration;
-using Okta.Sdk.Abstractions;
 
 namespace Okta.Sdk.Abstractions
 {

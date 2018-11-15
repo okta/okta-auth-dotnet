@@ -9,9 +9,17 @@
     <PackageReference Include="FlexibleConfiguration" Version="1.2.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="System.Diagnostics.TraceSource" Version="4.3.0" />
     <PackageReference Include="System.Interactive.Async" Version="3.1.1" />
     <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+    <AdditionalFiles Include="..\stylecop.json" />
   </ItemGroup>
-
+  
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\OktaSdk.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
 </Project>

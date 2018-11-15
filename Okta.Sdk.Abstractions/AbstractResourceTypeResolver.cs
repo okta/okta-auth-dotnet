@@ -18,24 +18,9 @@ namespace Okta.Sdk.Abstractions.Internal
 
         public abstract AbstractResourceTypeResolverFactory ResourceTypeResolverFactory
         {
-            set;
             get;
+            set;
         }
-
-        //public AbstractResourceTypeResolverFactory ResourceTypeResolverFactory
-        //{
-        //    set { this._resourceTypeResolverFactory = value; }
-
-        //    get
-        //    {
-        //        if (_resourceTypeResolverFactory == null)
-        //        {
-        //            _resourceTypeResolverFactory = new DefaultResourceTypeResolverFactory();
-        //        }
-
-        //        return _resourceTypeResolverFactory;
-        //    }
-        //}
 
         /// <summary>
         /// Get the resolved resource type given its <paramref name="data"/>.
