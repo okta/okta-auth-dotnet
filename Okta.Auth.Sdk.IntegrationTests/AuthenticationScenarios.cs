@@ -1,13 +1,9 @@
 using System;
-using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Okta.Auth.Sdk.IntegrationTests.Internal;
-using Okta.Auth.Sdk.Models;
-using Okta.Auth.Sdk.POCOs;
 using Okta.Sdk;
 using Xunit;
-using ChangePasswordOptions = Okta.Auth.Sdk.POCOs.ChangePasswordOptions;
 using OktaApiException = Okta.Sdk.Abstractions.OktaApiException;
 
 namespace Okta.Auth.Sdk.IntegrationTests

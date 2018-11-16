@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
-using Okta.Auth.Sdk.Abstractions;
-using Okta.Auth.Sdk.Models;
-using Okta.Auth.Sdk.POCOs;
 using Okta.Auth.Sdk.UnitTests.Internal;
 using Okta.Sdk.Abstractions;
 using Xunit;
