@@ -8,7 +8,7 @@ using System.Linq;
 using System.Reflection;
 using Okta.Sdk.Abstractions;
 
-namespace Okta.Authn.Abstractions
+namespace Okta.Auth.Sdk.Abstractions
 {
     public class ResourceTypeResolverFactory : AbstractResourceTypeResolverFactory
     {

@@ -3,9 +3,9 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
-using Okta.Authn.Abstractions;
+using Okta.Auth.Sdk.Abstractions;
 
-namespace Okta.Authn.Models
+namespace Okta.Auth.Sdk.Models
 {
     public class ActivateFactorRequest : Resource
     {

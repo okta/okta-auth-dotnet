@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Authn", "Okta.Authn\Okta.Authn.csproj", "{8425BCFA-EFB1-4EC4-AEBC-6D0A1B200FE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Auth.Sdk", "Okta.Authn\Okta.Auth.Sdk.csproj", "{8425BCFA-EFB1-4EC4-AEBC-6D0A1B200FE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Authn.IntegrationTests", "Okta.Authn.IntegrationTests\Okta.Authn.IntegrationTests.csproj", "{76607E7C-B42E-4716-BD75-B93C89D322DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Auth.Sdk.IntegrationTests", "Okta.Authn.IntegrationTests\Okta.Auth.Sdk.IntegrationTests.csproj", "{76607E7C-B42E-4716-BD75-B93C89D322DA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Sdk.Abstractions", "Okta.Sdk.Abstractions\Okta.Sdk.Abstractions.csproj", "{55BBE5EC-6D9A-4B4E-888A-424DDAEFE4AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Sdk.Abstractions.UnitTests", "Okta.Sdk.Abstractions.UnitTests\Okta.Sdk.Abstractions.UnitTests.csproj", "{5222746D-BA58-4BAB-83F8-28321450784B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okta.Authn.UnitTests", "Okta.Authn.UnitTests\Okta.Authn.UnitTests.csproj", "{3AB60DFE-E604-4276-B422-D6C570B26E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Okta.Auth.Sdk.UnitTests", "Okta.Authn.UnitTests\Okta.Auth.Sdk.UnitTests.csproj", "{3AB60DFE-E604-4276-B422-D6C570B26E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

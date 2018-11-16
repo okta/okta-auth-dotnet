@@ -6,10 +6,10 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
-using Okta.Authn.Models;
+using Okta.Auth.Sdk.Models;
 using Okta.Sdk.Abstractions;
 
-namespace Okta.Authn.Abstractions
+namespace Okta.Auth.Sdk.Abstractions
 {
     public class Resource : BaseResource
     {

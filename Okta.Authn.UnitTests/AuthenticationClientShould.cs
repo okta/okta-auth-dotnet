@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
-using Okta.Authn.Abstractions;
-using Okta.Authn.Models;
-using Okta.Authn.POCOs;
-using Okta.Authn.UnitTests.Internal;
+using Okta.Auth.Sdk.Abstractions;
+using Okta.Auth.Sdk.Models;
+using Okta.Auth.Sdk.POCOs;
+using Okta.Auth.Sdk.UnitTests.Internal;
 using Okta.Sdk.Abstractions;
 using Xunit;
 
-namespace Okta.Authn.UnitTests
+namespace Okta.Auth.Sdk.UnitTests
 {
     public class AuthenticationClientShould
     {

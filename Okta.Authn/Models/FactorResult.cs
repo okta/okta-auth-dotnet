@@ -5,7 +5,7 @@
 
 using Okta.Sdk.Abstractions;
 
-namespace Okta.Authn.Models
+namespace Okta.Auth.Sdk.Models
 {
     public class FactorResult : StringEnum
     {

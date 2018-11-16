@@ -5,10 +5,10 @@
 
 using System.Threading;
 using System.Threading.Tasks;
-using Okta.Authn.POCOs;
+using Okta.Auth.Sdk.POCOs;
 using Okta.Sdk.Abstractions;
 
-namespace Okta.Authn.Models
+namespace Okta.Auth.Sdk.Models
 {
     public interface IAuthenticationClient : IBaseOktaClient
     {

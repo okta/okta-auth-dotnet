@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Okta.Authn\Okta.Authn.csproj" />
+    <ProjectReference Include="..\Okta.Authn\Okta.Auth.Sdk.csproj" />
   </ItemGroup>
 
 </Project>

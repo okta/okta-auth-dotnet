@@ -5,9 +5,9 @@
 
 using System;
 using System.Collections.Generic;
-using Okta.Authn.Abstractions;
+using Okta.Auth.Sdk.Abstractions;
 
-namespace Okta.Authn.Models
+namespace Okta.Auth.Sdk.Models
 {
     public class AuthenticationResponse : Resource, IAuthenticationResponse
     {

@@ -1,7 +1,7 @@
-﻿using Okta.Authn.Models;
+﻿using Okta.Auth.Sdk.Models;
 using Okta.Sdk.Abstractions.Configuration;
 
-namespace Okta.Authn.IntegrationTests.Internal
+namespace Okta.Auth.Sdk.IntegrationTests.Internal
 {
     public static class TestAuthenticationClient
     {

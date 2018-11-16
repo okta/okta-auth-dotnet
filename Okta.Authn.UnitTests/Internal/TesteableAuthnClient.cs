@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Okta.Sdk.Abstractions;
 using Okta.Sdk.Abstractions.Configuration;
 
-namespace Okta.Authn.UnitTests.Internal
+namespace Okta.Auth.Sdk.UnitTests.Internal
 {
     public class TesteableAuthnClient : AuthenticationClient
     {

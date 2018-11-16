@@ -9,13 +9,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using Okta.Authn.Abstractions;
-using Okta.Authn.Models;
-using Okta.Authn.POCOs;
+using Okta.Auth.Sdk.Abstractions;
+using Okta.Auth.Sdk.Models;
+using Okta.Auth.Sdk.POCOs;
 using Okta.Sdk.Abstractions;
 using Okta.Sdk.Abstractions.Configuration;
 
-namespace Okta.Authn
+namespace Okta.Auth.Sdk
 {
     public class AuthenticationClient : BaseOktaClient, IAuthenticationClient
     {

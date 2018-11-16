@@ -5,10 +5,10 @@
 
 using System;
 using System.Collections.Generic;
-using Okta.Authn.Abstractions;
+using Okta.Auth.Sdk.Abstractions;
 using Okta.Sdk.Abstractions;
 
-namespace Okta.Authn.Models
+namespace Okta.Auth.Sdk.Models
 {
     public interface IAuthenticationResponse : IResource
     {
