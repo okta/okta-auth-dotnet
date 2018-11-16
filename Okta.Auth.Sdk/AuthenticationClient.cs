@@ -482,7 +482,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyRecoveryFactorRequest = new VerifyFactorRecoveryRequest()
             {
@@ -597,7 +597,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyU2fFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyU2fFactorRequest = new VerifyU2fFactorRequest()
             {
@@ -611,7 +611,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyDuoFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyDuoFactorRequest = new VerifyDuoFactorRequest()
             {
@@ -622,7 +622,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyCallFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyCallFactorRequest = new VerifyCallFactorRequest()
             {
@@ -635,7 +635,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyPushFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyPushFactorRequest = new VerifyPushFactorRequest()
             {
@@ -648,7 +648,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyTotpFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyTotpFactorRequest = new VerifyTotpFactorRequest()
             {
@@ -661,7 +661,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifySmsFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifySmsFactorRequest = new VerifySmsFactorRequest()
             {
@@ -674,7 +674,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifySecurityQuestionFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifySecurityQuestionFactorRequest = new VerifySecurityQuestionFactorRequest()
             {

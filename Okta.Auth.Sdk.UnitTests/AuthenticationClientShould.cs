@@ -488,7 +488,7 @@ namespace Okta.Auth.Sdk.UnitTests
                 FactorId = "bar",
             };
 
-            var authResponse = await authnClient.VerifySmsFactorAsync(verifySmsOptions);
+            var authResponse = await authnClient.VerifyFactorAsync(verifySmsOptions);
             authResponse.Should().NotBeNull();
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaChallenge);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");

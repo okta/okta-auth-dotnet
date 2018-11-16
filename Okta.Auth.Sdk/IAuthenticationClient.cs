@@ -217,7 +217,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyFactorRecoveryOptions">The verify recovery factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Resend a recovery challenge for a factor (SMS/Call)
@@ -280,7 +280,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyU2FFactorOptions">The verify U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyU2fFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Verifies a Duo factor
@@ -289,7 +289,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyDuoFactorOptions">The verify Duo factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyDuoFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Verifies a call factor
@@ -298,7 +298,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyCallFactorOptions">The verify call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyCallFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Verifies a push factor
@@ -307,7 +307,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyPushFactorOptions">The verify push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyPushFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Verifies a TOTP factor
@@ -316,7 +316,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyTotpFactorOptions">The verify TOTP factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyTotpFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Verifies a sms factor.
@@ -325,7 +325,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifySmsFactorOptions">The verify SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifySmsFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Verifies an answer to a question factor.
@@ -334,7 +334,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifySecurityQuestionFactorOptions">The verify security question factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifySecurityQuestionFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Resend challenge
