@@ -13,7 +13,6 @@ namespace Okta.Auth.Sdk.UnitTests.Internal
         public static readonly OktaClientConfiguration DefaultFakeConfiguration = new OktaClientConfiguration
         {
             OktaDomain = "https://fake.example.com",
-            Token = "foobar",
         };
 
         public TesteableAuthnClient(IRequestExecutor requestExecutor)

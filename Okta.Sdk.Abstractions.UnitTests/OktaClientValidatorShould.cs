@@ -19,7 +19,6 @@ namespace Okta.Sdk.Abstractions.UnitTests
         {
             var configuration = new OktaClientConfiguration();
             configuration.OktaDomain = oktaDomain;
-            configuration.Token = "foo";
 
             Action action = () => OktaClientConfigurationValidator.Validate(configuration);
             action.Should().Throw<ArgumentNullException>().Where(e => e.ParamName == nameof(configuration.OktaDomain));
@@ -33,7 +32,6 @@ namespace Okta.Sdk.Abstractions.UnitTests
         {
             var configuration = new OktaClientConfiguration();
             configuration.OktaDomain = oktaDomain;
-            configuration.Token = "foo";
 
             Action action = () => OktaClientConfigurationValidator.Validate(configuration);
             action.Should().Throw<ArgumentException>().Where(e => e.ParamName == nameof(configuration.OktaDomain));
@@ -47,7 +45,6 @@ namespace Okta.Sdk.Abstractions.UnitTests
         {
             var configuration = new OktaClientConfiguration();
             configuration.OktaDomain = oktaDomain;
-            configuration.Token = "foo";
 
             Action action = () => OktaClientConfigurationValidator.Validate(configuration);
             action.Should().Throw<ArgumentException>().Where(e => e.ParamName == nameof(configuration.OktaDomain));
@@ -60,36 +57,9 @@ namespace Okta.Sdk.Abstractions.UnitTests
         {
             var configuration = new OktaClientConfiguration();
             configuration.OktaDomain = oktaDomain;
-            configuration.Token = "foo";
 
             Action action = () => OktaClientConfigurationValidator.Validate(configuration);
             action.Should().Throw<ArgumentException>().Where(e => e.ParamName == nameof(configuration.OktaDomain));
-        }
-
-        [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        public void FailIfTokenIsNullOrEmpty(string token)
-        {
-            var configuration = new OktaClientConfiguration();
-            configuration.OktaDomain = "https://foo.oktapreview.com";
-            configuration.Token = token;
-
-            Action action = () => OktaClientConfigurationValidator.Validate(configuration);
-            action.Should().Throw<ArgumentNullException>().Where(e => e.ParamName == nameof(configuration.Token));
-        }
-
-        [Theory]
-        [InlineData("{apiToken}")]
-        [InlineData("{APIToken}")]
-        public void FailIfTokenIsNotDefined(string token)
-        {
-            var configuration = new OktaClientConfiguration();
-            configuration.OktaDomain = "https://foo.oktapreview.com";
-            configuration.Token = token;
-
-            Action action = () => OktaClientConfigurationValidator.Validate(configuration);
-            action.Should().Throw<ArgumentException>().Where(e => e.ParamName == nameof(configuration.Token));
         }
 
         [Theory]
@@ -100,7 +70,6 @@ namespace Okta.Sdk.Abstractions.UnitTests
         {
             var configuration = new OktaClientConfiguration();
             configuration.OktaDomain = oktaDomain;
-            configuration.Token = "foo";
             configuration.DisableHttpsCheck = false;
 
             Action action = () => OktaClientConfigurationValidator.Validate(configuration);
@@ -114,7 +83,6 @@ namespace Okta.Sdk.Abstractions.UnitTests
         {
             var configuration = new OktaClientConfiguration();
             configuration.OktaDomain = oktaDomain;
-            configuration.Token = "foo";
             configuration.DisableHttpsCheck = true;
 
             Action action = () => OktaClientConfigurationValidator.Validate(configuration);

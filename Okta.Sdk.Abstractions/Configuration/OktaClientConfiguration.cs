@@ -47,15 +47,6 @@ namespace Okta.Sdk.Abstractions.Configuration
         public ProxyConfiguration Proxy { get; set; }
 
         /// <summary>
-        /// Gets or sets the Okta API token.
-        /// </summary>
-        /// <value>
-        /// The Okta API token.
-        /// </value>
-        /// <remarks>An API token can be generated from the Okta developer dashboard.</remarks>
-        public string Token { get; set; }
-
-        /// <summary>
         /// Gets or sets a value indicating whether the https check is disabled.
         /// This allows for insecure configurations and is NOT recommended for production use.
         /// </summary>
@@ -83,7 +74,6 @@ namespace Okta.Sdk.Abstractions.Configuration
             {
                 ConnectionTimeout = ConnectionTimeout.HasValue ? this.ConnectionTimeout.Value : (int?)null,
                 OktaDomain = this.OktaDomain,
-                Token = this.Token,
                 Proxy = this.Proxy?.DeepClone(),
                 DisableHttpsCheck = this.DisableHttpsCheck,
             };

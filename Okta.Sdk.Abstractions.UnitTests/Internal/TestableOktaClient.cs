@@ -15,7 +15,6 @@ namespace Okta.Sdk.Abstractions.UnitTests.Internal
         public static readonly OktaClientConfiguration DefaultFakeConfiguration = new OktaClientConfiguration
         {
             OktaDomain = "https://fake.example.com",
-            Token = "foobar",
         };
 
         public TestableOktaClient(IRequestExecutor requestExecutor)

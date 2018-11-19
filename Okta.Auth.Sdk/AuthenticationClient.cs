@@ -482,7 +482,7 @@ namespace Okta.Auth.Sdk
         }
 
         /// <inheritdoc/>
-        public async Task<IAuthenticationResponse> VerifyFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var verifyRecoveryFactorRequest = new VerifyFactorRecoveryRequest()
             {

@@ -18,7 +18,7 @@ namespace Okta.Sdk.Abstractions
     /// <summary>
     /// The default implementation of <see cref="IRequestExecutor"/> that uses <c>System.Net.Http</c>.
     /// </summary>
-    public sealed class DefaultRequestExecutor : IRequestExecutor
+    public class DefaultRequestExecutor : IRequestExecutor
     {
         private const string OktaClientUserAgentName = "oktasdk-dotnet";
 
@@ -46,10 +46,9 @@ namespace Okta.Sdk.Abstractions
             ApplyDefaultClientSettings(_httpClient, _oktaDomain, configuration);
         }
 
-        private static void ApplyDefaultClientSettings(HttpClient client, string oktaDomain, OktaClientConfiguration configuration)
+        protected virtual void ApplyDefaultClientSettings(HttpClient client, string oktaDomain, OktaClientConfiguration configuration)
         {
             client.BaseAddress = new Uri(oktaDomain, UriKind.Absolute);
-            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("SSWS", configuration.Token);
         }
 
         private string EnsureRelativeUrl(string uri)

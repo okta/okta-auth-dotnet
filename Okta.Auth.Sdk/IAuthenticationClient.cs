@@ -217,7 +217,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyFactorRecoveryOptions">The verify recovery factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Resend a recovery challenge for a factor (SMS/Call)
