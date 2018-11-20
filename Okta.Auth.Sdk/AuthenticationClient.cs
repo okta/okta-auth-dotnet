@@ -3,6 +3,7 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
+using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading;
@@ -38,7 +39,7 @@ namespace Okta.Auth.Sdk
                 logger);
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
-            var resourceFactory = new ResourceFactory(this, logger, new ResourceTypeResolverFactory());
+            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(Resource.AllDefinedTypes));
             var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version);
 
             _dataStore = new DefaultDataStore(requestExecutor, new DefaultSerializer(), resourceFactory, logger, userAgentBuilder);
@@ -61,7 +62,7 @@ namespace Okta.Auth.Sdk
             logger = logger ?? NullLogger.Instance;
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
-            var resourceFactory = new ResourceFactory(this, logger, new ResourceTypeResolverFactory());
+            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(Resource.AllDefinedTypes));
             var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
 
             _dataStore = new DefaultDataStore(

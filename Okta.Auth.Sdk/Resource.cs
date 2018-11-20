@@ -5,6 +5,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Microsoft.Extensions.Logging;
 using Okta.Auth.Sdk.Models;
 using Okta.Sdk.Abstractions;
@@ -27,7 +29,7 @@ namespace Okta.Auth.Sdk
             IDictionary<string, object> data,
             ILogger logger)
         {
-            resourceFactory = resourceFactory ?? new ResourceFactory(client, logger, new ResourceTypeResolverFactory());
+            resourceFactory = resourceFactory ?? new ResourceFactory(client, logger, new AbstractResourceTypeResolverFactory(Resource.AllDefinedTypes));
             base.Initialize(client, resourceFactory, data, logger);
         }
 
@@ -38,6 +40,14 @@ namespace Okta.Auth.Sdk
         protected new IAuthenticationClient GetClient()
         {
             return (IAuthenticationClient)_client ?? throw new InvalidOperationException("Only resources retrieved or saved through a Client object cna call server-side methods.");
+        }
+
+        /// <summary>
+        /// Gets All Resource defined types
+        /// </summary>
+        public static new IEnumerable<TypeInfo> AllDefinedTypes
+        {
+            get { return typeof(Resource).GetTypeInfo().Assembly.DefinedTypes.ToArray(); }
         }
     }
 }

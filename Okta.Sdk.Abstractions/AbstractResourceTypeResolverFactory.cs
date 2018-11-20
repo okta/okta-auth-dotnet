@@ -11,8 +11,15 @@ using Okta.Sdk.Abstractions.Internal;
 
 namespace Okta.Sdk.Abstractions
 {
-    public abstract class AbstractResourceTypeResolverFactory
+    public class AbstractResourceTypeResolverFactory
     {
+        public AbstractResourceTypeResolverFactory(IEnumerable<TypeInfo> resourceDefinedTypes)
+        {
+            _resourceDefinedTypes = resourceDefinedTypes;
+        }
+
+        private IEnumerable<TypeInfo> _resourceDefinedTypes;
+
         private static readonly Type DefaultResolverType = typeof(DefaultResourceTypeResolver<>);
 
         private IEnumerable<(Type Resolver, Type For)> GetAllResolvers(IEnumerable<TypeInfo> allTypes)
@@ -35,7 +42,10 @@ namespace Okta.Sdk.Abstractions
                 .ToArray();
         }
 
-        public abstract IEnumerable<TypeInfo> GetAllResourceDefinedTypes();
+        public IEnumerable<TypeInfo> GetAllResourceDefinedTypes()
+        {
+            return _resourceDefinedTypes;
+        }
 
         protected IEnumerable<(Type Resolver, Type For)> GetAllResolvers()
         {

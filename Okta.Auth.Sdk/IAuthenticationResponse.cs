@@ -4,7 +4,6 @@
 // </copyright>
 
 using System;
-using System.Collections.Generic;
 using Okta.Sdk.Abstractions;
 
 namespace Okta.Auth.Sdk

@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -35,7 +36,7 @@ namespace Okta.Sdk.Abstractions
             ILogger logger)
         {
             _client = client;
-            _resourceFactory = resourceFactory ?? new ResourceFactory(client, logger, new DefaultResourceTypeResolverFactory());
+            _resourceFactory = resourceFactory ?? new ResourceFactory(client, logger, new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes));
             _data = data ?? _resourceFactory.NewDictionary(null);
             _logger = logger ?? NullLogger.Instance;
         }
@@ -312,6 +313,11 @@ namespace Okta.Sdk.Abstractions
         {
             var nestedData = GetPropertyOrNull(key) as IDictionary<string, object>;
             return _resourceFactory.CreateFromExistingData<T>(nestedData);
+        }
+
+        public static IEnumerable<TypeInfo> AllDefinedTypes
+        {
+            get { return typeof(BaseResource).GetTypeInfo().Assembly.DefinedTypes.ToArray(); }
         }
     }
 }

@@ -5,6 +5,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Okta.Sdk.Abstractions.Internal;
 
 namespace Okta.Sdk.Abstractions
@@ -17,7 +19,7 @@ namespace Okta.Sdk.Abstractions
             {
                 if (_resourceTypeResolverFactory == null)
                 {
-                    _resourceTypeResolverFactory = new DefaultResourceTypeResolverFactory();
+                    _resourceTypeResolverFactory = new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes);
                 }
 
                 return _resourceTypeResolverFactory;

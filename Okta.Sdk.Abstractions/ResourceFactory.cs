@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -30,7 +31,7 @@ namespace Okta.Sdk.Abstractions
         {
             _client = client;
             _logger = logger;
-            _resourceTypeResolverFactory = resourceTypeResolverFactory ?? new DefaultResourceTypeResolverFactory();
+            _resourceTypeResolverFactory = resourceTypeResolverFactory ?? new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes);
         }
 
         /// <summary>
