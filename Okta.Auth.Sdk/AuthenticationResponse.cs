@@ -30,23 +30,5 @@ namespace Okta.Auth.Sdk
 
         /// <inheritdoc/>
         public Resource Links => GetResourceProperty<Resource>("_links");
-
-        /// <inheritdoc/>
-        public IList<Factor> Factors => Embedded.GetArrayProperty<Factor>("factors");
-
-        /// <inheritdoc/>
-        public Factor Factor => Embedded.GetProperty<Factor>("factor");
-
-        /// <inheritdoc/>
-        public string RecoveryToken => GetStringProperty("recoveryToken");
-
-        /// <inheritdoc/>
-        public RecoveryType RecoveryType => GetEnumProperty<RecoveryType>("recoveryType");
-
-        /// <inheritdoc/>
-        public FactorType FactorType => GetEnumProperty<FactorType>("factorType");
-
-        /// <inheritdoc/>
-        public FactorResult FactorResult => GetEnumProperty<FactorResult>("factorResult");
     }
 }

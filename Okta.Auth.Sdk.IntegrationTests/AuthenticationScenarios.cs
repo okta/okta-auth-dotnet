@@ -158,8 +158,8 @@ namespace Okta.Auth.Sdk.IntegrationTests
             var authnResponse = await client.AuthenticateAsync(authnOptions);
 
             authnResponse.Should().NotBeNull();
-            authnResponse.Factors.Should().NotBeNull();
-            authnResponse.Factors.Should().HaveCountGreaterThan(0);
+            authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().NotBeNull();
+            authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().HaveCountGreaterThan(0);
             authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnroll);
         }
 
@@ -258,8 +258,8 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 var authnResponse = await authnClient.AuthenticateAsync(authnOptions);
 
                 authnResponse.Should().NotBeNull();
-                authnResponse.Factors.Should().NotBeNull();
-                authnResponse.Factors.Should().HaveCountGreaterThan(0);
+                authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().NotBeNull();
+                authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().HaveCountGreaterThan(0);
                 authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnroll);
 
                 var enrollOptions = new EnrollSMSFactorOptions()
@@ -271,8 +271,8 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
                 authnResponse.Should().NotBeNull();
                 authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnrollActivate);
-                authnResponse.Factor.Should().NotBeNull();
-                authnResponse.Factor.Profile.GetProperty<string>("phoneNumber").Should().NotBeNullOrEmpty();
+                authnResponse.GetProperty<Factor>("factor").Should().NotBeNull();
+                authnResponse.GetProperty<Factor>("factor").Profile.GetProperty<string>("phoneNumber").Should().NotBeNullOrEmpty();
 
             }
             finally
@@ -318,8 +318,8 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 var authnResponse = await authnClient.AuthenticateAsync(authnOptions);
 
                 authnResponse.Should().NotBeNull();
-                authnResponse.Factors.Should().NotBeNull();
-                authnResponse.Factors.Should().HaveCountGreaterThan(0);
+                authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().NotBeNull();
+                authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().HaveCountGreaterThan(0);
                 authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnroll);
 
                 var enrollOptions = new EnrollSecurityQuestionFactorOptions()

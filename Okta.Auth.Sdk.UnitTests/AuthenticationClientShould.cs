@@ -35,10 +35,10 @@ namespace Okta.Auth.Sdk.UnitTests
             var authResponse = await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
             authResponse.Should().NotBeNull();
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.RecoveryChallenge);
-            authResponse.FactorType.Should().Be(FactorType.Email);
+            authResponse.GetProperty<FactorType>("factorType").Should().Be(FactorType.Email);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            authResponse.RecoveryType.Should().Be(RecoveryType.Password);
-            authResponse.FactorResult.Should().Be(FactorResult.Waiting);
+            authResponse.GetProperty<RecoveryType>("recoveryType").Should().Be(RecoveryType.Password);
+            authResponse.GetProperty<FactorResult>("factorResult").Should().Be(FactorResult.Waiting);
 
         }
 
@@ -100,9 +100,9 @@ namespace Okta.Auth.Sdk.UnitTests
             var authResponse = await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
             authResponse.Should().NotBeNull();
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.RecoveryChallenge);
-            authResponse.FactorType.Should().Be(FactorType.Call);
+            authResponse.GetProperty<FactorType>("factorType").Should().Be(FactorType.Call);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            authResponse.RecoveryType.Should().Be(RecoveryType.Password);
+            authResponse.GetProperty<RecoveryType>("recoveryType").Should().Be(RecoveryType.Password);
             authResponse.StateToken.Should().Be("00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh");
             authResponse.Links.Should().NotBeNull();
 
@@ -372,12 +372,12 @@ namespace Okta.Auth.Sdk.UnitTests
             authResponse.Should().NotBeNull();
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnrollActivate);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            authResponse.FactorResult.Should().Be(FactorResult.Waiting);
-            authResponse.Factor.Should().NotBeNull();
-            authResponse.Factor.Id.Should().Be("opfh52xcuft3J4uZc0g3");
-            authResponse.Factor.Provider.Should().Be(OktaDefaults.OktaProvider);
+            authResponse.GetProperty<FactorResult>("factorResult").Should().Be(FactorResult.Waiting);
+            authResponse.Embedded.GetProperty<Factor>("factor").Should().NotBeNull();
+            authResponse.Embedded.GetProperty<Factor>("factor").Id.Should().Be("opfh52xcuft3J4uZc0g3");
+            authResponse.Embedded.GetProperty<Factor>("factor").Provider.Should().Be(OktaDefaults.OktaProvider);
 
-            var activation = authResponse.Factor.Embedded.GetProperty<Resource>("activation");
+            var activation = authResponse.Embedded.GetProperty<Factor>("factor").Embedded.GetProperty<Resource>("activation");
             var activationLinks = activation.GetProperty<Resource>("_links");
             activationLinks.GetProperty<Resource>("qrcode").Should().NotBeNull();
             activationLinks.GetProperty<Resource>("qrcode").GetProperty<string>("href").Should().Be(
@@ -493,9 +493,9 @@ namespace Okta.Auth.Sdk.UnitTests
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaChallenge);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
 
-            authResponse.Factor.Id.Should().Be("sms193zUBEROPBNZKPPE");
-            authResponse.Factor.Type.Should().Be(FactorType.Sms);
-            authResponse.Factor.Provider.Should().Be(OktaDefaults.OktaProvider);
+            authResponse.Embedded.GetProperty<Factor>("factor").Id.Should().Be("sms193zUBEROPBNZKPPE");
+            authResponse.Embedded.GetProperty<Factor>("factor").Type.Should().Be(FactorType.Sms);
+            authResponse.Embedded.GetProperty<Factor>("factor").Provider.Should().Be(OktaDefaults.OktaProvider);
 
             authResponse.Links.Should().NotBeNull();
             var next = authResponse.Links.GetProperty<Resource>("next");
@@ -645,10 +645,10 @@ namespace Okta.Auth.Sdk.UnitTests
             authnResponse.StateToken.Should().Be("007ucIX7PATyn94hsHfOLVaXAmOBkKHWnOOLG43bsb");
             authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnrollActivate);
             authnResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
-            authnResponse.Factor.Should().NotBeNull();
-            authnResponse.Factor.Id.Should().Be("clf198rKSEWOSKRIVIFT");
-            authnResponse.Factor.Type.Should().Be(FactorType.Call);
-            authnResponse.Factor.Provider.Should().Be(OktaDefaults.OktaProvider);
+            authnResponse.Embedded.GetProperty<Factor>("factor").Should().NotBeNull();
+            authnResponse.Embedded.GetProperty<Factor>("factor").Id.Should().Be("clf198rKSEWOSKRIVIFT");
+            authnResponse.Embedded.GetProperty<Factor>("factor").Type.Should().Be(FactorType.Call);
+            authnResponse.Embedded.GetProperty<Factor>("factor").Provider.Should().Be(OktaDefaults.OktaProvider);
         }
 
         [Fact]
@@ -681,7 +681,7 @@ namespace Okta.Auth.Sdk.UnitTests
 
             authResponse.Should().NotBeNull();
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.RecoveryChallenge);
-            authResponse.FactorType.Should().Be(FactorType.Email);
+            authResponse.GetProperty<FactorType>("factorType").Should().Be(FactorType.Email);
             authResponse.RelayState.Should().Be("/myapp/some/deep/link/i/want/to/return/to");
         }
     }

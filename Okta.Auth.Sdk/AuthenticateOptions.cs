@@ -15,10 +15,12 @@ namespace Okta.Auth.Sdk
 
         public string RelayState { get; set; }
 
-        public bool MultiOptionalFactorEnroll { get; set; } = true;
+        public bool MultiOptionalFactorEnroll { get; set; }
 
-        public bool WarnBeforePasswordExpired { get; set; } = true;
+        public bool WarnBeforePasswordExpired { get; set; }
 
         public string DeviceToken { get; set; }
+
+        public string DeviceFingerPrint { get; set; }
     }
 }

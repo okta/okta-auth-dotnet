@@ -24,20 +24,5 @@ namespace Okta.Auth.Sdk
         Resource Embedded { get; }
 
         Resource Links { get; }
-
-        IList<Factor> Factors { get; }
-
-        /// <summary>
-        /// Some times the response has a single factor instead of a list
-        /// </summary>
-        Factor Factor { get; }
-
-        FactorType FactorType { get; }
-
-        FactorResult FactorResult { get; }
-
-        string RecoveryToken { get; }
-
-        RecoveryType RecoveryType { get; }
     }
 }

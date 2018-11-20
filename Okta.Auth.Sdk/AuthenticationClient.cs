@@ -99,12 +99,19 @@ namespace Okta.Auth.Sdk
                 },
             };
 
+            var request = new HttpRequest
+            {
+                Uri = "/api/v1/authn",
+                Payload = authenticationRequest,
+            };
+
+            if (!string.IsNullOrEmpty(authenticateOptions.DeviceFingerPrint))
+            {
+                request.Headers["X-Device-Fingerprint"] = authenticateOptions.DeviceFingerPrint;
+            }
+
             return await PostAsync<AuthenticationResponse>(
-                new HttpRequest
-                {
-                    Uri = "/api/v1/authn",
-                    Payload = authenticationRequest,
-                }, cancellationToken).ConfigureAwait(false);
+                request, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>
@@ -379,7 +386,6 @@ namespace Okta.Auth.Sdk
             return await EnrollFactorAsync(enrollTotpFactor, cancellationToken);
         }
 
-        /// <inheritdoc/>
         private async Task<IAuthenticationResponse> EnrollFactorAsync(EnrollFactorRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             return await PostAsync<AuthenticationResponse>(
