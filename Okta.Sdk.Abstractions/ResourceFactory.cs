@@ -31,7 +31,7 @@ namespace Okta.Sdk.Abstractions
         {
             _client = client;
             _logger = logger;
-            _resourceTypeResolverFactory = resourceTypeResolverFactory ?? new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes);
+            _resourceTypeResolverFactory = resourceTypeResolverFactory ?? new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes);
         }
 
         /// <summary>

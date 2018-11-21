@@ -43,7 +43,7 @@ namespace Okta.Sdk.Abstractions
                 logger);
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
-            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes));
+            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes));
             var userAgentBuilder = new UserAgentBuilder("okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
 
             _dataStore = new DefaultDataStore(
@@ -71,7 +71,7 @@ namespace Okta.Sdk.Abstractions
             logger = logger ?? NullLogger.Instance;
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
-            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes));
+            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes));
             var userAgentBuilder = new UserAgentBuilder("okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
 
             _dataStore = new DefaultDataStore(

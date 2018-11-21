@@ -43,11 +43,11 @@ namespace Okta.Auth.Sdk
         }
 
         /// <summary>
-        /// Gets All Resource defined types
+        /// Gets All Resource's defined types
         /// </summary>
-        public static new IEnumerable<TypeInfo> AllDefinedTypes
+        public static IEnumerable<TypeInfo> AllDefinedTypes
         {
-            get { return typeof(Resource).GetTypeInfo().Assembly.DefinedTypes.ToArray(); }
+            get { return ResourceTypeHelper.GetAllDefinedTypes(typeof(Resource)); }
         }
     }
 }

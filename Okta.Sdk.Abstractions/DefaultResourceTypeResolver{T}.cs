@@ -19,7 +19,7 @@ namespace Okta.Sdk.Abstractions
             {
                 if (_resourceTypeResolverFactory == null)
                 {
-                    _resourceTypeResolverFactory = new AbstractResourceTypeResolverFactory(BaseResource.AllDefinedTypes);
+                    _resourceTypeResolverFactory = new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes);
                 }
 
                 return _resourceTypeResolverFactory;
