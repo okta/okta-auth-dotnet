@@ -1,12 +1,10 @@
-﻿// <copyright file="DefaultResourceTypeResolver{T}.cs" company="Okta, Inc">
+﻿// <copyright file="DefaultResourceTypeResolver.cs" company="Okta, Inc">
 // Copyright (c) 2018 - present Okta, Inc. All rights reserved.
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Okta.Sdk.Abstractions.Internal;
 
 namespace Okta.Sdk.Abstractions

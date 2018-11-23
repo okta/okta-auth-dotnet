@@ -17,7 +17,7 @@ using Okta.Sdk.Abstractions.Configuration;
 
 namespace Okta.Sdk.Abstractions
 {
-    public class BaseOktaClient : IBaseOktaClient
+    public class BaseOktaClient : IOktaClient
     {
         protected IDataStore _dataStore;
         protected RequestContext _requestContext;
@@ -126,7 +126,7 @@ namespace Okta.Sdk.Abstractions
         public OktaClientConfiguration Configuration { get; protected set; }
 
         /// <inheritdoc/>
-        public IBaseOktaClient CreatedScoped(RequestContext requestContext)
+        public IOktaClient CreatedScoped(RequestContext requestContext)
             => new BaseOktaClient(_dataStore, Configuration, requestContext);
 
         /// <summary>

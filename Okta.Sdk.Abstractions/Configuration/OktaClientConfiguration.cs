@@ -72,7 +72,7 @@ namespace Okta.Sdk.Abstractions.Configuration
         public OktaClientConfiguration DeepClone()
             => new OktaClientConfiguration
             {
-                ConnectionTimeout = ConnectionTimeout.HasValue ? this.ConnectionTimeout.Value : (int?)null,
+                ConnectionTimeout = ConnectionTimeout,
                 OktaDomain = this.OktaDomain,
                 Proxy = this.Proxy?.DeepClone(),
                 DisableHttpsCheck = this.DisableHttpsCheck,

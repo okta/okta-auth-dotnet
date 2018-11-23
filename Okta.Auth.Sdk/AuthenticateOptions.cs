@@ -21,6 +21,6 @@ namespace Okta.Auth.Sdk
 
         public string DeviceToken { get; set; }
 
-        public string DeviceFingerPrint { get; set; }
+        public string DeviceFingerprint { get; set; }
     }
 }

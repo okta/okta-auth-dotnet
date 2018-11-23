@@ -7,7 +7,7 @@ using Okta.Sdk.Abstractions;
 
 namespace Okta.Auth.Sdk.Models
 {
-    public class AuthenticationRequestContext : BaseResource
+    public class AuthenticationRequestContext : Resource
     {
         public string DeviceToken
         {

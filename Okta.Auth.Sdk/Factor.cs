@@ -15,8 +15,7 @@ namespace Okta.Auth.Sdk
 
         public string VendorName => GetStringProperty("vendorName");
 
-        // TODO: FactorStatus enum?
-        public string Status => GetStringProperty("status");
+        public FactorStatus Status => GetEnumProperty<FactorStatus>("status");
 
         public string Enrollment => GetStringProperty("enrollment");
 

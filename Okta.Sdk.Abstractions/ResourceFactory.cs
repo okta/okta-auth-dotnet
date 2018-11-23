@@ -17,7 +17,7 @@ namespace Okta.Sdk.Abstractions
     /// </summary>
     public sealed class ResourceFactory
     {
-        private readonly IBaseOktaClient _client;
+        private readonly IOktaClient _client;
         private readonly ILogger _logger;
         private readonly AbstractResourceTypeResolverFactory _resourceTypeResolverFactory;
 
@@ -27,7 +27,7 @@ namespace Okta.Sdk.Abstractions
         /// <param name="client">The client.</param>
         /// <param name="logger">The logging interface.</param>
         /// <param name="resourceTypeResolverFactory">The resource type resolver factory</param>
-        public ResourceFactory(IBaseOktaClient client, ILogger logger, AbstractResourceTypeResolverFactory resourceTypeResolverFactory)
+        public ResourceFactory(IOktaClient client, ILogger logger, AbstractResourceTypeResolverFactory resourceTypeResolverFactory)
         {
             _client = client;
             _logger = logger;

@@ -16,7 +16,7 @@ namespace Okta.Sdk.Abstractions
     {
         internal static readonly TypeInfo ResourceTypeInfo = typeof(IResource).GetTypeInfo();
 
-        protected IBaseOktaClient _client;
+        protected IOktaClient _client;
         private ResourceFactory _resourceFactory;
         private ILogger _logger;
         private IDictionary<string, object> _data;
@@ -30,7 +30,7 @@ namespace Okta.Sdk.Abstractions
         }
 
         public void Initialize(
-            IBaseOktaClient client,
+            IOktaClient client,
             ResourceFactory resourceFactory,
             IDictionary<string, object> data,
             ILogger logger)
@@ -45,7 +45,7 @@ namespace Okta.Sdk.Abstractions
         /// Gets the <see cref="IOktaClient">OktaClient</see> that created this resource.
         /// </summary>
         /// <returns>The <see cref="IOktaClient">OktaClient</see> that created this resource.</returns>
-        protected IBaseOktaClient GetClient()
+        protected IOktaClient GetClient()
         {
             return _client ?? throw new InvalidOperationException("Only resources retrieved or saved through a Client object cna call server-side methods.");
         }

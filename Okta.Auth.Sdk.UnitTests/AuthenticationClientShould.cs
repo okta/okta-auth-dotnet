@@ -224,7 +224,7 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
-        public async Task ActivateSMSFactor()
+        public async Task ActivateSmsFactor()
         {
             #region raw response
 

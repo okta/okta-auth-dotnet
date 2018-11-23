@@ -26,7 +26,7 @@ Okta's Authentication API is built around a [state machine](https://developer.ok
 We also publish these other libraries for .NET:
  
 * [Okta ASP.NET middleware](https://github.com/okta/okta-aspnet)
-* [Okta .NET SDK](https://github.com/okta/okta-sdk-dotnet)
+* [Okta .NET management SDK](https://github.com/okta/okta-sdk-dotnet)
 
 You can learn more on the [Okta + .NET][lang-landing] page in our documentation.
 
@@ -91,8 +91,6 @@ var authnOptions = new AuthenticateOptions()
 {
     Username = $"darth.vader@imperial-senate.gov",
     Password = "D1sturB1ng!",
-    MultiOptionalFactorEnroll = true,
-    WarnBeforePasswordExpired = true,
 };
 
 var authnResponse = await authClient.AuthenticateAsync(authnOptions);
@@ -254,7 +252,7 @@ The full YAML configuration looks like:
 okta:
   client:
     connectionTimeout: 30 # seconds
-    orgUrl: "https://{yourOktaDomain}"
+    oktaDomain: "https://{yourOktaDomain}"
     proxy:
       port: null
       host: null
@@ -265,7 +263,7 @@ okta:
 Each one of the configuration values above can be turned into an environment variable name with the `_` (underscore) character:
  
 * `OKTA_CLIENT_CONNECTIONTIMEOUT`
-* `OKTA_CLIENT_ORGURL`
+* `OKTA_CLIENT_OKTADOMAIN`
 * and so on
 
 ## Building the SDK

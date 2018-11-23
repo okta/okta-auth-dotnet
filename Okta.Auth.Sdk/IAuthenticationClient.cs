@@ -9,7 +9,7 @@ using Okta.Sdk.Abstractions;
 
 namespace Okta.Auth.Sdk
 {
-    public interface IAuthenticationClient : IBaseOktaClient
+    public interface IAuthenticationClient : IOktaClient
     {
         /// <summary>
         /// Authenticates a user with username/password credentials
@@ -63,7 +63,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSMSFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Resend a SMS challenge.
@@ -72,7 +72,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResendSmsEnrollFactorAsync(EnrollSMSFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResendSmsEnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Enrolls a user with a security question factor

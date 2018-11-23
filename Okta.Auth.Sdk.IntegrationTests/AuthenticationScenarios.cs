@@ -28,21 +28,20 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 Password = "Okta1234!",
                 Activate = true,
             });
-
-            await createdUser.ExpirePasswordAsync();
-
-            var authClient = TestAuthenticationClient.Create();
-
-            var authnOptions = new AuthenticateOptions()
-            {
-                Username = $"john-expired-pass-dotnet-authn-{guid}@example.com",
-                Password = "Okta1234!",
-                MultiOptionalFactorEnroll = true,
-                WarnBeforePasswordExpired = true,
-            };
-
+            
             try
             {
+                await createdUser.ExpirePasswordAsync();
+                var authClient = TestAuthenticationClient.Create();
+
+                var authnOptions = new AuthenticateOptions()
+                {
+                    Username = $"john-expired-pass-dotnet-authn-{guid}@example.com",
+                    Password = "Okta1234!",
+                    MultiOptionalFactorEnroll = true,
+                    WarnBeforePasswordExpired = true,
+                };
+
                 var authnResponse = await authClient.AuthenticateAsync(authnOptions);
 
                 authnResponse.Should().NotBeNull();
@@ -223,7 +222,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
         }
         
         [Fact]
-        public async Task EnrollSMSFactor()
+        public async Task EnrollSmsFactor()
         {
             var oktaClient = new OktaClient();
             var guid = Guid.NewGuid();
@@ -241,12 +240,14 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 Password = "Okta4321!",
                 Activate = true,
             });
-
-            await oktaClient.Groups.AddUserToGroupAsync(groupId, createdUser.Id);
-
-            var authnClient = TestAuthenticationClient.Create();
+            
             try
             {
+
+                await oktaClient.Groups.AddUserToGroupAsync(groupId, createdUser.Id);
+
+                var authnClient = TestAuthenticationClient.Create();
+
                 var authnOptions = new AuthenticateOptions()
                 {
                     Username = $"john-enroll-sms-dotnet-authn-{guid}@example.com",
@@ -262,7 +263,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 authnResponse.Embedded.GetArrayProperty<Factor>("factors").Should().HaveCountGreaterThan(0);
                 authnResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.MfaEnroll);
 
-                var enrollOptions = new EnrollSMSFactorOptions()
+                var enrollOptions = new EnrollSmsFactorOptions()
                 {
                     PhoneNumber = "+1 415 555 5555",
                     StateToken = authnResponse.StateToken,
@@ -301,12 +302,13 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 Password = "Okta4321!",
                 Activate = true,
             });
-
-            await oktaClient.Groups.AddUserToGroupAsync(groupId, createdUser.Id);
-
-            var authnClient = TestAuthenticationClient.Create();
+            
             try
             {
+                await oktaClient.Groups.AddUserToGroupAsync(groupId, createdUser.Id);
+
+                var authnClient = TestAuthenticationClient.Create();
+
                 var authnOptions = new AuthenticateOptions()
                 {
                     Username = $"john-enroll-question-dotnet-authn-{guid}@example.com",

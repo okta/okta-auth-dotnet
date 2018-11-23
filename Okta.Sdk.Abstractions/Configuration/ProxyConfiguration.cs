@@ -46,7 +46,7 @@ namespace Okta.Sdk.Abstractions.Configuration
         public ProxyConfiguration DeepClone()
             => new ProxyConfiguration
             {
-                Port = Port.HasValue ? this.Port.Value : (int?)null,
+                Port = Port,
                 Host = Host,
                 Username = Username,
                 Password = Password,

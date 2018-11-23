@@ -18,17 +18,13 @@ namespace Okta.Sdk.Abstractions
         /// <param name="type">The resource type</param>
         /// <returns>All the defined types</returns>
         public static IEnumerable<TypeInfo> GetAllDefinedTypes(Type type)
-        {
-            return type.GetTypeInfo().Assembly.DefinedTypes.ToArray();
-        }
+            => type.GetTypeInfo().Assembly.DefinedTypes.ToArray();
 
         /// <summary>
         /// Gets all the defined type for BaseResource
         /// </summary>
         /// <returns>All the defined types</returns>
         public static IEnumerable<TypeInfo> AllDefinedTypes
-        {
-            get { return typeof(BaseResource).GetTypeInfo().Assembly.DefinedTypes.ToArray(); }
-        }
+            => typeof(BaseResource).GetTypeInfo().Assembly.DefinedTypes.ToArray();
     }
 }

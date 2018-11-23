@@ -1,4 +1,4 @@
-﻿// <copyright file="IBaseOktaClient.cs" company="Okta, Inc">
+﻿// <copyright file="IOktaClient.cs" company="Okta, Inc">
 // Copyright (c) 2018 - present Okta, Inc. All rights reserved.
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
@@ -9,7 +9,7 @@ using Okta.Sdk.Abstractions.Configuration;
 
 namespace Okta.Sdk.Abstractions
 {
-    public interface IBaseOktaClient
+    public interface IOktaClient
     {
         /// <summary>
         /// Gets the configuration passed to this <see cref="IOktaClient">OktaClient</see>.
@@ -26,7 +26,7 @@ namespace Okta.Sdk.Abstractions
         /// <param name="requestContext">The request context</param>
         /// <remarks>This method is used to temporarily create a copy of the client in order to pass information about the current request to the Okta API.</remarks>
         /// <returns>The new client.</returns>
-        IBaseOktaClient CreatedScoped(RequestContext requestContext);
+        IOktaClient CreatedScoped(RequestContext requestContext);
 
         /// <summary>
         /// Gets a resource by URL and deserializes it to a <see cref="BaseResource"/> type.
