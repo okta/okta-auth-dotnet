@@ -220,8 +220,8 @@ namespace Okta.Auth.Sdk.IntegrationTests
                 await createdUser.DeactivateOrDeleteAsync();
             }
         }
-        
-        [Fact]
+
+        [Fact(Skip = "Group w/ right policy rules must be created")]
         public async Task EnrollSmsFactor()
         {
             var oktaClient = new OktaClient();
@@ -283,7 +283,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
             }
         }
 
-        [Fact]
+        [Fact(Skip = "Group w/ right policy rules must be created")]
         public async Task EnrollSecurityQuestionFactor()
         {
             var oktaClient = new OktaClient();

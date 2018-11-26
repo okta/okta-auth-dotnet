@@ -37,6 +37,12 @@ namespace Okta.Auth.Sdk.Models
             set => this["token"] = value;
         }
 
+        public string StateToken
+        {
+            get => GetStringProperty("stateToken");
+            set => this["stateToken"] = value;
+        }
+
         public AuthenticationRequestOptions Options
         {
             get => GetResourceProperty<AuthenticationRequestOptions>("options");

@@ -93,11 +93,16 @@ namespace Okta.Auth.Sdk
                 Password = authenticateOptions.Password,
                 Audience = authenticateOptions.Audience,
                 RelayState = authenticateOptions.RelayState,
+                StateToken = authenticateOptions.StateToken,
                 Options = new AuthenticationRequestOptions()
                 {
                     MultiOptionalFactorEnroll = authenticateOptions.MultiOptionalFactorEnroll,
                     WarnBeforePasswordExpired = authenticateOptions.WarnBeforePasswordExpired,
                 },
+                Context = new AuthenticationRequestContext()
+                {
+                    DeviceToken = authenticateOptions.DeviceToken,
+                }
             };
 
             var request = new HttpRequest

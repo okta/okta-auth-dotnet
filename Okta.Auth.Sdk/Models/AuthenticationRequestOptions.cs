@@ -16,7 +16,7 @@ namespace Okta.Auth.Sdk.Models
         public bool? WarnBeforePasswordExpired
         {
             get => GetBooleanProperty("warnBeforePasswordExpired");
-            set => this["multiOptionalFactorEnroll"] = value;
+            set => this["warnBeforePasswordExpired"] = value;
         }
     }
 }
