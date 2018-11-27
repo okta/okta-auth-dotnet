@@ -590,6 +590,271 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
+        public async Task SendWellStructuredRequestForActivateFactor()
+        {
+            var activateFactorOptions = new ActivateFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                PassCode = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ActivateFactorAsync(activateFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/lifecycle/activate",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"passCode\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForActivateU2fFactor()
+        {
+            var activateFactorOptions = new ActivateU2fFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                RegistrationData = "bar",
+                ClientData = "baz",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ActivateFactorAsync(activateFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/lifecycle/activate",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"clientData\":\"baz\",\"registrationData\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForActivatePushFactor()
+        {
+            var activateFactorOptions = new ActivatePushFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ActivateFactorAsync(activateFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/lifecycle/activate",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifySecurityQuestionFactor()
+        {
+            var verifyFactorOptions = new VerifySecurityQuestionFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                Answer = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"answer\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifySmsFactor()
+        {
+            var verifyFactorOptions = new VerifySmsFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                PassCode = "bar",
+                RememberDevice = true,
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"passCode\":\"bar\",\"rememberDevice\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyTotpFactor()
+        {
+            var verifyFactorOptions = new VerifyTotpFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                PassCode = "bar",
+                RememberDevice = true,
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"passCode\":\"bar\",\"rememberDevice\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyPushFactor()
+        {
+            var verifyFactorOptions = new VerifyPushFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                AutoPush = true,
+                RememberDevice = true,
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"rememberDevice\":true,\"autoPush\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyDuoFactor()
+        {
+            var verifyFactorOptions = new VerifyDuoFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyU2fFactor()
+        {
+            var verifyFactorOptions = new VerifyU2FFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                ClientData = "bar",
+                SignatureData = "baz",
+                RememberDevice = true,
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"clientData\":\"bar\",\"signatureData\":\"baz\",\"rememberDevice\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyCallFactor()
+        {
+            var verifyFactorOptions = new VerifyCallFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                PassCode = "bar",
+                RememberDevice = true,
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"passCode\":\"bar\",\"rememberDevice\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
         public async Task ThrowWhenPasswordDoesNotMeetRequirementsInResetPassword()
         {
             #region raw response
@@ -668,9 +933,8 @@ namespace Okta.Auth.Sdk.UnitTests
             var activateFactorOptions = new ActivateFactorOptions()
             {
                 StateToken = "00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh",
-                FactorType = FactorType.Sms,
                 FactorId = "foo",
-                PassCode = "foo",
+                PassCode = "bar",
             };
 
             var authResponse = await authnClient.ActivateFactorAsync(activateFactorOptions);

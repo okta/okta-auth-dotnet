@@ -13,7 +13,7 @@ namespace Okta.Auth.Sdk
 
         public string FactorId { get; set; }
 
-        public FactorType FactorType { get; set; }
+       // public FactorType FactorType { get; set; }
 
         public string PassCode { get; set; }
     }

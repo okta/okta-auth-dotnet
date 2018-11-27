@@ -408,7 +408,6 @@ namespace Okta.Auth.Sdk
         {
             var activateFactorRequest = new ActivateFactorRequest()
             {
-                FactorType = activateFactorOptions.FactorType,
                 StateToken = activateFactorOptions.StateToken,
                 PassCode = activateFactorOptions.PassCode,
             };
@@ -421,7 +420,6 @@ namespace Okta.Auth.Sdk
         {
             var activateFactorRequest = new ActivateFactorRequest()
             {
-                FactorType = FactorType.Push,
                 StateToken = activatePushFactorOptions.StateToken,
             };
 
@@ -616,8 +614,8 @@ namespace Okta.Auth.Sdk
             {
                 StateToken = verifyU2FFactorOptions.StateToken,
                 ClientData = verifyU2FFactorOptions.ClientData,
-                RememberDevice = verifyU2FFactorOptions.RememberDevice,
                 SignatureData = verifyU2FFactorOptions.SignatureData,
+                RememberDevice = verifyU2FFactorOptions.RememberDevice,
             };
 
             return await VerifyFactorAsync(verifyU2fFactorRequest, verifyU2FFactorOptions.FactorId, cancellationToken);

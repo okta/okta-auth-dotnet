@@ -13,12 +13,6 @@ namespace Okta.Auth.Sdk.Models
             set => this["stateToken"] = value;
         }
 
-        public string FactorType
-        {
-            get => GetStringProperty("factorType");
-            set => this["factorType"] = value;
-        }
-
         /// <summary>
         /// Gets or sets the PassCode
         /// </summary>
