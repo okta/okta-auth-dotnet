@@ -312,7 +312,7 @@ namespace Okta.Auth.Sdk
             var enrollRsaFactor = new EnrollFactorRequest()
             {
                 StateToken = factorOptions.StateToken,
-                FactorType = FactorType.TokenHardware,
+                FactorType = FactorType.Token,
                 Provider = factorOptions.Provider,
                 PassCode = factorOptions.PassCode,
                 Profile = profile,
@@ -345,6 +345,7 @@ namespace Okta.Auth.Sdk
         {
             var enrollYubiKeyFactor = new EnrollFactorRequest()
             {
+                StateToken = factorOptions.StateToken,
                 FactorType = FactorType.TokenHardware,
                 Provider = factorOptions.Provider,
                 PassCode = factorOptions.PassCode,

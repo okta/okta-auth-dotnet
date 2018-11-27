@@ -11,8 +11,6 @@ namespace Okta.Auth.Sdk
     {
         public string StateToken { get; set; }
 
-        public string CredentialId { get; set; }
-
         public string Provider { get; set; } = OktaDefaults.YubiKeyProvider;
 
         public string PassCode { get; set; }

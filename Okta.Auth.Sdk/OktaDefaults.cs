@@ -9,6 +9,8 @@ namespace Okta.Auth.Sdk
     {
         public const string OktaProvider = "OKTA";
 
+        public const string RsaProvider = "RSA";
+
         public const string GoogleProvider = "GOOGLE";
 
         public const string YubiKeyProvider = "YUBICO";

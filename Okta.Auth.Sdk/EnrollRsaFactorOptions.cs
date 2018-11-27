@@ -13,7 +13,7 @@ namespace Okta.Auth.Sdk
 
         public string CredentialId { get; set; }
 
-        public string Provider { get; set; } = OktaDefaults.OktaProvider;
+        public string Provider { get; set; } = OktaDefaults.RsaProvider;
 
         public string PassCode { get; set; }
     }

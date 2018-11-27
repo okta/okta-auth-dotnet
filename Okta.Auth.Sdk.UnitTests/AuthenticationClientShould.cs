@@ -339,7 +339,7 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
-        public async Task SendWellStructuredRequestForEnrollSecurityQuestion()
+        public async Task SendWellStructuredRequestForEnrollSecurityQuestionFactor()
         {
             var enrollOptions = new EnrollSecurityQuestionFactorOptions()
             {
@@ -361,6 +361,231 @@ namespace Okta.Auth.Sdk.UnitTests
                 "/api/v1/authn/factors",
                 Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
                 "{\"stateToken\":\"foo\",\"factorType\":\"question\",\"provider\":\"OKTA\",\"profile\":{\"question\":\"disliked_food\",\"answer\":\"mayo\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollSmsFactor()
+        {
+            var enrollOptions = new EnrollSmsFactorOptions()
+            {
+                StateToken = "foo",
+                PhoneNumber = "+1-555-415-1337",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"sms\",\"provider\":\"OKTA\",\"profile\":{\"phoneNumber\":\"+1-555-415-1337\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollCallFactor()
+        {
+            var enrollOptions = new EnrollCallFactorOptions()
+            {
+                StateToken = "foo",
+                PhoneNumber = "+1-555-415-1337",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"call\",\"provider\":\"OKTA\",\"profile\":{\"phoneNumber\":\"+1-555-415-1337\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollTotpFactor()
+        {
+            var enrollOptions = new EnrollTotpFactorOptions()
+            {
+                StateToken = "foo",
+                Provider = OktaDefaults.GoogleProvider,
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"token:software:totp\",\"provider\":\"GOOGLE\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollPushFactor()
+        {
+            var enrollOptions = new EnrollPushFactorOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"push\",\"provider\":\"OKTA\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollRsaFactor()
+        {
+            var enrollOptions = new EnrollRsaFactorOptions()
+            {
+                StateToken = "foo",
+                CredentialId = "dade.murphy@example.com",
+                PassCode = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"token\",\"provider\":\"RSA\",\"passCode\":\"bar\",\"profile\":{\"credentialId\":\"dade.murphy@example.com\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollSymantecFactor()
+        {
+            var enrollOptions = new EnrollSymantecFactorOptions()
+            {
+                StateToken = "foo",
+                CredentialId = "dade.murphy@example.com",
+                PassCode = "bar",
+                NextPassCode = "baz",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"token\",\"provider\":\"SYMANTEC\",\"passCode\":\"bar\",\"nextPassCode\":\"baz\",\"profile\":{\"credentialId\":\"dade.murphy@example.com\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollYubikeyFactor()
+        {
+            var enrollOptions = new EnrollYubiKeyFactorOptions()
+            {
+                PassCode = "bar",
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"token:hardware\",\"provider\":\"YUBICO\",\"passCode\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollDuoFactor()
+        {
+            var enrollOptions = new EnrollDuoFactorOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"web\",\"provider\":\"DUO\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForEnrollU2fFactor()
+        {
+            var enrollOptions = new EnrollU2FFactorOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"u2f\",\"provider\":\"FIDO\"}",
                 CancellationToken.None);
         }
 
