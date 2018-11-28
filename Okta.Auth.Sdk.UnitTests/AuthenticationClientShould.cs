@@ -1205,6 +1205,142 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
+        public async Task ThrowWhenUsernameIsInvalidForForgotPassword()
+        {
+            #region raw response
+
+            var rawResponse = @"
+            {
+                ""errorCode"": ""E0000095"",
+                ""errorSummary"": ""Recovery not allowed for unknown user."",
+                ""errorLink"": ""E0000095"",
+                ""errorId"": ""oaeS4O7BUp5Roefkk_y4Z2u8Q"",
+                ""errorCauses"": [
+                ]
+            }";
+
+            #endregion
+
+            var mockRequestExecutor = new MockedStringRequestExecutor(rawResponse, 403);
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            var forgotPasswordOptions = new ForgotPasswordOptions()
+            {
+                UserName = "wrong",
+                FactorType = FactorType.Email,
+                RelayState = "foo",
+            };
+
+            try
+            {
+                var authResponse = await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
+            }
+            catch (OktaApiException apiException)
+            {
+                apiException.Message.Should()
+                    .StartWith(
+                        "Recovery not allowed for unknown user. (403, E0000095)");
+                apiException.ErrorCode.Should().Be("E0000095");
+                apiException.ErrorSummary.Should()
+                    .Be("Recovery not allowed for unknown user.");
+                apiException.ErrorLink.Should().Be("E0000095");
+                apiException.ErrorId.Should().Be("oaeS4O7BUp5Roefkk_y4Z2u8Q");
+            }
+        }
+
+        [Fact]
+        public async Task ThrowWhenOldPasswordIsInvalidForChangePassword()
+        {
+            #region raw response
+
+            var rawResponse = @"
+            {
+                ""errorCode"": ""E0000014"",
+                ""errorSummary"": ""Update of credentials failed"",
+                ""errorLink"": ""E0000014"",
+                ""errorId"": ""oaeS4O7BUp5Roefkk_y4Z2u8Q"",
+                ""errorCauses"": [
+                {
+                    ""errorSummary"": ""oldPassword: The credentials provided were incorrect.""
+                }]
+            }";
+
+            #endregion
+
+            var mockRequestExecutor = new MockedStringRequestExecutor(rawResponse, 403);
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            var changePasswordOptions = new ChangePasswordOptions()
+            {
+                NewPassword = "1234",
+                OldPassword = "wrong",
+                StateToken = "00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh",
+            };
+
+            try
+            {
+                var authResponse = await authnClient.ChangePasswordAsync(changePasswordOptions);
+            }
+            catch (OktaApiException apiException)
+            {
+                apiException.Message.Should()
+                    .StartWith(
+                        "Update of credentials failed (403, E0000014)");
+                apiException.ErrorCode.Should().Be("E0000014");
+                apiException.ErrorSummary.Should()
+                    .Be("Update of credentials failed");
+                apiException.ErrorLink.Should().Be("E0000014");
+                apiException.ErrorId.Should().Be("oaeS4O7BUp5Roefkk_y4Z2u8Q");
+            }
+        }
+        
+        [Fact]
+        public async Task ThrowWhenPassCodeIsInvalidForActivateFactor()
+        {
+            #region raw response
+
+            var rawResponse = @"
+            {
+                ""errorCode"": ""E0000068"",
+                ""errorSummary"": ""Invalid Passcode/Answer"",
+                ""errorLink"": ""E0000068"",
+                ""errorId"": ""oaeS4O7BUp5Roefkk_y4Z2u8Q"",
+                ""errorCauses"": [
+                {
+                    ""errorSummary"": ""Your passcode doesn't match our records. Please try again.""
+                }]
+            }";
+
+            #endregion
+
+            var mockRequestExecutor = new MockedStringRequestExecutor(rawResponse, 403);
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            var activateFactorOptions = new ActivateFactorOptions()
+            {
+                FactorId = "foo",
+                PassCode = "wrong",
+                StateToken = "00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh",
+            };
+
+            try
+            {
+                var authResponse = await authnClient.ActivateFactorAsync(activateFactorOptions);
+            }
+            catch (OktaApiException apiException)
+            {
+                apiException.Message.Should()
+                    .StartWith(
+                        "Invalid Passcode/Answer (403, E0000068)");
+                apiException.ErrorCode.Should().Be("E0000068");
+                apiException.ErrorSummary.Should()
+                    .Be("Invalid Passcode/Answer");
+                apiException.ErrorLink.Should().Be("E0000068");
+                apiException.ErrorId.Should().Be("oaeS4O7BUp5Roefkk_y4Z2u8Q");
+            }
+        }
+
+        [Fact]
         public async Task ActivateSmsFactor()
         {
             #region raw response
