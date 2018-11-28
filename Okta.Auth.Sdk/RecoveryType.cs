@@ -14,8 +14,8 @@ namespace Okta.Auth.Sdk
         {
         }
 
-        public static RecoveryType Password = new RecoveryType("PASSWORD");
+        public static readonly RecoveryType Password = new RecoveryType("PASSWORD");
 
-        public static RecoveryType Unlock = new RecoveryType("UNLOCK");
+        public static readonly RecoveryType Unlock = new RecoveryType("UNLOCK");
     }
 }

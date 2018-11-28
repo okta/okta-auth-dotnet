@@ -337,11 +337,11 @@ namespace Okta.Auth.Sdk
         Task<IAuthenticationResponse> VerifyFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Resend challenge
+        /// Resend a verify challenge
         /// </summary>
         /// <param name="resendChallengeOptions">The resend challenge options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResendChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResendVerifyChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
     }
 }

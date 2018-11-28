@@ -221,7 +221,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
             }
         }
 
-        [Fact(Skip = "Group w/ right policy rules must be created")]
+        [Fact(Skip = "Group w/ right policy rules must be created. Waiting for MFA policies to be published.")]
         public async Task EnrollSmsFactor()
         {
             var oktaClient = new OktaClient();
@@ -283,7 +283,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
             }
         }
 
-        [Fact(Skip = "Group w/ right policy rules must be created")]
+        [Fact(Skip = "Group w/ right policy rules must be created. Waiting for MFA policies to be published.")]
         public async Task EnrollSecurityQuestionFactor()
         {
             var oktaClient = new OktaClient();

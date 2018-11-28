@@ -827,6 +827,111 @@ namespace Okta.Auth.Sdk.UnitTests
                 CancellationToken.None);
         }
 
+        [Theory]
+        [InlineData("sms")]
+        [InlineData("email")]
+        public async Task SendWellStructuredRequestForUnlockAccount(string factorType)
+        {
+            var unlockAccountOptions = new UnlockAccountOptions()
+            {
+                FactorType = new FactorType(factorType),
+                RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+                UserName = "dade.murphy@example.com",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.UnlockAccountAsync(unlockAccountOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/recovery/unlock",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                $"{{\"factorType\":\"{factorType.ToLower()}\",\"relayState\":\"/myapp/some/deep/link/i/want/to/return/to\",\"username\":\"dade.murphy@example.com\"}}",
+                CancellationToken.None);
+        }
+
+        [Theory]
+        [InlineData("sms")]
+        [InlineData("call")]
+        public async Task SendWellStructuredRequestForVerifyRecoverFactor(string factorType)
+        {
+            var verifyFactorOptions = new VerifyRecoveryFactorOptions()
+            {
+                StateToken = "foo",
+                PassCode = "bar",
+                FactorType = new FactorType(factorType),
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyRecoveryFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                $"/api/v1/authn/recovery/factors/{factorType.ToLower()}/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"passCode\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyRecoverToken()
+        {
+            var verifyFactorOptions = new VerifyRecoveryTokenOptions()
+            {
+                RecoveryToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyRecoveryTokenAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/recovery/token",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"recoveryToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForAnswerRecoveryQuestion()
+        {
+            var answerRecoveryQuestionOptions = new AnswerRecoveryQuestionOptions()
+            {
+                StateToken = "foo",
+                Answer = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.AnswerRecoveryQuestionAsync(answerRecoveryQuestionOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/recovery/answer",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"answer\":\"bar\"}",
+                CancellationToken.None);
+        }
+
         [Fact]
         public async Task SendWellStructuredRequestForVerifyCallFactor()
         {
@@ -851,6 +956,206 @@ namespace Okta.Auth.Sdk.UnitTests
                 "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
                 Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
                 "{\"stateToken\":\"foo\",\"passCode\":\"bar\",\"rememberDevice\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForGetTransactionState()
+        {
+            var transactionStateOptions = new TransactionStateOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.GetTransactionStateAsync(transactionStateOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForGetPreviousTransactionState()
+        {
+            var transactionStateOptions = new TransactionStateOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.GetPreviousTransactionStateAsync(transactionStateOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/previous",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForSkipTransactionState()
+        {
+            var transactionStateOptions = new TransactionStateOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.SkipTransactionStateAsync(transactionStateOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/skip",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForCancelTransactionState()
+        {
+            var transactionStateOptions = new TransactionStateOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.CancelTransactionStateAsync(transactionStateOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/cancel",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForResendEnrollSmsFactor()
+        {
+            var enrollOptions = new EnrollSmsFactorOptions()
+            {
+                StateToken = "foo",
+                PhoneNumber = "+1-555-415-1337",
+                FactorId = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ResendSmsEnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/bar/lifecycle/resend",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"sms\",\"provider\":\"OKTA\",\"profile\":{\"phoneNumber\":\"+1-555-415-1337\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForResendEnrollCallFactor()
+        {
+            var enrollOptions = new EnrollCallFactorOptions()
+            {
+                StateToken = "foo",
+                PhoneNumber = "+1-555-415-1337",
+                FactorId = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ResendCallEnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/bar/lifecycle/resend",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"call\",\"provider\":\"OKTA\",\"profile\":{\"phoneNumber\":\"+1-555-415-1337\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForResendVerifyChallenge()
+        {
+            var verifyOptions = new ResendChallengeOptions()
+            {
+                StateToken = "foo",
+                FactorId = "bar",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ResendVerifyChallengeAsync(verifyOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/bar/verify/resend",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
+                CancellationToken.None);
+        }
+
+        [Theory]
+        [InlineData("sms")]
+        [InlineData("call")]
+        public async Task SendWellStructuredRequestForResendRecoveryChallenge(string factorType)
+        {
+            var recoveryOptions = new ResendRecoveryChallengeOptions()
+            {
+                StateToken = "foo",
+                FactorType = new FactorType(factorType),
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ResendRecoveryChallengeAsync(recoveryOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                $"/api/v1/authn/recovery/factors/{recoveryOptions.FactorType}/resend",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
                 CancellationToken.None);
         }
 

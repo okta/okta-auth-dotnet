@@ -14,30 +14,30 @@ namespace Okta.Auth.Sdk
         {
         }
 
-        public static AuthenticationStatus Unauthenticated = new AuthenticationStatus("UNAUTHENTICATED");
+        public static readonly AuthenticationStatus Unauthenticated = new AuthenticationStatus("UNAUTHENTICATED");
 
-        public static AuthenticationStatus PasswordExpired = new AuthenticationStatus("PASSWORD_EXPIRED");
+        public static readonly AuthenticationStatus PasswordExpired = new AuthenticationStatus("PASSWORD_EXPIRED");
 
-        public static AuthenticationStatus PasswordWarn = new AuthenticationStatus("PASSWORD_WARN");
+        public static readonly AuthenticationStatus PasswordWarn = new AuthenticationStatus("PASSWORD_WARN");
 
-        public static AuthenticationStatus PasswordReset = new AuthenticationStatus("PASSWORD_RESET");
+        public static readonly AuthenticationStatus PasswordReset = new AuthenticationStatus("PASSWORD_RESET");
 
-        public static AuthenticationStatus Success = new AuthenticationStatus("SUCCESS");
+        public static readonly AuthenticationStatus Success = new AuthenticationStatus("SUCCESS");
 
-        public static AuthenticationStatus LockedOut = new AuthenticationStatus("LOCKED_OUT");
+        public static readonly AuthenticationStatus LockedOut = new AuthenticationStatus("LOCKED_OUT");
 
-        public static AuthenticationStatus MfaRequired = new AuthenticationStatus("MFA_REQUIRED");
+        public static readonly AuthenticationStatus MfaRequired = new AuthenticationStatus("MFA_REQUIRED");
 
-        public static AuthenticationStatus Unknown = new AuthenticationStatus("UNKNOWN");
+        public static readonly AuthenticationStatus Unknown = new AuthenticationStatus("UNKNOWN");
 
-        public static AuthenticationStatus MfaEnroll = new AuthenticationStatus("MFA_ENROLL");
+        public static readonly AuthenticationStatus MfaEnroll = new AuthenticationStatus("MFA_ENROLL");
 
-        public static AuthenticationStatus MfaEnrollActivate = new AuthenticationStatus("MFA_ENROLL_ACTIVATE");
+        public static readonly AuthenticationStatus MfaEnrollActivate = new AuthenticationStatus("MFA_ENROLL_ACTIVATE");
 
-        public static AuthenticationStatus MfaChallenge = new AuthenticationStatus("MFA_CHALLENGE");
+        public static readonly AuthenticationStatus MfaChallenge = new AuthenticationStatus("MFA_CHALLENGE");
 
-        public static AuthenticationStatus RecoveryChallenge = new AuthenticationStatus("RECOVERY_CHALLENGE");
+        public static readonly AuthenticationStatus RecoveryChallenge = new AuthenticationStatus("RECOVERY_CHALLENGE");
 
-        public static AuthenticationStatus Recovery = new AuthenticationStatus("RECOVERY");
+        public static readonly AuthenticationStatus Recovery = new AuthenticationStatus("RECOVERY");
     }
 }

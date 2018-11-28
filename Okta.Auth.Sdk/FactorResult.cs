@@ -14,16 +14,16 @@ namespace Okta.Auth.Sdk
         {
         }
 
-        public static FactorResult Waiting = new FactorResult("WAITING");
+        public static readonly FactorResult Waiting = new FactorResult("WAITING");
 
-        public static FactorResult Cancelled = new FactorResult("CANCELLED");
+        public static readonly FactorResult Cancelled = new FactorResult("CANCELLED");
 
-        public static FactorResult TimeOut = new FactorResult("TIMEOUT");
+        public static readonly FactorResult TimeOut = new FactorResult("TIMEOUT");
 
-        public static FactorResult TimeWindowExceeded = new FactorResult("TIME_WINDOW_EXCEEDED");
+        public static readonly FactorResult TimeWindowExceeded = new FactorResult("TIME_WINDOW_EXCEEDED");
 
-        public static FactorResult PassCodeReplayed = new FactorResult("PASSCODE_REPLAYED");
+        public static readonly FactorResult PassCodeReplayed = new FactorResult("PASSCODE_REPLAYED");
 
-        public static FactorResult Error = new FactorResult("ERROR");
+        public static readonly FactorResult Error = new FactorResult("ERROR");
     }
 }

@@ -707,7 +707,7 @@ namespace Okta.Auth.Sdk
                 }, cancellationToken).ConfigureAwait(false);
         }
 
-        public async Task<IAuthenticationResponse> ResendChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<IAuthenticationResponse> ResendVerifyChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var resendChallengeRequest = new ResendChallengeRequest()
             {

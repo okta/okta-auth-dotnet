@@ -46,13 +46,13 @@ namespace Okta.Sdk.Abstractions.Configuration
         /// </value>
         public ProxyConfiguration Proxy { get; set; }
 
-        /// <summary>	
-        /// Gets or sets the Okta API token.	
-        /// </summary>	
-        /// <value>	
-        /// The Okta API token.	
-        /// </value>	
-        /// <remarks>An API token can be generated from the Okta developer dashboard.</remarks>	
+        /// <summary>
+        /// Gets or sets the Okta API token.
+        /// </summary>
+        /// <value>
+        /// The Okta API token.
+        /// </value>
+        /// <remarks>An API token can be generated from the Okta developer dashboard.</remarks>
         public string Token { get; set; }
 
         /// <summary>
