@@ -13,9 +13,6 @@ namespace Okta.Auth.Sdk
 
         public string RelayState { get; set; }
 
-        /// <summary>
-        /// Not required for Trusted Applications
-        /// </summary>
         public FactorType FactorType { get; set; }
     }
 }

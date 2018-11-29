@@ -5,7 +5,7 @@
 
 namespace Okta.Auth.Sdk
 {
-    public class OktaDefaults
+    public static class OktaDefaults
     {
         public const string OktaProvider = "OKTA";
 

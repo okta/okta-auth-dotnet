@@ -18,7 +18,7 @@ namespace Okta.Auth.Sdk
         public string PhoneExtension { get; set; }
 
         /// <summary>
-        /// Gets or sets the factor id. It is used for resend a call.
+        /// Gets or sets the factor id
         /// </summary>
         public string FactorId { get; set; }
     }
