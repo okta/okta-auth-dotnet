@@ -5,14 +5,25 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the body of the resend password request
+    /// </summary>
     public class ResetPasswordRequest : Resource
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken
         {
             get => GetStringProperty("stateToken");
             set => this["stateToken"] = value;
         }
 
+        /// <summary>
+        /// Gets or sets the new password
+        /// </summary>
+        /// <value>The new password</value>
         public string NewPassword
         {
             get => GetStringProperty("newPassword");

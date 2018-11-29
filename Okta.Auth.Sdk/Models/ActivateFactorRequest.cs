@@ -5,8 +5,15 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the body of the activate factor request
+    /// </summary>
     public class ActivateFactorRequest : Resource
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken
         {
             get => GetStringProperty("stateToken");
@@ -14,8 +21,9 @@ namespace Okta.Auth.Sdk.Models
         }
 
         /// <summary>
-        /// Gets or sets the PassCode
+        /// Gets or sets the pass code
         /// </summary>
+        /// <value>The pass code</value>
         public string PassCode
         {
             get => GetStringProperty("passCode");

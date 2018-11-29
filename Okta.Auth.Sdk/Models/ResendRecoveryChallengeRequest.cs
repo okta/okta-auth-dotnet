@@ -5,8 +5,15 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the body of the resend recovery challenge request
+    /// </summary>
     public class ResendRecoveryChallengeRequest : Resource
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken
         {
             get => GetStringProperty("stateToken");

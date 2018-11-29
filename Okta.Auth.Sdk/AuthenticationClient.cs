@@ -16,6 +16,9 @@ using Okta.Sdk.Abstractions.Configuration;
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class represents the authentication client
+    /// </summary>
     public class AuthenticationClient : BaseOktaClient, IAuthenticationClient
     {
         /// <summary>
@@ -85,6 +88,7 @@ namespace Okta.Auth.Sdk
         {
         }
 
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var authenticationRequest = new AuthenticationRequest()
@@ -707,6 +711,7 @@ namespace Okta.Auth.Sdk
                 }, cancellationToken).ConfigureAwait(false);
         }
 
+        /// <inheritdoc/>
         public async Task<IAuthenticationResponse> ResendVerifyChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
             var resendChallengeRequest = new ResendChallengeRequest()

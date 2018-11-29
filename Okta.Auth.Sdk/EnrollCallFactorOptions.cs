@@ -7,19 +7,39 @@ using Okta.Auth.Sdk.Models;
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing an enroll call factor request
+    /// </summary>
     public class EnrollCallFactorOptions
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken { get; set; }
 
+        /// <summary>
+        /// Gets or sets the provider
+        /// </summary>
+        /// <value>The provider</value>
         public string Provider { get; set; } = OktaDefaults.OktaProvider;
 
+        /// <summary>
+        /// Gets or sets the phone number
+        /// </summary>
+        /// <value>The phone number</value>
         public string PhoneNumber { get; set; }
 
+        /// <summary>
+        /// Gets or sets the phone extension
+        /// </summary>
+        /// <value>The phone extension</value>
         public string PhoneExtension { get; set; }
 
         /// <summary>
         /// Gets or sets the factor id
         /// </summary>
+        /// <value>The factor id</value>
         public string FactorId { get; set; }
     }
 }

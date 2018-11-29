@@ -5,10 +5,21 @@
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for answering a recovery question request
+    /// </summary>
     public class AnswerRecoveryQuestionOptions
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken { get; set; }
 
+        /// <summary>
+        /// Gets or sets the answer
+        /// </summary>
+        /// <value>The answer</value>
         public string Answer { get; set; }
     }
 }

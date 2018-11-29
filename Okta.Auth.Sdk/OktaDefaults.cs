@@ -5,20 +5,44 @@
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains Okta defaults
+    /// </summary>
     public static class OktaDefaults
     {
+        /// <summary>
+        /// Okta
+        /// </summary>
         public const string OktaProvider = "OKTA";
 
+        /// <summary>
+        /// RSA
+        /// </summary>
         public const string RsaProvider = "RSA";
 
+        /// <summary>
+        /// Google
+        /// </summary>
         public const string GoogleProvider = "GOOGLE";
 
+        /// <summary>
+        /// Yubico
+        /// </summary>
         public const string YubiKeyProvider = "YUBICO";
 
+        /// <summary>
+        /// Duo
+        /// </summary>
         public const string DuoProvider = "DUO";
 
+        /// <summary>
+        /// FIDO
+        /// </summary>
         public const string FidoProvider = "FIDO";
 
+        /// <summary>
+        /// Symantec
+        /// </summary>
         public const string SymantecProvider = "SYMANTEC";
     }
 }

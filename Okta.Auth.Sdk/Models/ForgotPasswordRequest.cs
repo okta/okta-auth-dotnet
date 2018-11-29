@@ -5,20 +5,35 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the body of the forgot password request
+    /// </summary>
     public class ForgotPasswordRequest : Resource
     {
+        /// <summary>
+        /// Gets or sets the username
+        /// </summary>
+        /// <value>The username</value>
         public string Username
         {
             get => GetStringProperty("username");
             set => this["username"] = value;
         }
 
+        /// <summary>
+        /// Gets or sets the relay state
+        /// </summary>
+        /// <value>The relay state</value>
         public string RelayState
         {
             get => GetStringProperty("relayState");
             set => this["relayState"] = value;
         }
 
+        /// <summary>
+        /// Gets or sets the factor type
+        /// </summary>
+        /// <value>The factor type</value>
         public string FactorType
         {
             get => GetStringProperty("factorType");

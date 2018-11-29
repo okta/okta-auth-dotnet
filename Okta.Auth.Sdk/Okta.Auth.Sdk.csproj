@@ -16,6 +16,10 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\OktaSdk.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\source\okta-auth-dotnet\Okta.Auth.Sdk\Okta.Auth.Sdk.xml</DocumentationFile>
+  </PropertyGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\Okta.Sdk.Abstractions\Okta.Sdk.Abstractions.csproj" />

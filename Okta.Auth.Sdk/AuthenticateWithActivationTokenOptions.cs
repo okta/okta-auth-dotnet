@@ -5,8 +5,15 @@
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing a primary authentication request
+    /// </summary>
     public class AuthenticateWithActivationTokenOptions
     {
+        /// <summary>
+        /// Gets or sets the activation token
+        /// </summary>
+        /// <value>The activation token</value>
         public string ActivationToken { get; set; }
     }
 }

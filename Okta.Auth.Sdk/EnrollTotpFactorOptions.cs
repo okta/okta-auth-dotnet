@@ -3,14 +3,23 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
-using Okta.Auth.Sdk.Models;
-
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing an enroll TOTP factor request
+    /// </summary>
     public class EnrollTotpFactorOptions
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken { get; set; }
 
+        /// <summary>
+        /// Gets or sets the provider
+        /// </summary>
+        /// <value>The provider</value>
         public string Provider { get; set; } = OktaDefaults.OktaProvider;
     }
 }

@@ -4,10 +4,12 @@
 // </copyright>
 
 using System;
-using System.Collections.Generic;
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class represents the authentication response
+    /// </summary>
     public class AuthenticationResponse : Resource, IAuthenticationResponse
     {
         /// <inheritdoc/>

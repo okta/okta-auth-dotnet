@@ -5,14 +5,27 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the options of the authentication request
+    /// </summary>
     public class AuthenticationRequestOptions : Resource
     {
+        /// <summary>
+        /// Gets or sets the multiOptionalFactorEnroll flag
+        /// </summary>
+        /// <remarks><see href="https://developer.okta.com/docs/api/resources/authn#options-object"/></remarks>
+        /// <value>The multiOptionalFactorEnroll flag</value>
         public bool? MultiOptionalFactorEnroll
         {
             get => GetBooleanProperty("multiOptionalFactorEnroll");
             set => this["multiOptionalFactorEnroll"] = value;
         }
 
+        /// <summary>
+        /// Gets or sets the warnBeforePasswordExpired flag
+        /// </summary>
+        /// <remarks><see href="https://developer.okta.com/docs/api/resources/authn#options-object"/></remarks>
+        /// <value>The warnBeforePasswordExpired flag</value>
         public bool? WarnBeforePasswordExpired
         {
             get => GetBooleanProperty("warnBeforePasswordExpired");

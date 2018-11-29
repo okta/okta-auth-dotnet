@@ -5,14 +5,14 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Microsoft.Extensions.Logging;
-using Okta.Auth.Sdk.Models;
 using Okta.Sdk.Abstractions;
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class represents a resource
+    /// </summary>
     public class Resource : BaseResource
     {
         /// <summary>

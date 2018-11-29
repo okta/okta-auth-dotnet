@@ -3,12 +3,17 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
-using Okta.Sdk.Abstractions;
-
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the context of the authentication request
+    /// </summary>
     public class AuthenticationRequestContext : Resource
     {
+        /// <summary>
+        /// Gets or sets the device token
+        /// </summary>
+        /// <value>The device token</value>
         public string DeviceToken
         {
             get => GetStringProperty("deviceToken");

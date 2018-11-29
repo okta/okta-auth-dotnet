@@ -7,15 +7,28 @@ using Okta.Sdk.Abstractions;
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class represents the possible recovery types
+    /// </summary>
     public class RecoveryType : StringEnum
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RecoveryType"/> class.
+        /// </summary>
+        /// <param name="value">The recovery type value</param>
         public RecoveryType(string value)
             : base(value)
         {
         }
 
+        /// <summary>
+        /// Password
+        /// </summary>
         public static readonly RecoveryType Password = new RecoveryType("PASSWORD");
 
+        /// <summary>
+        /// Unlock
+        /// </summary>
         public static readonly RecoveryType Unlock = new RecoveryType("UNLOCK");
     }
 }

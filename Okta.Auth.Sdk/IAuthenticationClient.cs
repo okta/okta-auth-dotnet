@@ -9,11 +9,14 @@ using Okta.Sdk.Abstractions;
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// Interface for authentication clients
+    /// </summary>
     public interface IAuthenticationClient : IOktaClient
     {
         /// <summary>
         /// Authenticates a user with username/password credentials
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#primary-authentication"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#primary-authentication"/>
         /// </summary>
         /// <param name="authenticateOptions">The authentication options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -22,16 +25,16 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Authenticates a user with activation token
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#primary-authentication-with-activation-token"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#primary-authentication-with-activation-token"/>
         /// </summary>
         /// <param name="authenticateOptions">The authentication options</param>
         /// <param name="cancellationToken">The cancellation token</param>
-        /// <returns>The <see cref="IAuthenticationResponse"/> response</returns
+        /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
         Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateWithActivationTokenOptions authenticateOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Changes the user password
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#change-password"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#change-password"/>
         /// </summary>
         /// <param name="passwordOptions">The Change Password options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -40,7 +43,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Starts a new password recovery transaction for a given user and issues a recovery token that can be used to reset a user’s password.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#forgot-password"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#forgot-password"/>
         /// </summary>
         /// <param name="forgotPasswordOptions">The forgot password options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -49,7 +52,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Resets user password
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#reset-password"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#reset-password"/>
         /// </summary>
         /// <param name="resetPasswordOptions">The reset password options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -58,7 +61,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a SMS factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-okta-sms-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-sms-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -67,7 +70,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Resend a SMS challenge.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#resend-sms-as-part-of-enrollment"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#resend-sms-as-part-of-enrollment"/>
         /// </summary>
         /// <param name="factorOptions">The enroll SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -76,7 +79,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a security question factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-okta-security-question-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-security-question-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll security question factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -85,7 +88,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a call factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-okta-call-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-call-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -94,7 +97,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Resend a Call challenge.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#request-example-for-resend-voice-call"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#request-example-for-resend-voice-call"/>
         /// </summary>
         /// <param name="factorOptions">The enroll call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -103,7 +106,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a push factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-push-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-push-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -112,7 +115,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a RSA factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-rsa-securid-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-rsa-securid-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll RSA factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -121,7 +124,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a Symantec factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-symantec-vip-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-symantec-vip-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll Symantec factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -130,7 +133,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a YubiKey factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-yubikey-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-yubikey-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll YubiKey factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -139,7 +142,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a Duo factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-duo-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-duo-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll Duo factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -148,7 +151,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a U2F factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-u2f-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-u2f-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -157,7 +160,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Enrolls a user with a TOTP factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-totp-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-totp-factor"/>
         /// </summary>
         /// <param name="factorOptions">The enroll TOTP factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -166,8 +169,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Activates a factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#activate-factor"/>
-        /// For U2F use <see cref="ActivateU2fFactorAsync"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#activate-factor"/>
         /// </summary>
         /// <param name="activateFactorOptions">The activate factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -176,7 +178,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Activates a push factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#activate-push-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#activate-push-factor"/>
         /// </summary>
         /// <param name="activatePushFactorOptions">The activate push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -185,7 +187,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Activates a U2F factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#activate-u2f-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#activate-u2f-factor"/>
         /// </summary>
         /// <param name="activateFactorOptions">The activate U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -194,7 +196,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Answers the user’s recovery question
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#answer-recovery-question"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#answer-recovery-question"/>
         /// </summary>
         /// <param name="answerOptions">The answer recovery question options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -203,7 +205,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Validates a recovery token that was distributed to the end user to continue the recovery transaction.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-recovery-token"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-recovery-token"/>
         /// </summary>
         /// <param name="verifyRecoveryTokenOptions">The verify recovery token options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -212,7 +214,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies Recovery for a factor (SMS/Call).
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-recovery-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-recovery-factor"/>
         /// </summary>
         /// <param name="verifyFactorRecoveryOptions">The verify recovery factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -221,8 +223,8 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Resend a recovery challenge for a factor (SMS/Call)
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#resend-sms-recovery-challenge"/>
-        /// <seealso cref="https://developer.okta.com/docs/api/resources/authn#resend-call-recovery-challenge"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#resend-sms-recovery-challenge"/>
+        /// <seealso href="https://developer.okta.com/docs/api/resources/authn#resend-call-recovery-challenge"/>
         /// </summary>
         /// <param name="resendRecoveryChallengeOptions">The resend recovery challenge options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -230,7 +232,7 @@ namespace Okta.Auth.Sdk
         Task<IAuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Unlocks an account <see cref="https://developer.okta.com/docs/api/resources/authn#unlock-account"/>
+        /// Unlocks an account <see href="https://developer.okta.com/docs/api/resources/authn#unlock-account"/>
         /// </summary>
         /// <param name="unlockAccountOptions">The unlock account options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -239,7 +241,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Retrieves the current transaction state for a state token.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#get-transaction-state"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#get-transaction-state"/>
         /// </summary>
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -248,7 +250,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Moves the current transaction state back to the previous state.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#previous-transaction-state"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#previous-transaction-state"/>
         /// </summary>
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -257,7 +259,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Sends a skip link to skip the current transaction state and advance to the next state.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#skip-transaction-state"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#skip-transaction-state"/>
         /// </summary>
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -266,7 +268,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Cancels the current transaction and revokes the state token.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#cancel-transaction"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#cancel-transaction"/>
         /// </summary>
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -275,7 +277,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies a U2F factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-u2f-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-u2f-factor"/>
         /// </summary>
         /// <param name="verifyU2FFactorOptions">The verify U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -284,7 +286,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies a Duo factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-duo-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-duo-factor"/>
         /// </summary>
         /// <param name="verifyDuoFactorOptions">The verify Duo factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -293,7 +295,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies a call factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-call-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-call-factor"/>
         /// </summary>
         /// <param name="verifyCallFactorOptions">The verify call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -302,7 +304,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies a push factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-push-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-push-factor"/>
         /// </summary>
         /// <param name="verifyPushFactorOptions">The verify push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -311,7 +313,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies a TOTP factor
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-totp-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-totp-factor"/>
         /// </summary>
         /// <param name="verifyTotpFactorOptions">The verify TOTP factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -320,7 +322,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies a sms factor.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-sms-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-sms-factor"/>
         /// </summary>
         /// <param name="verifySmsFactorOptions">The verify SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
@@ -329,7 +331,7 @@ namespace Okta.Auth.Sdk
 
         /// <summary>
         /// Verifies an answer to a question factor.
-        /// <see cref="https://developer.okta.com/docs/api/resources/authn#verify-security-question-factor"/>
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#verify-security-question-factor"/>
         /// </summary>
         /// <param name="verifySecurityQuestionFactorOptions">The verify security question factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>

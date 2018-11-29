@@ -5,14 +5,25 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the body of the answer recovery question request
+    /// </summary>
     public class AnswerRecoveryQuestionRequest : Resource
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken
         {
             get => GetStringProperty("stateToken");
             set => this["stateToken"] = value;
         }
 
+        /// <summary>
+        /// Gets or sets the answer
+        /// </summary>
+        /// <value>The answer</value>
         public string Answer
         {
             get => GetStringProperty("answer");

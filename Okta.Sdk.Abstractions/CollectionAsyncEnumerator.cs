@@ -42,7 +42,7 @@ namespace Okta.Sdk.Abstractions
         }
 
         /// <inheritdoc/>
-        public T Current => _pagedEnumerator.CurrentPage.Items.ElementAt(_localPageIndex++);
+        public T Current => _pagedEnumerator.CurrentPage.Items.ElementAt(_localPageIndex);
 
 #pragma warning disable UseAsyncSuffix // Must match interface
         /// <inheritdoc/>
@@ -55,6 +55,7 @@ namespace Okta.Sdk.Abstractions
 
             if (hasMoreLocalItems)
             {
+                _localPageIndex++;
                 return true;
             }
 
