@@ -214,24 +214,24 @@ var authResponse = await authnClient.VerifyFactorAsync(verifySmsOptions);
 The Authentication Client object allows you to construct and send a request to an Authentication API endpoint that isn't represented by a method in the SDK.
 Also, you can make calls to any Okta API (not just the endpoints officially supported by the SDK) via the `GetAsync`, `PostAsync`, `PutAsync` and `DeleteAsync` methods.
 
-For example, to activate a user using the `PostAsync` method (instead of `user.ActivateAsync`):
+For example, to send a forgot password request using the `PostAsync` method (instead of `ForgotPasswordAsync`):
 
 ```csharp
-await client.PostAsync(new HttpRequest()
+var forgotPasswordOptions = new ForgotPasswordOptions()
 {
-    Uri = $"/api/v1/users/{userId}/lifecycle/activate",
-    PathParameters = new Dictionary<string, object>()
-    {
-        ["userId"] = userId,
-    },
-    QueryParameters = new Dictionary<string, object>()
-    {
-        ["sendEmail"] = true,
-    }
+    FactorType = FactorType.Email,
+    RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+    UserName = "bob-user@test.com",
+};
+
+var authResponse = await authnClient.PostAsync<AuthenticationResponse>(new HttpRequest()
+{
+    Uri = "/api/v1/authn/recovery/password",
+    Payload = forgotPasswordOptions,
 });
 ```
 
-In this case, there is no benefit to using `PostAsync` instead of `user.ActivateAsync`. However, this approach can be used to call any endpoints that are not represented by methods in the SDK.
+In this case, there is no benefit to using `PostAsync` instead of `ForgotPasswordAsync`. However, this approach can be used to call any endpoints that are not represented by methods in the SDK.
 
 ## Configuration reference
   
@@ -256,6 +256,7 @@ okta:
     proxy:
       port: null
       host: null
+    token: {apiToken} # optional
 ```
  
 ### Environment variables
