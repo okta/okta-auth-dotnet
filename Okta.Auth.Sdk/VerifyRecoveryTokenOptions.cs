@@ -5,8 +5,15 @@
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing a verify recovery token request
+    /// </summary>
     public class VerifyRecoveryTokenOptions
     {
+        /// <summary>
+        /// Gets or sets the recovery token
+        /// </summary>
+        /// <value>The recovery token</value>
         public string RecoveryToken { get; set; }
     }
 }

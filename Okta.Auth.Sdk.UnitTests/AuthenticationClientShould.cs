@@ -836,7 +836,7 @@ namespace Okta.Auth.Sdk.UnitTests
             {
                 FactorType = new FactorType(factorType),
                 RelayState = "/myapp/some/deep/link/i/want/to/return/to",
-                UserName = "dade.murphy@example.com",
+                Username = "dade.murphy@example.com",
             };
 
             var mockRequestExecutor = Substitute.For<IRequestExecutor>();

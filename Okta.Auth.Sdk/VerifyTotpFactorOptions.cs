@@ -5,14 +5,33 @@
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing a verify TOTP factor request
+    /// </summary>
     public class VerifyTotpFactorOptions
     {
+        /// <summary>
+        /// Gets or sets the factor id
+        /// </summary>
+        /// <value>The factor id</value>
         public string FactorId { get; set; }
 
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken { get; set; }
 
+        /// <summary>
+        /// Gets or sets the pass code
+        /// </summary>
+        /// <value>The pass code</value>
         public string PassCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the remember device flag
+        /// </summary>
+        /// <value>The remember device flag</value>
         public bool? RememberDevice { get; set; }
     }
 }

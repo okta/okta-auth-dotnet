@@ -5,8 +5,15 @@
 
 namespace Okta.Auth.Sdk.Models
 {
+    /// <summary>
+    /// This class represents the body of the verify recovery token request
+    /// </summary>
     public class VerifyRecoveryTokenRequest : Resource
     {
+        /// <summary>
+        /// Gets or sets the recovery token
+        /// </summary>
+        /// <value>The recovery token</value>
         public string RecoveryToken
         {
             get => GetStringProperty("recoveryToken");

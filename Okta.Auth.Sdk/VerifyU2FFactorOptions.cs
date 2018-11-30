@@ -5,16 +5,39 @@
 
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing a verify U2F factor request
+    /// </summary>
     public class VerifyU2FFactorOptions
     {
+        /// <summary>
+        /// Gets or sets the factor id
+        /// </summary>
+        /// <value>The factor id</value>
         public string FactorId { get; set; }
 
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken { get; set; }
 
+        /// <summary>
+        /// Gets or sets the client data
+        /// </summary>
+        /// <value>The client data</value>
         public string ClientData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the signature data
+        /// </summary>
+        /// <value>The signature data</value>
         public string SignatureData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the remember device flag
+        /// </summary>
+        /// <value>The remember device flag</value>
         public bool? RememberDevice { get; set; }
     }
 }

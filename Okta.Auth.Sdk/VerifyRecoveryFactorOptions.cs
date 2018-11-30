@@ -3,16 +3,29 @@
 // Licensed under the Apache 2.0 license. See the LICENSE file in the project root for full license information.
 // </copyright>
 
-using Okta.Auth.Sdk.Models;
-
 namespace Okta.Auth.Sdk
 {
+    /// <summary>
+    /// This class contains all the request parameters for performing a verify recovery factor request
+    /// </summary>
     public class VerifyRecoveryFactorOptions
     {
+        /// <summary>
+        /// Gets or sets the state token
+        /// </summary>
+        /// <value>The state token</value>
         public string StateToken { get; set; }
 
+        /// <summary>
+        /// Gets or sets the pass code
+        /// </summary>
+        /// <value>The pass code</value>
         public string PassCode { get; set; }
 
+        /// <summary>
+        /// Gets or sets the factor type
+        /// </summary>
+        /// <value>The factor type</value>
         public FactorType FactorType { get; set; }
     }
 }

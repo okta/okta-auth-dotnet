@@ -499,7 +499,7 @@ namespace Okta.Auth.Sdk
         /// <inheritdoc/>
         public async Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyRecoveryFactorOptions, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var verifyRecoveryFactorRequest = new VerifyFactorRecoveryRequest()
+            var verifyRecoveryFactorRequest = new VerifyRecoveryFactorRequest()
             {
                 StateToken = verifyRecoveryFactorOptions.StateToken,
                 PassCode = verifyRecoveryFactorOptions.PassCode,
@@ -536,7 +536,7 @@ namespace Okta.Auth.Sdk
             {
                 FactorType = unlockAccountOptions.FactorType,
                 RelayState = unlockAccountOptions.RelayState,
-                Username = unlockAccountOptions.UserName,
+                Username = unlockAccountOptions.Username,
             };
 
             return await PostAsync<AuthenticationResponse>(
