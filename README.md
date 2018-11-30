@@ -122,18 +122,6 @@ var changePasswordOptions = new ChangePasswordOptions()
 var authnResponse = await authClient.ChangePasswordAsync(changePasswordOptions);
 ```
 
-### Reset Password
-
-``` csharp
-var resetPasswordOptions = new ResetPasswordOptions()
-{
-    NewPassword = "Okta1234!",
-    StateToken = "foo",
-};
-
-var authResponse = await authnClient.ResetPasswordAsync(resetPasswordOptions);
-```
-
 ### Enroll Security Question Factor
 
 ```csharp
@@ -144,7 +132,7 @@ var enrollOptions = new EnrollSecurityQuestionFactorOptions()
     StateToken = "foo",
 };
 
-authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
 ```
 
 ### Enroll SMS Factor
@@ -156,7 +144,7 @@ var enrollOptions = new EnrollSMSFactorOptions()
     StateToken = "foo",
 };
 
-authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
 ```
 
 ### Enroll Call Factor
@@ -172,15 +160,106 @@ var enrollFactorOptions = new EnrollCallFactorOptions()
 var authnResponse = await authnClient.EnrollFactorAsync(enrollFactorOptions);
 ```
 
-### Activate SMS Factor
+### Enroll Okta Verify TOTP Factor
 
 ``` csharp
-var activateFactorOptions = new ActivateFactorOptions()
+
+var enrollOptions = new EnrollTotpFactorOptions()
 {
-    StateToken = "00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh",
-    FactorType = FactorType.Sms,
-    FactorId = "foo",
+    StateToken = "foo",
+    Provider = OktaDefaults.GoogleProvider,
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+```
+
+### Enroll Okta Verify Push Factor
+
+``` csharp
+
+var enrollOptions = new EnrollPushFactorOptions()
+{
+    StateToken = "foo",
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+```
+
+### Enroll RSA SecurID Factor
+
+``` csharp
+
+var enrollOptions = new EnrollRsaFactorOptions()
+{
+    StateToken = "foo",
+    CredentialId = "dade.murphy@example.com",
     PassCode = "bar",
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+```
+
+### Enroll Symantec VIP Factor
+
+``` csharp
+
+var enrollOptions = new EnrollSymantecFactorOptions()
+{
+    StateToken = "foo",
+    CredentialId = "dade.murphy@example.com",
+    PassCode = "bar",
+    NextPassCode = "baz",
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+```
+
+### Enroll YubiKey Factor
+
+``` csharp
+
+var enrollOptions = new EnrollYubiKeyFactorOptions()
+{
+    PassCode = "bar",
+    StateToken = "foo",
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+```
+
+### Enroll Duo Factor
+
+``` csharp
+
+var enrollOptions = new EnrollDuoFactorOptions()
+{
+    StateToken = "foo",
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+``` 
+
+### Enroll U2F Factor
+
+``` csharp
+
+var enrollOptions = new EnrollU2FFactorOptions()
+{
+    StateToken = "foo",
+};
+
+var authnResponse = await authnClient.EnrollFactorAsync(enrollOptions);
+``` 
+
+### Activate U2F Factor
+
+``` csharp
+var activateFactorOptions = new ActivateU2fFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+    RegistrationData = "bar",
+    ClientData = "baz",
 };
 
 var authResponse = await authnClient.ActivateFactorAsync(activateFactorOptions);
@@ -197,16 +276,240 @@ var activatePushFactorOptions = new ActivatePushFactorOptions()
 var authResponse = await authnClient.ActivateFactorAsync(activatePushFactorOptions);
 ```
 
+### Activate Other Factors
+
+``` csharp
+var activateFactorOptions = new ActivateFactorOptions()
+{
+    StateToken = "00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh",
+    FactorId = "foo",
+    PassCode = "bar",
+};
+
+var authResponse = await authnClient.ActivateFactorAsync(activateFactorOptions);
+```
+
 ### Verify SMS Factor
 
 ```csharp
-var verifySmsOptions = new VerifySmsFactorOptions()
+var verifyFactorOptions = new VerifySmsFactorOptions()
 {
     StateToken = "foo",
     FactorId = "bar",
 };
 
-var authResponse = await authnClient.VerifyFactorAsync(verifySmsOptions);
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Verify Call Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifyCallFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+    PassCode = "bar",
+    RememberDevice = true,
+};
+
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Verify Security Question Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifySecurityQuestionFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+    Answer = "bar",
+};
+
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Verify TOTP Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifySmsFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+    PassCode = "bar",
+    RememberDevice = true,
+};
+
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Verify Push Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifyPushFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+    AutoPush = true,
+    RememberDevice = true,
+};
+
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Verify Duo Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifyDuoFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+};
+
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Verify U2F Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifyU2FFactorOptions()
+{
+    FactorId = "ostf1fmaMGJLMNGNLIVG",
+    StateToken = "foo",
+    ClientData = "bar",
+    SignatureData = "baz",
+    RememberDevice = true,
+};
+
+var authResponse = await authnClient.VerifyFactorAsync(verifyFactorOptions);
+```
+
+### Unlock Account
+
+```csharp
+
+var unlockAccountOptions = new UnlockAccountOptions()
+{
+    FactorType = new FactorType(factorType),
+    RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+    Username = "dade.murphy@example.com",
+};
+
+await authnClient.UnlockAccountAsync(unlockAccountOptions);
+
+```
+
+### Reset Password
+
+```csharp
+
+var resetPasswordOptions = new ResetPasswordOptions()
+{
+    NewPassword = "1234",
+    StateToken = "00xdqXOE5qDXX8-PBR1bYv8AESqIEinDy3yul01tyh",
+};
+
+var authResponse = await authnClient.ResetPasswordAsync(resetPasswordOptions);
+
+```
+
+### Verify Recovery Token
+
+```csharp
+
+var verifyFactorOptions = new VerifyRecoveryTokenOptions()
+{
+    RecoveryToken = "foo",
+};
+
+await authnClient.VerifyRecoveryTokenAsync(verifyFactorOptions);
+
+```
+
+### Verify Recovery Factor
+
+```csharp
+
+var verifyFactorOptions = new VerifyRecoveryFactorOptions()
+{
+    StateToken = "foo",
+    PassCode = "bar",
+    FactorType = new FactorType(factorType),
+};
+
+await authnClient.VerifyRecoveryFactorAsync(verifyFactorOptions);
+
+```
+
+### Answer Recovery Question
+
+```csharp
+
+var answerRecoveryQuestionOptions = new AnswerRecoveryQuestionOptions()
+{
+    StateToken = "foo",
+    Answer = "bar",
+};
+
+await authnClient.AnswerRecoveryQuestionAsync(answerRecoveryQuestionOptions);
+
+```
+
+### Get Transaction State
+
+```csharp
+
+var transactionStateOptions = new TransactionStateOptions()
+{
+    StateToken = "foo",
+};
+
+await authnClient.GetTransactionStateAsync(transactionStateOptions);
+
+```
+
+### Previous Transaction State
+
+```csharp
+
+var transactionStateOptions = new TransactionStateOptions()
+{
+    StateToken = "foo",
+};
+
+await authnClient.GetPreviousTransactionStateAsync(transactionStateOptions);
+
+```
+
+### Skip Transaction State
+
+```csharp
+
+var transactionStateOptions = new TransactionStateOptions()
+{
+    StateToken = "foo",
+};
+
+await authnClient.SkipTransactionStateAsync(transactionStateOptions);
+
+```
+
+### Cancel Transaction State
+
+```csharp
+
+var transactionStateOptions = new TransactionStateOptions()
+{
+    StateToken = "foo",
+};
+
+await authnClient.CancelTransactionStateAsync(transactionStateOptions);
+
 ```
 
 ## Call other API endpoints

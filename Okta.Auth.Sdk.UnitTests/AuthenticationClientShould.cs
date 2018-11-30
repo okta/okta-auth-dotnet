@@ -884,7 +884,7 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
-        public async Task SendWellStructuredRequestForVerifyRecoverToken()
+        public async Task SendWellStructuredRequestForVerifyRecoveryToken()
         {
             var verifyFactorOptions = new VerifyRecoveryTokenOptions()
             {
