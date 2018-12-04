@@ -4,7 +4,6 @@
 
 # Okta .NET Authentication SDK
 
-
 > :warning: Beta alert! This library is in beta. See [release status](#release-status) for more information.
 
 * [Release status](#release-status)
