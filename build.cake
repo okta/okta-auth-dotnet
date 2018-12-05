@@ -39,17 +39,6 @@ Task("Build")
     }
 });
 
-Task("Pack")
-.IsDependentOn("Build")
-.Does(() =>
-{
-    DotNetCorePack("./Okta.Auth.Sdk/Okta.Auth.Sdk.csproj", new DotNetCorePackSettings
-    {
-        Configuration = configuration,
-        OutputDirectory = "./artifacts/"
-    });
-});
-
 Task("Test")
 .IsDependentOn("Restore")
 .IsDependentOn("Build")
@@ -63,8 +52,7 @@ Task("Test")
         DotNetCoreTest(string.Format("./{0}/{0}.csproj", name));
     }
 });
-
-Task("IntegrationTest")
+/*Task("IntegrationTest")
 .IsDependentOn("Restore")
 .IsDependentOn("Build")
 .Does(() =>
@@ -76,6 +64,30 @@ Task("IntegrationTest")
     {
         DotNetCoreTest(string.Format("./{0}/{0}.csproj", name));
     }
+});*/
+Task("Pack")
+.IsDependentOn("Test")
+//.IsDependentOn("IntegrationTest")
+.Does(() =>
+{
+	var projects = new List<string>()
+	{
+		"Okta.Sdk.Abstractions",
+		"Okta.Auth.Sdk"
+	};
+	
+	projects
+    .ForEach(name =>
+    {
+        Console.WriteLine($"\nCreating NuGet package for {name}");
+        
+		DotNetCorePack($"./{name}", new DotNetCorePackSettings
+		{
+			Configuration = configuration,
+			OutputDirectory = "./artifacts",
+		});
+    });
+	
 });
 
 // Define top-level tasks
@@ -85,13 +97,6 @@ Task("Default")
     .IsDependentOn("Restore")
     .IsDependentOn("Build")
     .IsDependentOn("Test")
-    .IsDependentOn("Pack");
-
-Task("DefaultIT")
-    .IsDependentOn("Clean")
-    .IsDependentOn("Restore")
-    .IsDependentOn("Build")
-    .IsDependentOn("IntegrationTest")
     .IsDependentOn("Pack");
 
 // Default task
