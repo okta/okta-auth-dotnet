@@ -2,8 +2,8 @@
 
 [![Support](https://img.shields.io/badge/support-Developer%20Forum-blue.svg)][devforum]
 
-# Okta .NET Authentication SDK
 
+# Okta .NET Authentication SDK
 
 > :warning: Beta alert! This library is in beta. See [release status](#release-status) for more information.
 
