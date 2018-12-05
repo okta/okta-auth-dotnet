@@ -99,13 +99,6 @@ Task("Default")
     .IsDependentOn("Test")
     .IsDependentOn("Pack");
 
-Task("DefaultIT")
-    .IsDependentOn("Clean")
-    .IsDependentOn("Restore")
-    .IsDependentOn("Build")
-    .IsDependentOn("IntegrationTest")
-    .IsDependentOn("Pack");
-
 // Default task
 var target = Argument("target", "Default");
 RunTarget(target);
