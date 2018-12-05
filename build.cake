@@ -52,8 +52,7 @@ Task("Test")
         DotNetCoreTest(string.Format("./{0}/{0}.csproj", name));
     }
 });
-
-Task("IntegrationTest")
+/*Task("IntegrationTest")
 .IsDependentOn("Restore")
 .IsDependentOn("Build")
 .Does(() =>
@@ -65,11 +64,10 @@ Task("IntegrationTest")
     {
         DotNetCoreTest(string.Format("./{0}/{0}.csproj", name));
     }
-});
-
+});*/
 Task("Pack")
 .IsDependentOn("Test")
-.IsDependentOn("IntegrationTest")
+//.IsDependentOn("IntegrationTest")
 .Does(() =>
 {
 	var projects = new List<string>()
