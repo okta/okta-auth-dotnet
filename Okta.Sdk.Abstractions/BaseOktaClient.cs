@@ -25,6 +25,13 @@ namespace Okta.Sdk.Abstractions
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
         /// </summary>
+        public BaseOktaClient()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
+        /// </summary>
         /// <param name="apiClientConfiguration">
         /// The client configuration. If <c>null</c>, the library will attempt to load
         /// configuration from an <c>okta.yaml</c> file or environment variables.

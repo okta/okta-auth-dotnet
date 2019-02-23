@@ -30,8 +30,22 @@ namespace Okta.Auth.Sdk
         /// </param>
         /// <param name="logger">The logging interface to use, if any.</param>
         public AuthenticationClient(OktaClientConfiguration apiClientConfiguration = null, ILogger logger = null)
-            : base(apiClientConfiguration, logger)
         {
+            Configuration = GetConfigurationOrDefault(apiClientConfiguration);
+            OktaClientConfigurationValidator.Validate(Configuration);
+
+            logger = logger ?? NullLogger.Instance;
+
+            var defaultClient = DefaultHttpClient.Create(
+                Configuration.ConnectionTimeout,
+                Configuration.Proxy,
+                logger);
+
+            var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
+            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.GetAllDefinedTypes(typeof(Resource))));
+            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version);
+
+            _dataStore = new DefaultDataStore(requestExecutor, new DefaultSerializer(), resourceFactory, logger, userAgentBuilder);
         }
 
         /// <summary>
@@ -44,8 +58,22 @@ namespace Okta.Auth.Sdk
         /// <param name="httpClient">The HTTP client to use for requests to the Okta API.</param>
         /// <param name="logger">The logging interface to use, if any.</param>
         public AuthenticationClient(OktaClientConfiguration apiClientConfiguration, HttpClient httpClient, ILogger logger = null)
-            : base(apiClientConfiguration, httpClient, logger)
         {
+            Configuration = GetConfigurationOrDefault(apiClientConfiguration);
+            OktaClientConfigurationValidator.Validate(Configuration);
+
+            logger = logger ?? NullLogger.Instance;
+
+            var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
+            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.GetAllDefinedTypes(typeof(Resource))));
+            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
+
+            _dataStore = new DefaultDataStore(
+                requestExecutor,
+                new DefaultSerializer(),
+                resourceFactory,
+                logger,
+                userAgentBuilder);
         }
 
         /// <summary>
