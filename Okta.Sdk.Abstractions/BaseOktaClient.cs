@@ -22,6 +22,18 @@ namespace Okta.Sdk.Abstractions
         protected IDataStore _dataStore;
         protected RequestContext _requestContext;
 
+         static BaseOktaClient()
+        {
+            System.AppContext.SetSwitch("Switch.System.Net.DontEnableSystemDefaultTlsVersions", false);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
+        /// </summary>
+        public BaseOktaClient()
+        {
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
         /// </summary>

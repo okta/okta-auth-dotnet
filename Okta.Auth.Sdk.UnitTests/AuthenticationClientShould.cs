@@ -7,12 +7,26 @@ using FluentAssertions;
 using NSubstitute;
 using Okta.Auth.Sdk.UnitTests.Internal;
 using Okta.Sdk.Abstractions;
+using Okta.Sdk.Abstractions.Configuration;
 using Xunit;
 
 namespace Okta.Auth.Sdk.UnitTests
 {
     public class AuthenticationClientShould
     {
+        [Fact]
+        public void BeConstructedWithTheCorrectConfiguration()
+        {
+            var client = new AuthenticationClient(new OktaClientConfiguration
+            {
+                OktaDomain = "https://foo.oktapreview.com/",
+                Token = "abc123notreal"
+            });
+
+            client.Configuration.OktaDomain.Should().Be("https://foo.oktapreview.com/");
+            client.Configuration.Token.Should().Be("abc123notreal");
+        }
+
         [Fact]
         public async Task ForgotPasswordWithEmailFactor()
         {
