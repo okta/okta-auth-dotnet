@@ -80,7 +80,7 @@ Hard-coding the Okta domain works for quick tests, but for real projects you sho
  
 ## Usage guide
 
-These examples will help you understand how to use this library. You can also browse the full [API reference documentation][dotnetdocs].
+These examples will help you understand how to use this library.
 
 Once you initialize an `AuthenticationClient`, you can call methods to make requests to the Okta API.
 
@@ -579,7 +579,6 @@ In most cases, you won't need to build the SDK from source. If you want to build
 We're happy to accept contributions and PRs! Please see the [contribution guide](CONTRIBUTING.md) to understand how to structure a contribution.
 
 [devforum]: https://devforum.okta.com/
-[dotnetdocs]: https://developer.okta.com/okta-auth-dotnet/latest/
 [lang-landing]: https://developer.okta.com/code/dotnet/
-[github-issues]: https://developer.okta.com/okta-auth-dotnet/issues
+[github-issues]: https://github.com/okta/okta-auth-dotnet/issues
 [github-releases]: https://github.com/okta/okta-auth-dotnet/releases
