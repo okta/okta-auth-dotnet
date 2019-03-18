@@ -22,33 +22,6 @@ namespace Okta.Auth.Sdk
     public class AuthenticationClient : BaseOktaClient, IAuthenticationClient
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthenticationClient"/> class.
-        /// </summary>
-        /// <param name="apiClientConfiguration">
-        /// The client configuration. If <c>null</c>, the library will attempt to load
-        /// configuration from an <c>okta.yaml</c> file or environment variables.
-        /// </param>
-        /// <param name="logger">The logging interface to use, if any.</param>
-        public AuthenticationClient(OktaClientConfiguration apiClientConfiguration = null, ILogger logger = null)
-        {
-            Configuration = GetConfigurationOrDefault(apiClientConfiguration);
-            OktaClientConfigurationValidator.Validate(Configuration);
-
-            logger = logger ?? NullLogger.Instance;
-
-            var defaultClient = DefaultHttpClient.Create(
-                Configuration.ConnectionTimeout,
-                Configuration.Proxy,
-                logger);
-
-            var requestExecutor = new DefaultRequestExecutor(Configuration, defaultClient, logger);
-            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.GetAllDefinedTypes(typeof(Resource))));
-            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version);
-
-            _dataStore = new DefaultDataStore(requestExecutor, new DefaultSerializer(), resourceFactory, logger, userAgentBuilder);
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="AuthenticationClient"/> class using the specified <see cref="HttpClient"/>.
         /// </summary>
         /// <param name="apiClientConfiguration">
@@ -57,23 +30,9 @@ namespace Okta.Auth.Sdk
         /// </param>
         /// <param name="httpClient">The HTTP client to use for requests to the Okta API.</param>
         /// <param name="logger">The logging interface to use, if any.</param>
-        public AuthenticationClient(OktaClientConfiguration apiClientConfiguration, HttpClient httpClient, ILogger logger = null)
+        public AuthenticationClient(OktaClientConfiguration apiClientConfiguration = null, HttpClient httpClient = null, ILogger logger = null)
+            : base(apiClientConfiguration, httpClient, logger, "okta-auth-dotnet")
         {
-            Configuration = GetConfigurationOrDefault(apiClientConfiguration);
-            OktaClientConfigurationValidator.Validate(Configuration);
-
-            logger = logger ?? NullLogger.Instance;
-
-            var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
-            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.GetAllDefinedTypes(typeof(Resource))));
-            var userAgentBuilder = new UserAgentBuilder("okta-auth-dotnet", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
-
-            _dataStore = new DefaultDataStore(
-                requestExecutor,
-                new DefaultSerializer(),
-                resourceFactory,
-                logger,
-                userAgentBuilder);
         }
 
         /// <summary>
