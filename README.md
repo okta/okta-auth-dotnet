@@ -5,8 +5,6 @@
 
 # Okta .NET Authentication SDK
 
-> :warning: Beta alert! This library is in beta. See [release status](#release-status) for more information.
-
 * [Release status](#release-status)
 * [Need help?](#need-help)
 * [Getting started](#getting-started)
@@ -38,7 +36,7 @@ This library uses semantic versioning and follows Okta's [library version policy
 
 | Version | Status                    |
 | ------- | ------------------------- |
-| 1.x | :warning: Beta |
+| 1.x | :heavy_check_mark: Stable |
  
 The latest release can always be found on the [releases page][github-releases].
 
@@ -60,8 +58,6 @@ The SDK is compatible with [.NET Standard](https://docs.microsoft.com/en-us/dotn
 
 ### Install using The Package Manager Console
 Simply run `install-package Okta.Auth.Sdk`. Done!
-
-To install 1.x version through NuGet, you will need to enable the "Include Prereleases" option when you search for the `Okta.Auth.Sdk` package.
 
 You'll also need:
 
