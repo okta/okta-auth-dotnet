@@ -22,7 +22,7 @@ namespace Okta.Sdk.Abstractions
         protected IDataStore _dataStore;
         protected RequestContext _requestContext;
 
-         static BaseOktaClient()
+        static BaseOktaClient()
         {
             System.AppContext.SetSwitch("Switch.System.Net.DontEnableSystemDefaultTlsVersions", false);
         }
@@ -35,7 +35,7 @@ namespace Okta.Sdk.Abstractions
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class using the specified <see cref="HttpClient"/>.
+        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class, called internally from this or any derived class's constructor.
         /// </summary>
         /// <param name="apiClientConfiguration">
         /// The client configuration. If <c>null</c>, the library will attempt to load
@@ -43,7 +43,14 @@ namespace Okta.Sdk.Abstractions
         /// </param>
         /// <param name="httpClient">The HTTP client to use for requests to the Okta API.</param>
         /// <param name="logger">The logging interface to use, if any.</param>
-        public BaseOktaClient(OktaClientConfiguration apiClientConfiguration = null, HttpClient httpClient = null, ILogger logger = null, string userAgent = null)
+        /// <param name="userAgentBuilder">The builder for the user agent, which would be specific to any derived classes</param>
+        /// <param name="resourceTypeResolverFactory">The factory with can resolve and enumerate all Resources in the assembly</param>
+        protected BaseOktaClient(
+            OktaClientConfiguration apiClientConfiguration,
+            HttpClient httpClient,
+            ILogger logger,
+            UserAgentBuilder userAgentBuilder,
+            AbstractResourceTypeResolverFactory resourceTypeResolverFactory)
         {
             Configuration = GetConfigurationOrDefault(apiClientConfiguration);
             OktaClientConfigurationValidator.Validate(Configuration);
@@ -56,9 +63,7 @@ namespace Okta.Sdk.Abstractions
                 logger);
 
             var requestExecutor = new DefaultRequestExecutor(Configuration, httpClient, logger);
-
-            var resourceFactory = new ResourceFactory(this, logger, new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes));
-            var userAgentBuilder = new UserAgentBuilder(userAgent ?? "okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version);
+            var resourceFactory = new ResourceFactory(this, logger, resourceTypeResolverFactory);
 
             _dataStore = new DefaultDataStore(
                 requestExecutor,
@@ -66,6 +71,28 @@ namespace Okta.Sdk.Abstractions
                 resourceFactory,
                 logger,
                 userAgentBuilder);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class using the specified <see cref="HttpClient"/>.
+        /// </summary>
+        /// <param name="apiClientConfiguration">
+        /// The client configuration. If <c>null</c>, the library will attempt to load
+        /// configuration from an <c>okta.yaml</c> file or environment variables.
+        /// </param>
+        /// <param name="httpClient">The HTTP client to use for requests to the Okta API.</param>
+        /// <param name="logger">The logging interface to use, if any.</param>
+        public BaseOktaClient(
+            OktaClientConfiguration apiClientConfiguration = null,
+            HttpClient httpClient = null,
+            ILogger logger = null)
+            : this(
+                apiClientConfiguration,
+                httpClient,
+                logger,
+                new UserAgentBuilder("okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version),
+                new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes))
+        {
         }
 
         /// <summary>

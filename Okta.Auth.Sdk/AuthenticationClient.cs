@@ -30,8 +30,16 @@ namespace Okta.Auth.Sdk
         /// </param>
         /// <param name="httpClient">The HTTP client to use for requests to the Okta API.</param>
         /// <param name="logger">The logging interface to use, if any.</param>
-        public AuthenticationClient(OktaClientConfiguration apiClientConfiguration = null, HttpClient httpClient = null, ILogger logger = null)
-            : base(apiClientConfiguration, httpClient, logger, "okta-auth-dotnet")
+        public AuthenticationClient(
+            OktaClientConfiguration apiClientConfiguration = null,
+            HttpClient httpClient = null,
+            ILogger logger = null)
+            : base(
+                apiClientConfiguration,
+                httpClient,
+                logger,
+                new UserAgentBuilder("okta-auth-dotnet", typeof(AuthenticationClient).GetTypeInfo().Assembly.GetName().Version),
+                new AbstractResourceTypeResolverFactory(ResourceTypeHelper.GetAllDefinedTypes(typeof(Resource))))
         {
         }
 
