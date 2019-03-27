@@ -32,7 +32,7 @@ namespace Okta.Sdk.Abstractions
                 AllowAutoRedirect = false,
             };
 
-            if (proxyConfiguration != null)
+            if (proxyConfiguration != null && !string.IsNullOrEmpty(proxyConfiguration.Host))
             {
                 handler.Proxy = new DefaultProxy(proxyConfiguration, logger);
                 logger.LogInformation("Using proxy from configuration");
