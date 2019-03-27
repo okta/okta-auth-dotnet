@@ -74,28 +74,6 @@ namespace Okta.Sdk.Abstractions
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BaseOktaClient"/> class using the specified <see cref="HttpClient"/>.
-        /// </summary>
-        /// <param name="apiClientConfiguration">
-        /// The client configuration. If <c>null</c>, the library will attempt to load
-        /// configuration from an <c>okta.yaml</c> file or environment variables.
-        /// </param>
-        /// <param name="httpClient">The HTTP client to use for requests to the Okta API.</param>
-        /// <param name="logger">The logging interface to use, if any.</param>
-        public BaseOktaClient(
-            OktaClientConfiguration apiClientConfiguration = null,
-            HttpClient httpClient = null,
-            ILogger logger = null)
-            : this(
-                apiClientConfiguration,
-                httpClient,
-                logger,
-                new UserAgentBuilder("okta-sdk-abstractions", typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version),
-                new AbstractResourceTypeResolverFactory(ResourceTypeHelper.AllDefinedTypes))
-        {
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="BaseOktaClient"/> class.
         /// </summary>
         /// <param name="dataStore">The <see cref="IDataStore">DataStore</see> to use.</param>

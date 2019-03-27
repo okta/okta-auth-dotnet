@@ -141,7 +141,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
             }
         }
 
-        [Fact]
+        [Fact(Skip = "Group w/ right policy rules must be created. Waiting for MFA policies to be published.")]
         public async Task AuthenticateUserWithPendingEnroll()
         {
             var client = TestAuthenticationClient.Create();
