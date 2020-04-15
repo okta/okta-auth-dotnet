@@ -1,5 +1,5 @@
 language: csharp
-mono: latest
+mono: 6.6.0 # Use specific mono version due to a cake failure: https://github.com/cake-build/cake/issues/2695
 # https://github.com/travis-ci/travis-ci/issues/9703
 # .NET Core
 dotnet: 2.1.300 
