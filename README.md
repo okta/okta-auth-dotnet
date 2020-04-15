@@ -508,6 +508,53 @@ await authnClient.CancelTransactionStateAsync(transactionStateOptions);
 
 ```
 
+## Send information via User Agent
+
+Some scenarios require you to send additional information in the request's user agent. The following methods allow you to provide your user agent information via the method options:
+
+* `AuthenticateAsync`
+
+```csharp
+var authOptions = new AuthenticateOptions()
+{
+    Username = $"darth.vader@imperial-senate.gov",
+    Password = "D1sturB1ng!",
+    UserAgent = "Chrome/46.0.2490.86",
+};
+
+await authnClient.AuthenticateAsync(authOptions);
+```
+
+* `ForgotPasswordAsync`
+
+```csharp
+var forgotPasswordOptions = new ForgotPasswordOptions()
+{
+    FactorType = FactorType.Call,
+    RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+    UserName = "bob-user@test.com",
+    UserAgent = "Chrome/46.0.2490.86",
+};
+
+await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
+```
+
+* `UnlockAccountAsync`
+
+```csharp
+var unlockAccountOptions = new UnlockAccountOptions()
+{
+    FactorType = new FactorType("sms"),
+    RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+    Username = "dade.murphy@example.com",
+    UserAgent = "Chrome/46.0.2490.86",
+};
+
+await authnClient.UnlockAccountAsync(unlockAccountOptions);
+```
+
+The Authentication Client object allows you to send custom requests that you can construct and set your desired headers. Check out [Call other API endpoints](Call-other-API-endpoints) section for more details.
+
 ## Call other API endpoints
 
 The Authentication Client object allows you to construct and send a request to an Authentication API endpoint that isn't represented by a method in the SDK.
@@ -523,11 +570,15 @@ var forgotPasswordOptions = new ForgotPasswordOptions()
     UserName = "bob-user@test.com",
 };
 
-var authResponse = await authnClient.PostAsync<AuthenticationResponse>(new HttpRequest()
+var request = new HttpRequest()
 {
     Uri = "/api/v1/authn/recovery/password",
     Payload = forgotPasswordOptions,
-});
+};
+
+request.Headers["User-Agent"] = "MyUserAgentInfo";
+
+var authResponse = await authnClient.PostAsync<AuthenticationResponse>(request);
 ```
 
 In this case, there is no benefit to using `PostAsync` instead of `ForgotPasswordAsync`. However, this approach can be used to call any endpoints that are not represented by methods in the SDK.

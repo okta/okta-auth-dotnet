@@ -8,7 +8,7 @@ namespace Okta.Auth.Sdk
     /// <summary>
     /// This class contains all the request parameters for performing an forgot password request
     /// </summary>
-    public class ForgotPasswordOptions
+    public class ForgotPasswordOptions : BaseTrustedOptions
     {
         /// <summary>
         /// Gets or sets the username

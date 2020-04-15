@@ -8,7 +8,7 @@ namespace Okta.Auth.Sdk
     /// <summary>
     /// This class contains all the request parameters for performing a primary authentication request
     /// </summary>
-    public class AuthenticateOptions
+    public class AuthenticateOptions : BaseTrustedOptions
     {
         /// <summary>
         /// Gets or sets the username

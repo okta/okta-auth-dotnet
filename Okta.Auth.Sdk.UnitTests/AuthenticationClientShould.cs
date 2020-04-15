@@ -141,6 +141,33 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
+        public async Task AddUserAgentToForgotPasswordRequest()
+        {
+            var forgotPasswordOptions = new ForgotPasswordOptions()
+            {
+                FactorType = FactorType.Call,
+                RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+                UserName = "bob-user@test.com",
+                UserAgent = "baz",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/recovery/password",
+                Arg.Is<IEnumerable<KeyValuePair<string, string>>>(headers => headers.Any(kvp => kvp.Key == "User-Agent" && kvp.Value == "baz")),
+                Arg.Any<string>(),
+                CancellationToken.None);
+        }
+
+        [Fact]
         public async Task ResetPassword()
         {
             #region raw response
@@ -217,6 +244,32 @@ namespace Okta.Auth.Sdk.UnitTests
             await mockRequestExecutor.Received().PostAsync(
                 "/api/v1/authn",
                 Arg.Is<IEnumerable<KeyValuePair<string, string>>>(headers => headers.Any(kvp => kvp.Key == "X-Device-Fingerprint" && kvp.Value == "baz")),
+                "{\"username\":\"foo\",\"password\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task AddUserAgentToAuthenticationRequest()
+        {
+            var authOptions = new AuthenticateOptions()
+            {
+                Username = "foo",
+                Password = "bar",
+                UserAgent = "baz",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.AuthenticateAsync(authOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn",
+                Arg.Is<IEnumerable<KeyValuePair<string, string>>>(headers => headers.Any(kvp => kvp.Key == "User-Agent" && kvp.Value == "baz")),
                 "{\"username\":\"foo\",\"password\":\"bar\"}",
                 CancellationToken.None);
         }
@@ -866,6 +919,33 @@ namespace Okta.Auth.Sdk.UnitTests
                 "/api/v1/authn/recovery/unlock",
                 Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
                 $"{{\"factorType\":\"{factorType.ToLower()}\",\"relayState\":\"/myapp/some/deep/link/i/want/to/return/to\",\"username\":\"dade.murphy@example.com\"}}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task AddUserAgentToUnlockAccountRequest()
+        {
+            var unlockAccountOptions = new UnlockAccountOptions()
+            {
+                FactorType = new FactorType("sms"),
+                RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+                Username = "dade.murphy@example.com",
+                UserAgent = "baz",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.UnlockAccountAsync(unlockAccountOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/recovery/unlock",
+                Arg.Is<IEnumerable<KeyValuePair<string, string>>>(headers => headers.Any(kvp => kvp.Key == "User-Agent" && kvp.Value == "baz")),
+                Arg.Any<string>(),
                 CancellationToken.None);
         }
 

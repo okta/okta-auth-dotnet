@@ -8,7 +8,7 @@ namespace Okta.Auth.Sdk
     /// <summary>
     /// This class contains all the request parameters for performing an unlock account request
     /// </summary>
-    public class UnlockAccountOptions
+    public class UnlockAccountOptions : BaseTrustedOptions
     {
         /// <summary>
         /// Gets or sets the username

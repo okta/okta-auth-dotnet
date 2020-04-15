@@ -177,6 +177,29 @@ namespace Okta.Sdk.Abstractions.UnitTests
                 CancellationToken.None);
         }
 
+
+        [Fact]
+        public async Task DoNotOvewriteUserAgentWhenProvided()
+        {
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .GetAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var dataStore = new DefaultDataStore(mockRequestExecutor, new DefaultSerializer(), new ResourceFactory(null, null, null), NullLogger.Instance, new UserAgentBuilder("okta-sdk-dotnet", UserAgentHelper.SdkVersion));
+            var request = new HttpRequest { Uri = "https://foo.dev" };
+            request.Headers["User-Agent"] = "foo bar baz";
+
+            await dataStore.GetAsync<TestResource>(request, new RequestContext(), CancellationToken.None);
+
+            // Assert that the request sent to the RequestExecutor included the User-Agent header
+            await mockRequestExecutor.Received().GetAsync(
+                "https://foo.dev",
+                Arg.Is<IEnumerable<KeyValuePair<string, string>>>(
+                    headers => headers.Any(kvp => kvp.Key == "User-Agent" && kvp.Value == "foo bar baz")),
+                CancellationToken.None);
+        }
+
         [Fact]
         public async Task AddContextUserAgentToRequests()
         {
