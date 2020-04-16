@@ -508,11 +508,41 @@ await authnClient.CancelTransactionStateAsync(transactionStateOptions);
 
 ```
 
-## Send information via User Agent
+## Send information via request's headers.
 
-Some scenarios require you to send additional information in the request's user agent. The following methods allow you to provide your user agent information via the method options:
+The scenarios described in this section require you to send additional information in the `user-agent`, `x-forwarded-for` and `x-device-fingerprinting` headers. This SDK allows you to define these headers via method parameters or construct and send custom requests using the `AuthenticationClient`.
 
-* `AuthenticateAsync`
+### [Primary authentication with trusted application](https://developer.okta.com/docs/reference/api/authn/#request-example-for-unlock-account-with-sms-factor-trusted-application)
+
+```csharp
+var authOptions = new AuthenticateOptions()
+{
+    Username = $"darth.vader@imperial-senate.gov",
+    Password = "D1sturB1ng!",
+    MultiOptionalFactorEnroll = false,
+    WarnBeforePasswordExpired = false,
+    DeviceToken = "26q43Ak9Eh04p7H6Nnx0m69JqYOrfVBY",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+};
+
+await authnClient.AuthenticateAsync(authOptions);
+```
+
+### [Primary authentication with activation token](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-activation-token)
+
+```csharp
+var authOptions = new AuthenticateOptions()
+{
+    ActivationToken = "o7AFoTGE9xjQiHQK6dAa",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+};
+
+await authnClient.AuthenticateAsync(authOptions);
+```
+
+### [Primary authentication with device fingerprinting](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-device-fingerprinting)
 
 ```csharp
 var authOptions = new AuthenticateOptions()
@@ -520,12 +550,14 @@ var authOptions = new AuthenticateOptions()
     Username = $"darth.vader@imperial-senate.gov",
     Password = "D1sturB1ng!",
     UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+    DeviceFingerprint = "device_fingerprint"
 };
 
 await authnClient.AuthenticateAsync(authOptions);
 ```
 
-* `ForgotPasswordAsync`
+### [Forgot password with trusted application](https://developer.okta.com/docs/reference/api/authn/#forgot-password-with-trusted-application)
 
 ```csharp
 var forgotPasswordOptions = new ForgotPasswordOptions()
@@ -534,12 +566,13 @@ var forgotPasswordOptions = new ForgotPasswordOptions()
     RelayState = "/myapp/some/deep/link/i/want/to/return/to",
     UserName = "bob-user@test.com",
     UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
 };
 
 await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
 ```
 
-* `UnlockAccountAsync`
+### [Unlock account with trusted application](https://developer.okta.com/docs/reference/api/authn/#unlock-account-with-trusted-application)
 
 ```csharp
 var unlockAccountOptions = new UnlockAccountOptions()
@@ -548,6 +581,7 @@ var unlockAccountOptions = new UnlockAccountOptions()
     RelayState = "/myapp/some/deep/link/i/want/to/return/to",
     Username = "dade.murphy@example.com",
     UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
 };
 
 await authnClient.UnlockAccountAsync(unlockAccountOptions);

@@ -8,7 +8,7 @@ namespace Okta.Auth.Sdk
     /// <summary>
     /// This class contains all the request parameters for performing an unlock account request
     /// </summary>
-    public class UnlockAccountOptions : BaseTrustedOptions
+    public class UnlockAccountOptions
     {
         /// <summary>
         /// Gets or sets the username
@@ -27,5 +27,17 @@ namespace Okta.Auth.Sdk
         /// </summary>
         /// <value>The factor type</value>
         public FactorType FactorType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value for `x-forwarded-for` header.
+        /// </summary>
+        /// <value>The value for `x-forwarded-for` header.</value>
+        public string XForwardedFor { get; set; }
+
+        /// <summary>
+        /// Gets or sets the user agent.
+        /// </summary>
+        /// <value>The user agent.</value>
+        public string UserAgent { get; set; }
     }
 }

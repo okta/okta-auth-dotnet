@@ -87,6 +87,11 @@ namespace Okta.Auth.Sdk
                 request.Headers["X-Device-Fingerprint"] = authenticateOptions.DeviceFingerprint;
             }
 
+            if (!string.IsNullOrEmpty(authenticateOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = authenticateOptions.XForwardedFor;
+            }
+
             if (!string.IsNullOrEmpty(authenticateOptions.UserAgent))
             {
                 request.Headers["User-Agent"] = authenticateOptions.UserAgent;
@@ -114,6 +119,11 @@ namespace Okta.Auth.Sdk
             if (!string.IsNullOrEmpty(authenticateOptions.UserAgent))
             {
                 request.Headers["User-Agent"] = authenticateOptions.UserAgent;
+            }
+
+            if (!string.IsNullOrEmpty(authenticateOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = authenticateOptions.XForwardedFor;
             }
 
             return await PostAsync<AuthenticationResponse>(request, cancellationToken).ConfigureAwait(false);
@@ -156,6 +166,11 @@ namespace Okta.Auth.Sdk
             if (!string.IsNullOrEmpty(forgotPasswordOptions.UserAgent))
             {
                 request.Headers["User-Agent"] = forgotPasswordOptions.UserAgent;
+            }
+
+            if (!string.IsNullOrEmpty(forgotPasswordOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = forgotPasswordOptions.XForwardedFor;
             }
 
             return await PostAsync<AuthenticationResponse>(request, cancellationToken).ConfigureAwait(false);
@@ -533,6 +548,11 @@ namespace Okta.Auth.Sdk
             if (!string.IsNullOrEmpty(unlockAccountOptions.UserAgent))
             {
                 request.Headers["User-Agent"] = unlockAccountOptions.UserAgent;
+            }
+
+            if (!string.IsNullOrEmpty(unlockAccountOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = unlockAccountOptions.XForwardedFor;
             }
 
             return await PostAsync<AuthenticationResponse>(request, cancellationToken).ConfigureAwait(false);
