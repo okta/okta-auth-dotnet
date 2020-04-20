@@ -512,7 +512,9 @@ await authnClient.CancelTransactionStateAsync(transactionStateOptions);
 
 The scenarios described in this section require you to send additional information in the `user-agent`, `x-forwarded-for` and `x-device-fingerprinting` headers. This SDK allows you to define these headers via method parameters or construct and send custom requests using the `AuthenticationClient`.
 
-### [Primary authentication with trusted application](https://developer.okta.com/docs/reference/api/authn/#request-example-for-unlock-account-with-sms-factor-trusted-application)
+### Primary authentication with trusted application
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#request-example-for-unlock-account-with-sms-factor-trusted-application).
 
 ```csharp
 var authOptions = new AuthenticateOptions()
@@ -529,7 +531,9 @@ var authOptions = new AuthenticateOptions()
 await authnClient.AuthenticateAsync(authOptions);
 ```
 
-### [Primary authentication with activation token](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-activation-token)
+### Primary authentication with activation token
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-activation-token).
 
 ```csharp
 var authOptions = new AuthenticateOptions()
@@ -542,7 +546,9 @@ var authOptions = new AuthenticateOptions()
 await authnClient.AuthenticateAsync(authOptions);
 ```
 
-### [Primary authentication with device fingerprinting](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-device-fingerprinting)
+### Primary authentication with device fingerprinting
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-device-fingerprinting).
 
 ```csharp
 var authOptions = new AuthenticateOptions()
@@ -557,7 +563,9 @@ var authOptions = new AuthenticateOptions()
 await authnClient.AuthenticateAsync(authOptions);
 ```
 
-### [Forgot password with trusted application](https://developer.okta.com/docs/reference/api/authn/#forgot-password-with-trusted-application)
+### Forgot password with trusted application
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#forgot-password-with-trusted-application).
 
 ```csharp
 var forgotPasswordOptions = new ForgotPasswordOptions()
@@ -572,7 +580,9 @@ var forgotPasswordOptions = new ForgotPasswordOptions()
 await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
 ```
 
-### [Unlock account with trusted application](https://developer.okta.com/docs/reference/api/authn/#unlock-account-with-trusted-application)
+### Unlock account with trusted application
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#unlock-account-with-trusted-application).
 
 ```csharp
 var unlockAccountOptions = new UnlockAccountOptions()
