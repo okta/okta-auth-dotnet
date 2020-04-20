@@ -508,6 +508,97 @@ await authnClient.CancelTransactionStateAsync(transactionStateOptions);
 
 ```
 
+## Send information via request's headers.
+
+The scenarios described in this section require you to send additional information in the `user-agent`, `x-forwarded-for` and `x-device-fingerprinting` headers. This SDK allows you to define these headers via method parameters or construct and send custom requests using the `AuthenticationClient`.
+
+### Primary authentication with trusted application
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#request-example-for-unlock-account-with-sms-factor-trusted-application).
+
+```csharp
+var authOptions = new AuthenticateOptions()
+{
+    Username = $"darth.vader@imperial-senate.gov",
+    Password = "D1sturB1ng!",
+    MultiOptionalFactorEnroll = false,
+    WarnBeforePasswordExpired = false,
+    DeviceToken = "26q43Ak9Eh04p7H6Nnx0m69JqYOrfVBY",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+};
+
+await authnClient.AuthenticateAsync(authOptions);
+```
+
+### Primary authentication with activation token
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-activation-token).
+
+```csharp
+var authOptions = new AuthenticateOptions()
+{
+    ActivationToken = "o7AFoTGE9xjQiHQK6dAa",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+};
+
+await authnClient.AuthenticateAsync(authOptions);
+```
+
+### Primary authentication with device fingerprinting
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#primary-authentication-with-device-fingerprinting).
+
+```csharp
+var authOptions = new AuthenticateOptions()
+{
+    Username = $"darth.vader@imperial-senate.gov",
+    Password = "D1sturB1ng!",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+    DeviceFingerprint = "device_fingerprint"
+};
+
+await authnClient.AuthenticateAsync(authOptions);
+```
+
+### Forgot password with trusted application
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#forgot-password-with-trusted-application).
+
+```csharp
+var forgotPasswordOptions = new ForgotPasswordOptions()
+{
+    FactorType = FactorType.Call,
+    RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+    UserName = "bob-user@test.com",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+};
+
+await authnClient.ForgotPasswordAsync(forgotPasswordOptions);
+```
+
+### Unlock account with trusted application
+
+For more information on this feature and the underlying API call, see the related [developer documentation](https://developer.okta.com/docs/reference/api/authn/#unlock-account-with-trusted-application).
+
+```csharp
+var unlockAccountOptions = new UnlockAccountOptions()
+{
+    FactorType = new FactorType("sms"),
+    RelayState = "/myapp/some/deep/link/i/want/to/return/to",
+    Username = "dade.murphy@example.com",
+    UserAgent = "Chrome/46.0.2490.86",
+    XForwardedFor = "23.235.46.133",
+};
+
+await authnClient.UnlockAccountAsync(unlockAccountOptions);
+```
+
+The Authentication Client object allows you to send custom requests that you can construct and set your desired headers. Check out [Call other API endpoints](Call-other-API-endpoints) section for more details.
+
 ## Call other API endpoints
 
 The Authentication Client object allows you to construct and send a request to an Authentication API endpoint that isn't represented by a method in the SDK.
@@ -523,11 +614,15 @@ var forgotPasswordOptions = new ForgotPasswordOptions()
     UserName = "bob-user@test.com",
 };
 
-var authResponse = await authnClient.PostAsync<AuthenticationResponse>(new HttpRequest()
+var request = new HttpRequest()
 {
     Uri = "/api/v1/authn/recovery/password",
     Payload = forgotPasswordOptions,
-});
+};
+
+request.Headers["User-Agent"] = "MyUserAgentInfo";
+
+var authResponse = await authnClient.PostAsync<AuthenticationResponse>(request);
 ```
 
 In this case, there is no benefit to using `PostAsync` instead of `ForgotPasswordAsync`. However, this approach can be used to call any endpoints that are not represented by methods in the SDK.

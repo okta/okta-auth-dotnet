@@ -87,6 +87,16 @@ namespace Okta.Auth.Sdk
                 request.Headers["X-Device-Fingerprint"] = authenticateOptions.DeviceFingerprint;
             }
 
+            if (!string.IsNullOrEmpty(authenticateOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = authenticateOptions.XForwardedFor;
+            }
+
+            if (!string.IsNullOrEmpty(authenticateOptions.UserAgent))
+            {
+                request.Headers["User-Agent"] = authenticateOptions.UserAgent;
+            }
+
             return await PostAsync<AuthenticationResponse>(
                 request, cancellationToken).ConfigureAwait(false);
         }
@@ -99,12 +109,24 @@ namespace Okta.Auth.Sdk
                 ActivationToken = authenticateOptions.ActivationToken,
             };
 
-            return await PostAsync<AuthenticationResponse>(
-                new HttpRequest
-                {
-                    Uri = "/api/v1/authn",
-                    Payload = authenticationRequest,
-                }, cancellationToken).ConfigureAwait(false);
+            var request = new HttpRequest
+            {
+                Uri = "/api/v1/authn",
+                Payload = authenticationRequest,
+
+            };
+
+            if (!string.IsNullOrEmpty(authenticateOptions.UserAgent))
+            {
+                request.Headers["User-Agent"] = authenticateOptions.UserAgent;
+            }
+
+            if (!string.IsNullOrEmpty(authenticateOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = authenticateOptions.XForwardedFor;
+            }
+
+            return await PostAsync<AuthenticationResponse>(request, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>
@@ -135,12 +157,23 @@ namespace Okta.Auth.Sdk
                 FactorType = forgotPasswordOptions.FactorType,
             };
 
-            return await PostAsync<AuthenticationResponse>(
-                new HttpRequest
-                {
-                    Uri = "/api/v1/authn/recovery/password",
-                    Payload = forgotPasswordRequest,
-                }, cancellationToken).ConfigureAwait(false);
+            var request = new HttpRequest
+            {
+                Uri = "/api/v1/authn/recovery/password",
+                Payload = forgotPasswordRequest,
+            };
+
+            if (!string.IsNullOrEmpty(forgotPasswordOptions.UserAgent))
+            {
+                request.Headers["User-Agent"] = forgotPasswordOptions.UserAgent;
+            }
+
+            if (!string.IsNullOrEmpty(forgotPasswordOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = forgotPasswordOptions.XForwardedFor;
+            }
+
+            return await PostAsync<AuthenticationResponse>(request, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>
@@ -506,12 +539,23 @@ namespace Okta.Auth.Sdk
                 Username = unlockAccountOptions.Username,
             };
 
-            return await PostAsync<AuthenticationResponse>(
-                new HttpRequest
-                {
-                    Uri = $"/api/v1/authn/recovery/unlock",
-                    Payload = unlockAccountRequest,
-                }, cancellationToken).ConfigureAwait(false);
+            var request = new HttpRequest
+            {
+                Uri = $"/api/v1/authn/recovery/unlock",
+                Payload = unlockAccountRequest,
+            };
+
+            if (!string.IsNullOrEmpty(unlockAccountOptions.UserAgent))
+            {
+                request.Headers["User-Agent"] = unlockAccountOptions.UserAgent;
+            }
+
+            if (!string.IsNullOrEmpty(unlockAccountOptions.XForwardedFor))
+            {
+                request.Headers["X-Forwarded-For"] = unlockAccountOptions.XForwardedFor;
+            }
+
+            return await PostAsync<AuthenticationResponse>(request, cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>

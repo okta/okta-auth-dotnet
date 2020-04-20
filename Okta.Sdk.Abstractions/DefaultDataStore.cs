@@ -92,7 +92,11 @@ namespace Okta.Sdk.Abstractions
                 request.Headers = new Dictionary<string, string>();
             }
 
-            request.Headers["User-Agent"] = _userAgentBuilder.GetUserAgent();
+            // User-Agent is not overwritten if provided
+            if (!request.Headers.ContainsKey("User-Agent") || string.IsNullOrEmpty(request.Headers["User-Agent"]))
+            {
+                request.Headers["User-Agent"] = _userAgentBuilder.GetUserAgent();
+            }
         }
 
         private static void ApplyContextToRequest(HttpRequest request, RequestContext context)
