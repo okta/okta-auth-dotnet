@@ -33,43 +33,18 @@ namespace Okta.Sdk.Abstractions
         /// <param name="dataStore">The <see cref="IDataStore">DataStore</see> to use.</param>
         /// <param name="initialRequest">The initial HTTP request options.</param>
         /// <param name="requestContext">The request context.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
         public CollectionAsyncEnumerator(
             IDataStore dataStore,
             HttpRequest initialRequest,
-            RequestContext requestContext)
+            RequestContext requestContext,
+            CancellationToken cancellationToken = default)
         {
-            _pagedEnumerator = new PagedCollectionEnumerator<T>(dataStore, initialRequest, requestContext);
+            _pagedEnumerator = new PagedCollectionEnumerator<T>(dataStore, initialRequest, requestContext, cancellationToken);
         }
 
         /// <inheritdoc/>
         public T Current => _pagedEnumerator.CurrentPage.Items.ElementAt(_localPageIndex);
-
-#pragma warning disable UseAsyncSuffix // Must match interface
-        /// <inheritdoc/>
-        public async Task<bool> MoveNext(CancellationToken cancellationToken)
-#pragma warning restore UseAsyncSuffix // Must match interface
-        {
-            var hasMoreLocalItems = _initialized
-                && _pagedEnumerator.CurrentPage.Items.Any()
-                && _localPageIndex < _pagedEnumerator.CurrentPage.Items.Count();
-
-            if (hasMoreLocalItems)
-            {
-                _localPageIndex++;
-                return true;
-            }
-
-            var movedNext = await _pagedEnumerator.MoveNextAsync(cancellationToken).ConfigureAwait(false);
-            if (!movedNext)
-            {
-                return false;
-            }
-
-            _initialized = true;
-            _localPageIndex = 0;
-
-            return _pagedEnumerator.CurrentPage.Items.Any();
-        }
 
         private void Dispose(bool disposing)
         {
@@ -85,10 +60,37 @@ namespace Okta.Sdk.Abstractions
         }
 
         /// <inheritdoc/>
-        public void Dispose()
+        public async ValueTask<bool> MoveNextAsync()
+        {
+            var hasMoreLocalItems = _initialized
+               && _pagedEnumerator.CurrentPage.Items.Any()
+               && _localPageIndex < _pagedEnumerator.CurrentPage.Items.Count();
+
+            if (hasMoreLocalItems)
+            {
+                _localPageIndex++;
+                return true;
+            }
+
+            var movedNext = await _pagedEnumerator.MoveNextAsync().ConfigureAwait(false);
+            if (!movedNext)
+            {
+                return false;
+            }
+
+            _initialized = true;
+            _localPageIndex = 0;
+
+            return _pagedEnumerator.CurrentPage.Items.Any();
+        }
+
+        /// <inheritdoc/>
+        public ValueTask DisposeAsync()
         {
             // Do not change this code. Put cleanup code in Dispose(bool disposing) above.
             Dispose(true);
+
+            return default(ValueTask);
         }
     }
 }
