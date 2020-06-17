@@ -1,6 +1,5 @@
 language: csharp
 mono: latest
-# https://github.com/travis-ci/travis-ci/issues/9703
 # .NET Core
 dotnet: 3.1 
 script:
