@@ -7,6 +7,7 @@
 
   <PropertyGroup>
     <Description>Interfaces and shared code for Okta's SDKs.</Description>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Okta.Auth.Sdk.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/okta/okta-auth-dotnet</RepositoryUrl>
     <PackageProjectUrl>https://github.com/okta/okta-auth-dotnet</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/okta/okta-auth-dotnet/blob/master/LICENSE</PackageLicenseUrl>
