@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Okta.Sdk.Abstractions
 {
@@ -33,11 +34,11 @@ namespace Okta.Sdk.Abstractions
         }
 
         /// <inheritdoc/>
-        public IAsyncEnumerator<T> GetEnumerator()
-            => new CollectionAsyncEnumerator<T>(_dataStore, _initialRequest, _requestContext);
+        public IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default)
+        => new CollectionAsyncEnumerator<T>(_dataStore, _initialRequest, _requestContext, cancellationToken);
 
         /// <inheritdoc/>
-        public IPagedCollectionEnumerator<T> GetPagedEnumerator()
-            => new PagedCollectionEnumerator<T>(_dataStore, _initialRequest, _requestContext);
+        public IPagedCollectionEnumerator<T> GetPagedEnumerator(CancellationToken cancellationToken = default)
+        => new PagedCollectionEnumerator<T>(_dataStore, _initialRequest, _requestContext, cancellationToken);
     }
 }

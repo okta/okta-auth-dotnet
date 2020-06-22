@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
     <Description>Official .NET SDK for the Okta Authentication API.</Description>
-    <DocumentationFile>bin\$(Configuration)\netstandard1.3\Okta.Auth.Sdk.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Okta.Auth.Sdk.xml</DocumentationFile>
     <RepositoryUrl>https://github.com/okta/okta-auth-dotnet</RepositoryUrl>
     <PackageProjectUrl>https://github.com/okta/okta-auth-dotnet</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/okta/okta-auth-dotnet/blob/master/LICENSE</PackageLicenseUrl>
@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
