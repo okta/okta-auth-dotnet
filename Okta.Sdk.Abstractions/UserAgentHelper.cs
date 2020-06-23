@@ -4,15 +4,56 @@
 // </copyright>
 
 using System;
+using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace Okta.Sdk.Abstractions
 {
     public static class UserAgentHelper
     {
+        private const string DotNetCoreFramework = ".NET Core";
+
+        /// <summary>
+        /// Gets the SDK version.
+        /// </summary>
         public static Version SdkVersion
         {
             get { return typeof(BaseOktaClient).GetTypeInfo().Assembly.GetName().Version; }
+        }
+
+        /// <summary>
+        /// Gets the .NET runtime version.
+        /// </summary>
+        /// <param name="runtimeFrameworkDescription">The runtime description.</param>
+        /// <param name="runtimeAssemblyCodeBase">The runtime code base.</param>
+        /// <returns>The .NET runtime version.</returns>
+        public static string GetRuntimeVersion(string runtimeFrameworkDescription = "", string runtimeAssemblyCodeBase = "")
+        {
+            var frameworkDescription = string.IsNullOrEmpty(runtimeFrameworkDescription) ? RuntimeInformation.FrameworkDescription : runtimeFrameworkDescription;
+            var assemblyCodeBase = runtimeAssemblyCodeBase;
+
+            // RuntimeInformation.FrameworkDescription is not always accurate, it can report versions like 4.6.x for .NET Core 2.x.
+            if (frameworkDescription.StartsWith(DotNetCoreFramework, StringComparison.OrdinalIgnoreCase))
+            {
+                if (string.IsNullOrEmpty(assemblyCodeBase))
+                {
+                    assemblyCodeBase = typeof(System.Runtime.GCSettings).GetTypeInfo().Assembly?.CodeBase;
+                }
+
+                if (assemblyCodeBase != null)
+                {
+                    var runtimeAssemblyLocation = assemblyCodeBase.Split(new[] { '/', '\\' }, StringSplitOptions.RemoveEmptyEntries);
+                    int dotnetCoreAppIndex = Array.IndexOf(runtimeAssemblyLocation, "Microsoft.NETCore.App");
+
+                    if (dotnetCoreAppIndex >= 0 && dotnetCoreAppIndex < runtimeAssemblyLocation.Length - 2)
+                    {
+                        frameworkDescription = $"{DotNetCoreFramework} {runtimeAssemblyLocation[dotnetCoreAppIndex + 1]}";
+                    }
+                }
+            }
+
+            return frameworkDescription;
         }
     }
 }
