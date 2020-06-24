@@ -12,7 +12,7 @@ namespace Okta.Sdk.Abstractions
 {
     public static class UserAgentHelper
     {
-        private const string DotNetCoreFramework = ".NET Core";
+        private const string DotNetCoreFrameworkRuntimeLabel = ".NET Core";
 
         /// <summary>
         /// Gets the SDK version.
@@ -34,7 +34,7 @@ namespace Okta.Sdk.Abstractions
             var assemblyCodeBase = runtimeAssemblyCodeBase;
 
             // RuntimeInformation.FrameworkDescription is not always accurate, it can report versions like 4.6.x for .NET Core 2.x.
-            if (frameworkDescription.StartsWith(DotNetCoreFramework, StringComparison.OrdinalIgnoreCase))
+            if (frameworkDescription.StartsWith(DotNetCoreFrameworkRuntimeLabel, StringComparison.OrdinalIgnoreCase))
             {
                 if (string.IsNullOrEmpty(assemblyCodeBase))
                 {
@@ -48,7 +48,7 @@ namespace Okta.Sdk.Abstractions
 
                     if (dotnetCoreAppIndex >= 0 && dotnetCoreAppIndex < runtimeAssemblyLocation.Length - 2)
                     {
-                        frameworkDescription = $"{DotNetCoreFramework} {runtimeAssemblyLocation[dotnetCoreAppIndex + 1]}";
+                        frameworkDescription = $"{DotNetCoreFrameworkRuntimeLabel} {runtimeAssemblyLocation[dotnetCoreAppIndex + 1]}";
                     }
                 }
             }
