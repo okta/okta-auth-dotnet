@@ -25,8 +25,8 @@ namespace Okta.Sdk.Abstractions
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAgentBuilder"/> class.
         /// </summary>
-        /// <param name="sdkUserAgentName">The user agent name. i.e: okta-sdk-dotnet</param>
-        /// <param name="sdkVersion">The sdk version</param>
+        /// <param name="sdkUserAgentName">The user agent name. i.e: okta-sdk-dotnet.</param>
+        /// <param name="sdkVersion">The sdk version.</param>
         public UserAgentBuilder(string sdkUserAgentName, Version sdkVersion)
         {
             _cachedUserAgent = new Lazy<string>(Generate);
@@ -44,7 +44,7 @@ namespace Okta.Sdk.Abstractions
         {
             var sdkToken = $"{_oktaSdkUserAgentName}/{GetSdkVersion()}";
 
-            var runtimeToken = $"runtime/{Sanitize(RuntimeInformation.FrameworkDescription)}";
+            var runtimeToken = $"runtime/{UserAgentHelper.GetRuntimeVersion()}";
 
             var operatingSystemToken = $"os/{Sanitize(RuntimeInformation.OSDescription)}";
 
