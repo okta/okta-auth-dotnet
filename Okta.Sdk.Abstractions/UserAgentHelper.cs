@@ -9,6 +9,9 @@ using System.Runtime.InteropServices;
 
 namespace Okta.Sdk.Abstractions
 {
+    /// <summary>
+    /// Utility class for user-agent report.
+    /// </summary>
     public static class UserAgentHelper
     {
         private const string DotNetCoreRuntimeLabel = ".NET Core";

@@ -17,9 +17,19 @@ using Okta.Sdk.Abstractions.Configuration;
 
 namespace Okta.Sdk.Abstractions
 {
+    /// <summary>
+    /// Base OktaClient implementation of <see cref="IOktaClient"/>.
+    /// </summary>
     public class BaseOktaClient : IOktaClient
     {
+        /// <summary>
+        /// The <code>IDataStore</code> implementation to be used for making requests.
+        /// </summary>
         protected IDataStore _dataStore;
+
+        /// <summary>
+        /// The request context to be used when making requests.
+        /// </summary>
         protected RequestContext _requestContext;
 
         static BaseOktaClient()
@@ -87,6 +97,11 @@ namespace Okta.Sdk.Abstractions
             _requestContext = requestContext;
         }
 
+        /// <summary>
+        /// Gets the Okta client configuration.
+        /// </summary>
+        /// <param name="apiClientConfiguration">The client configuration</param>
+        /// <returns>An instance of <c>OktaClientConfiguration</c></returns>
         protected static OktaClientConfiguration GetConfigurationOrDefault(OktaClientConfiguration apiClientConfiguration = null)
         {
             string configurationFileRoot = Directory.GetCurrentDirectory();

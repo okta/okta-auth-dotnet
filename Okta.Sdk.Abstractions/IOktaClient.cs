@@ -9,6 +9,9 @@ using Okta.Sdk.Abstractions.Configuration;
 
 namespace Okta.Sdk.Abstractions
 {
+    /// <summary>
+    /// An interface defining all the methods required for performing requests
+    /// </summary>
     public interface IOktaClient
     {
         /// <summary>
