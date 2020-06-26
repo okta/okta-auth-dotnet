@@ -11,8 +11,15 @@ using Okta.Sdk.Abstractions.Internal;
 
 namespace Okta.Sdk.Abstractions
 {
+    /// <summary>
+    /// This class encapsulates the logic to resolve resource types.
+    /// </summary>
     public class AbstractResourceTypeResolverFactory
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AbstractResourceTypeResolverFactory"/> class.
+        /// </summary>
+        /// <param name="resourceDefinedTypes">The resource types.</param>
         public AbstractResourceTypeResolverFactory(IEnumerable<TypeInfo> resourceDefinedTypes)
         {
             _resourceDefinedTypes = resourceDefinedTypes;
@@ -42,11 +49,19 @@ namespace Okta.Sdk.Abstractions
                 .ToArray();
         }
 
+        /// <summary>
+        /// Gets all resource types.
+        /// </summary>
+        /// <returns>The enumeration of resource types. </returns>
         public IEnumerable<TypeInfo> GetAllResourceDefinedTypes()
         {
             return _resourceDefinedTypes;
         }
 
+        /// <summary>
+        /// Gets all resolvers.
+        /// </summary>
+        /// <returns>The anumeration of resolvers.</returns>
         protected IEnumerable<(Type Resolver, Type For)> GetAllResolvers()
         {
             var resolvers = GetAllResolvers(GetAllResourceDefinedTypes());
@@ -54,12 +69,27 @@ namespace Okta.Sdk.Abstractions
             return resolvers;
         }
 
+        /// <summary>
+        /// Indicates if a resource type requires resolution.
+        /// </summary>
+        /// <param name="resourceType">The resource type.</param>
+        /// <returns> A bool value indicating if the resource type requires resolution.</returns>
         public bool RequiresResolution(Type resourceType)
             => GetResolver(resourceType) != null;
 
+        /// <summary>
+        /// Creates a new resolver.
+        /// </summary>
+        /// <typeparam name="T">The resolver type.</typeparam>
+        /// <returns>The resolver.</returns>
         public IResourceTypeResolver CreateResolver<T>()
             => CreateResolver(forType: typeof(T));
 
+        /// <summary>
+        /// Creates a new resolver for a given type.
+        /// </summary>
+        /// <param name="forType">The resource type.</param>
+        /// <returns>The resolver.</returns>
         public IResourceTypeResolver CreateResolver(Type forType)
         {
             var concreteType = GetConcreteForInterface(forType);

@@ -14,8 +14,14 @@ namespace Okta.Sdk.Abstractions.Internal
     /// <typeparam name="T">The base type of resource to resolve.</typeparam>
     public abstract class AbstractResourceTypeResolver<T> : IResourceTypeResolver
     {
+        /// <summary>
+        /// The resource type resolver factory.
+        /// </summary>
         protected AbstractResourceTypeResolverFactory _resourceTypeResolverFactory;
 
+        /// <summary>
+        /// Gets or sets a resource type resolver factory.
+        /// </summary>
         public abstract AbstractResourceTypeResolverFactory ResourceTypeResolverFactory
         {
             get;

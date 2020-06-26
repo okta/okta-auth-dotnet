@@ -12,11 +12,18 @@ using Microsoft.Extensions.Logging.Abstractions;
 
 namespace Okta.Sdk.Abstractions
 {
+    /// <summary>
+    /// Base resource implementation for <see cref="IResource"/>.
+    /// </summary>
     public class BaseResource : IResource
     {
         internal static readonly TypeInfo ResourceTypeInfo = typeof(IResource).GetTypeInfo();
 
+        /// <summary>
+        /// The Okta client.
+        /// </summary>
         protected IOktaClient _client;
+
         private ResourceFactory _resourceFactory;
         private ILogger _logger;
         private IDictionary<string, object> _data;
@@ -29,6 +36,13 @@ namespace Okta.Sdk.Abstractions
             Initialize(null, null, null, null);
         }
 
+        /// <summary>
+        /// Initializes a resource.
+        /// </summary>
+        /// <param name="client">The Okta client.</param>
+        /// <param name="resourceFactory">The resource factory.</param>
+        /// <param name="data">The resource data.</param>
+        /// <param name="logger">The logger.</param>
         public void Initialize(
             IOktaClient client,
             ResourceFactory resourceFactory,
