@@ -32,11 +32,13 @@ You can learn more on the [Okta + .NET][lang-landing] page in our documentation.
 
 This library uses semantic versioning and follows Okta's [library version policy](https://developer.okta.com/code/library-versions/).
 
-:heavy_check_mark: The current stable major version series is: 1.x
+:heavy_check_mark: The current stable major version series is: 2.x
 
 | Version | Status                    |
 | ------- | ------------------------- |
-| 1.x | :heavy_check_mark: Stable |
+| 1.x | :warning: Retiring on 2021-03-29 |
+| 2.x | :heavy_check_mark: Stable |
+
  
 The latest release can always be found on the [releases page][github-releases].
 
@@ -50,7 +52,12 @@ If you run into problems using the SDK, you can
 
 ## Getting Started
 
-The SDK is compatible with [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/library) 1.3 and .NET Framework 4.6.1 or higher.
+The SDK is compatible with:
+
+* .NET Standard 2.0 and 2.1
+* .NET Framework 4.6.1 or higher
+* .NET Core 3.0 or higher
+ 
 
 ### Install using Nuget Package Manager
  1. Right-click on your project in the Solution Explorer and choose **Manage Nuget Packages...**
