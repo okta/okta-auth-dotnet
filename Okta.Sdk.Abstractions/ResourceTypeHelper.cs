@@ -10,6 +10,9 @@ using System.Reflection;
 
 namespace Okta.Sdk.Abstractions
 {
+    /// <summary>
+    /// A utility class for resource types.
+    /// </summary>
     public class ResourceTypeHelper
     {
         /// <summary>

@@ -73,7 +73,7 @@ namespace Okta.Auth.Sdk
                 Context = new AuthenticationRequestContext()
                 {
                     DeviceToken = authenticateOptions.DeviceToken,
-                }
+                },
             };
 
             var request = new HttpRequest
@@ -113,7 +113,6 @@ namespace Okta.Auth.Sdk
             {
                 Uri = "/api/v1/authn",
                 Payload = authenticationRequest,
-
             };
 
             if (!string.IsNullOrEmpty(authenticateOptions.UserAgent))
