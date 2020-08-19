@@ -19,7 +19,7 @@ This repository contains the Okta Authentication SDK for .NET. This SDK can be u
 
 Okta's Authentication API is built around a [state machine](https://developer.okta.com/docs/api/resources/authn#transaction-state). In order to use this library you will need to be familiar with the available states.
 
-![State Model Diagram](https://raw.githubusercontent.com/okta/okta.github.io/source/_source/_assets/img/auth-state-model.png "State Model Diagram")
+![State Model Diagram](https://developer.okta.com/img/auth-state-model1.png "State Model Diagram")
 
 We also publish these other libraries for .NET:
  
