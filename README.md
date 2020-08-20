@@ -22,7 +22,7 @@ Okta's Authentication API is built around a [state machine](https://developer.ok
 
 ![State Model Diagram](https://developer.okta.com/img/auth-state-model1.png "State Model Diagram")
 
-For more information about multifactor authentication see the [Multifactor authentication guide](https://developer.okta.com/docs/guides/mfa/ga/prerequisites/).
+For more information about multifactor authentication see the [multifactor authentication guide](https://developer.okta.com/docs/guides/mfa/ga/prerequisites/).
 
 We also publish these other libraries for .NET:
  
