@@ -1,4 +1,3 @@
-[<img src="https://devforum.okta.com/uploads/oktadev/original/1X/bf54a16b5fda189e4ad2706fb57cbb7a1e5b8deb.png" align="right" width="256px"/>](https://devforum.okta.com/)
 
 [![Support](https://img.shields.io/badge/support-Developer%20Forum-blue.svg)][devforum]
 
@@ -13,13 +12,17 @@
 * [Building the SDK](#building-the-sdk)
 * [Contributing](#contributing)
 
-This repository contains the Okta Authentication SDK for .NET. This SDK can be used in your server-side code to interact with the [Okta Authentication API](https://developer.okta.com/docs/api/resources/authn).
+This repository contains the Okta Authentication SDK for .NET which is used in your server-side code to interact with the [Okta Authentication API](https://developer.okta.com/docs/api/resources/authn).
+
+For high level information about the features of the Okta Authentication product see [Okta Authentication](https://developer.okta.com/product/authentication).
  
-**NOTE:** Using OAuth 2.0 or OpenID Connect to integrate your application instead of this library will require much less work, and has a smaller risk profile. Please see [this guide](https://developer.okta.com/use_cases/authentication/) to see if using this API is right for your use case. You could also use our [ASP.NET Integration](https://github.com/okta/okta-aspnet) out of the box.
+> :warning: **NOTE:** Using OAuth 2.0 or OpenID Connect to integrate your application instead of this library requires much less work, and has a smaller risk profile. Please see [this guide](https://developer.okta.com/use_cases/authentication/) to see if using this API is right for your use case. You could also use our [ASP.NET Integration](https://github.com/okta/okta-aspnet) out of the box.
 
 Okta's Authentication API is built around a [state machine](https://developer.okta.com/docs/api/resources/authn#transaction-state). In order to use this library you will need to be familiar with the available states.
 
-![State Model Diagram](https://raw.githubusercontent.com/okta/okta.github.io/source/_source/_assets/img/auth-state-model.png "State Model Diagram")
+![State Model Diagram](https://developer.okta.com/img/auth-state-model1.png "State Model Diagram")
+
+For more information about multifactor authentication see the [multifactor authentication guide](https://developer.okta.com/docs/guides/mfa/ga/prerequisites/).
 
 We also publish these other libraries for .NET:
  
