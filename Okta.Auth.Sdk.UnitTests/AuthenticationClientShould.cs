@@ -212,6 +212,7 @@ namespace Okta.Auth.Sdk.UnitTests
             authResponse.AuthenticationStatus.Should().Be(AuthenticationStatus.Success);
             authResponse.SessionToken.Should().Be("00t6IUQiVbWpMLgtmwSjMFzqykb5QcaBNtveiWlGeM");
             authResponse.ExpiresAt.Value.Date.Should().Be(new DateTime(2015, 11, 3));
+            authResponse.ExpiresAt.Value.Should().Be(DateTimeOffset.Parse("2015-11-03T10:15:57.000Z"));
 
             var user = authResponse.Embedded.GetProperty<Resource>("user");
             user.Should().NotBeNull();
