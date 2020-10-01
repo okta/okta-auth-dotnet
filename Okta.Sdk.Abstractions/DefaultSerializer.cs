@@ -31,7 +31,7 @@ namespace Okta.Sdk.Abstractions
                 DefaultValueHandling = DefaultValueHandling.Ignore,
                 ContractResolver = new DefaultContractResolver(),
                 DateParseHandling = DateParseHandling.DateTimeOffset,
-        };
+            };
 
             _serializer.Converters.Add(new RecursiveDictionaryConverter());
             _serializer.Converters.Add(new ResourceSerializingConverter());
