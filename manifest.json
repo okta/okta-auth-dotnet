@@ -1,0 +1,1609 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/src/okta/test-okta-auth-dotnet/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ActivateFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ActivateFactorOptions.html",
+          "hash": "Wx9KX10/vPgloGlkImSsCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ActivatePushFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ActivatePushFactorOptions.html",
+          "hash": "FEVPQW+Vtf3XDsBIdgb9iA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ActivateU2fFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ActivateU2fFactorOptions.html",
+          "hash": "YUPClzZrptgY9XfWaLKsxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.AnswerRecoveryQuestionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.AnswerRecoveryQuestionOptions.html",
+          "hash": "WZfWcTDReh/vwT7nhs2Cyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.AuthenticateOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.AuthenticateOptions.html",
+          "hash": "eHLYhjjaatweMSFZd199Og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.AuthenticateWithActivationTokenOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.AuthenticateWithActivationTokenOptions.html",
+          "hash": "8k4ZcWeDS82WdoxijZcgLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.AuthenticationClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.AuthenticationClient.html",
+          "hash": "9cFM2AZEU3VW36DiGDeCTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.AuthenticationResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.AuthenticationResponse.html",
+          "hash": "mfPGtmckkJlMr8+8GKA73g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.AuthenticationStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.AuthenticationStatus.html",
+          "hash": "xL6LmDX/Fazkfq6d00ESag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ChangePasswordOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ChangePasswordOptions.html",
+          "hash": "JRZ4EbroEKQfERac1kYZSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollCallFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollCallFactorOptions.html",
+          "hash": "eyciWTDaVlRZkq3/Meftjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollDuoFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollDuoFactorOptions.html",
+          "hash": "j2hHmlfRah7FcPlfQzi40g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollPushFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollPushFactorOptions.html",
+          "hash": "SM+/4j2YpYlx5FzgM+LHbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollRsaFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollRsaFactorOptions.html",
+          "hash": "ZxzzLzHSWoy4CgfoXVr/kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollSecurityQuestionFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollSecurityQuestionFactorOptions.html",
+          "hash": "I5TtwzVOjdFIY8GHyiZWnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollSmsFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollSmsFactorOptions.html",
+          "hash": "Yi6FgayyrzL5SwmY4Bf81A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollSymantecFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollSymantecFactorOptions.html",
+          "hash": "MQWXeinMemmAgj+QTMK6HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollTotpFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollTotpFactorOptions.html",
+          "hash": "0Wh5zwFWG8h87t+4E9rYNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollU2FFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollU2FFactorOptions.html",
+          "hash": "hsrUB5EtEo+tJodrTGx91w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollYubiKeyFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollYubiKeyFactorOptions.html",
+          "hash": "/L0mdew1UHrLB6YQmVQntw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Factor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Factor.html",
+          "hash": "YzRxQdSRECkrWyEydWTN9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.FactorResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.FactorResult.html",
+          "hash": "Exg+vjBzYEAuSG9ceq8oGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.FactorStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.FactorStatus.html",
+          "hash": "7O94XCV0vV+Hh4R4w1/8Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.FactorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.FactorType.html",
+          "hash": "YKcgMe0qJegJXXWbEuOuZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ForgotPasswordOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ForgotPasswordOptions.html",
+          "hash": "UY2f9H+s1xMK63TQVwoVbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.IAuthenticationClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.IAuthenticationClient.html",
+          "hash": "RnmCgH4HdSqbr3CpbJcFxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.IAuthenticationResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.IAuthenticationResponse.html",
+          "hash": "qyEKkawA7fuTQZ97m6xz3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ActivateFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ActivateFactorRequest.html",
+          "hash": "NldwK4CZmBtf7hOi/ja9yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ActivateU2FFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ActivateU2FFactorRequest.html",
+          "hash": "fOt+tv8k9zz9P5N24bMRew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.AnswerRecoveryQuestionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.AnswerRecoveryQuestionRequest.html",
+          "hash": "8H7W/qTCunuShMzvALrOLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequest.html",
+          "hash": "YDdxhGSqYlmK0QHxwie7yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequestContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequestContext.html",
+          "hash": "1PrV7RMo+3Dk4IkiepxROg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequestOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequestOptions.html",
+          "hash": "C2dV1gP8qDsVv1YarJeDeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ChangePasswordRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ChangePasswordRequest.html",
+          "hash": "YI2w5p2V8UTO5DE8qoSgEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.EnrollFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.EnrollFactorRequest.html",
+          "hash": "YCvXtL5iHidYwwAb0V5ewQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ForgotPasswordRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ForgotPasswordRequest.html",
+          "hash": "UILOt/rnDiXQgANPMgN9jg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ResendChallengeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ResendChallengeRequest.html",
+          "hash": "/0ZA2PogFxMBCUh8+1UEMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ResendRecoveryChallengeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ResendRecoveryChallengeRequest.html",
+          "hash": "qRa5dBZxrlaA32O5Ga5dpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ResetPasswordRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ResetPasswordRequest.html",
+          "hash": "JT1D8MiLZrAGR6qzETDgNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.TransactionStateRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.TransactionStateRequest.html",
+          "hash": "d2tVJRYEZKcwxMYswlUtMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.UnlockAccountRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.UnlockAccountRequest.html",
+          "hash": "YYmLdAro2uKWB2gqioOsVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyCallFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyCallFactorRequest.html",
+          "hash": "BLeMaarCbpOwe8gRlEbVKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyDuoFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyDuoFactorRequest.html",
+          "hash": "/OUmfyaoZ15KEpN+CXWjCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyPushFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyPushFactorRequest.html",
+          "hash": "/AlCuInbZ+2kQIf06nXfnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyRecoveryFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyRecoveryFactorRequest.html",
+          "hash": "j6A/sfpLx8CP4OmJQeUgeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyRecoveryTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyRecoveryTokenRequest.html",
+          "hash": "y6MIgp3FsR4RByrsQYVIew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifySecurityQuestionFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifySecurityQuestionFactorRequest.html",
+          "hash": "5UklMQzCahnbotXdq2BjEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifySmsFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifySmsFactorRequest.html",
+          "hash": "cGvcBbyvfSAdvXU1/NgXvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyTotpFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyTotpFactorRequest.html",
+          "hash": "52hB/EWkEXK/M8nlfAnJNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyU2fFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyU2fFactorRequest.html",
+          "hash": "QPae/rcYOxEFueWYC22dhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.html",
+          "hash": "loelfaK+WGrBh9LL/BcFZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.OktaDefaults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.OktaDefaults.html",
+          "hash": "CY+NqK3iaoxmGnj5FoJzpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.RecoveryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.RecoveryType.html",
+          "hash": "jiTRblvkA5PbqPRdhryCYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ResendChallengeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ResendChallengeOptions.html",
+          "hash": "b8mSXcHJEJWSQ0BSyA76xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ResendRecoveryChallengeOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ResendRecoveryChallengeOptions.html",
+          "hash": "Fi3/tMQp6qXpCKRYucdgEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ResetPasswordOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ResetPasswordOptions.html",
+          "hash": "ujoxqxoxK96Jn2+ES9fNmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Resource.html",
+          "hash": "3m84PN4uynXlpl7OeblLdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.TransactionStateOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.TransactionStateOptions.html",
+          "hash": "l1uKfpBf1F+nqTHLzwPoTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.UnlockAccountOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.UnlockAccountOptions.html",
+          "hash": "ZUD8eeDHfL87vp+B9lssFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyCallFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyCallFactorOptions.html",
+          "hash": "DMVjpbAYRvZ4ImqgIIzjrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyDuoFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyDuoFactorOptions.html",
+          "hash": "K5GtBL5qvLLuzEOMMfH9Gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyPushFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyPushFactorOptions.html",
+          "hash": "V+SECjrazJddf+x9Rlhyqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyRecoveryFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyRecoveryFactorOptions.html",
+          "hash": "J0I60MV7D3fFsNYj8tnyqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyRecoveryTokenOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyRecoveryTokenOptions.html",
+          "hash": "jlqQOwHFcMwx9gYxygH7Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifySecurityQuestionFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifySecurityQuestionFactorOptions.html",
+          "hash": "iMYG1gTbOdel98f4d8EIOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifySmsFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifySmsFactorOptions.html",
+          "hash": "5Rb3VYDIlx3ag9paF3yWGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyTotpFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyTotpFactorOptions.html",
+          "hash": "XHq7ctIvDVwOWGBRNer4LA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyU2FFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyU2FFactorOptions.html",
+          "hash": "WqnKqb2r6Mn082rz8CLIeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.html",
+          "hash": "KDu8LVFE3mSebfBi9CuCYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory.html",
+          "hash": "jVz9pSLqwntk0bR497sCvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ApiError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ApiError.html",
+          "hash": "0Va9HhyBd1wkFch7KTXbPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ApiErrorCause.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ApiErrorCause.html",
+          "hash": "5ubkLxZmP05lzAb/9dDsSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.BaseOktaClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.BaseOktaClient.html",
+          "hash": "Q/4zszI91djWVorBYXnPTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.BaseResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.BaseResource.html",
+          "hash": "GqBZMVJBzCKe7TRucwdLFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.CastingListAdapter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.CastingListAdapter-1.html",
+          "hash": "7nv5fSTDVWT44Z+PXTX41A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.CollectionAsyncEnumerator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.CollectionAsyncEnumerator-1.html",
+          "hash": "ygCjXOYrJa/67a8+mRd1Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.CollectionClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.CollectionClient-1.html",
+          "hash": "xWoVWx7tPuXc1HGmKyaTHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.CollectionPage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.CollectionPage-1.html",
+          "hash": "G63rKkX/GrnO7h+xmopYPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration.html",
+          "hash": "7g7egaWnz26xvy2G55d0Tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.Configuration.ProxyConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.Configuration.ProxyConfiguration.html",
+          "hash": "FVB3an5MZFChLIchMz2skw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.Configuration.html",
+          "hash": "D9p6PsQ2wMVUh3ZVxnnE6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.DateTimeConvertor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.DateTimeConvertor.html",
+          "hash": "mnQ3pqtNvx0mzsKJKg6xfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.DefaultDataStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.DefaultDataStore.html",
+          "hash": "6hJOhppsdw3llKv0ZOnkHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.DefaultHttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.DefaultHttpClient.html",
+          "hash": "THzxM+Vm5KhVKUXeU7CFkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.DefaultProxy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.DefaultProxy.html",
+          "hash": "9bQxZNQyoiMw3yawqsLLyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.DefaultRequestExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.DefaultRequestExecutor.html",
+          "hash": "K/01IGmyJ+HlnuFY1MnfgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.DefaultSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.DefaultSerializer.html",
+          "hash": "/grnxdcT2FeVs6Ffjwoefg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.HomePath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.HomePath.html",
+          "hash": "dXOKcU6ANTkV/p4l3ZTCmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.HttpRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.HttpRequest.html",
+          "hash": "oDCC2/abl6+Ka4rDaoQaPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.HttpResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.HttpResponse-1.html",
+          "hash": "N9qRZHfCH2Wsa/HK3annIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.HttpResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.HttpResponse.html",
+          "hash": "qoqyMCS9QWOEF4bMRXLuag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IApiError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IApiError.html",
+          "hash": "+UmOJRpbOtOje2/RAi16UA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IApiErrorCause.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IApiErrorCause.html",
+          "hash": "YE5gvihqgEA8Guapy1vZ7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ICollectionClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ICollectionClient-1.html",
+          "hash": "GQEoz6w+Oa3NwIpIWXtZhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IDataStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IDataStore.html",
+          "hash": "cyjElTZwplyozjqnMaAPRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IDeepCloneable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IDeepCloneable-1.html",
+          "hash": "l6dEFzbhVfNqsO586QUACA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IOktaClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IOktaClient.html",
+          "hash": "dY48RLpMs7OthzEEjPn94A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IPagedCollectionEnumerator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IPagedCollectionEnumerator-1.html",
+          "hash": "6g5HUgOoapW0t77UegP37Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IRequestExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IRequestExecutor.html",
+          "hash": "89E6PeSFjw3+me7eRn02cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IResource.html",
+          "hash": "EXW3ZQKi1n7mQpuIYKC7ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.IResourceTypeResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.IResourceTypeResolver.html",
+          "hash": "STxko49trRClQgWIKC7i6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ISerializer.html",
+          "hash": "OHTwg4df73eHENBuAbhKfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.Internal.AbstractResourceTypeResolver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.Internal.AbstractResourceTypeResolver-1.html",
+          "hash": "gW2Rtjmci7QYBMQJgSc22Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.Internal.html",
+          "hash": "vT0r9cCF8s8Qv2aHDcQWpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.LinkHeaderParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.LinkHeaderParser.html",
+          "hash": "crvYnCUTDfF4wIMD+psntg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.OktaApiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.OktaApiException.html",
+          "hash": "PoXF9gIZFTEh8P5GmV3ARw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.OktaClientConfigurationValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.OktaClientConfigurationValidator.html",
+          "hash": "JsbfDZgIhnZkFo2N1JgKmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.OktaException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.OktaException.html",
+          "hash": "vznHi1ljwZK/XdUTH6T0Qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.PagedCollectionEnumerator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.PagedCollectionEnumerator-1.html",
+          "hash": "ZIqqi5aZa0AulfWD4YBQPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.RecursiveDictionaryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.RecursiveDictionaryConverter.html",
+          "hash": "ZUkDH8gIK+DBPoYg+H3Erw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.RequestContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.RequestContext.html",
+          "hash": "zmtmfQ3LEUNSiCrW8cG8nA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ResourceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ResourceFactory.html",
+          "hash": "wSX38d83M6EwVyKBI42Nbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ResourceSerializingConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ResourceSerializingConverter.html",
+          "hash": "4h9V/7p9PZQx8gHxbD0jcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.ResourceTypeHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.ResourceTypeHelper.html",
+          "hash": "kRUJFTDq6YA3yD5et4kJKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.StringEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.StringEnum.html",
+          "hash": "ROpjTvTN5igy7W4/W0ZnWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.html",
+          "hash": "tPtAS5NX1pvilVP8WefTrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.UrlFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.UrlFormatter.html",
+          "hash": "XkBHMdRkrVNHv/2oQO5BHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.UserAgentBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.UserAgentBuilder.html",
+          "hash": "P8rxUvkE3wMSnobCzZJiZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.UserAgentHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.UserAgentHelper.html",
+          "hash": "A3XdV9WUMbcV1LUQjXOtKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.WebLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.WebLink.html",
+          "hash": "jVuPbwpBjRGl0QChwS7VWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Sdk.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Sdk.Abstractions.html",
+          "hash": "J4GmadIw1akG0NAo2QPkOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "J+8L5kD/l1yxPwoiXP0opQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "nY1LS85yAqwmbOo5wLXyyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "WeGxWIaKYefEJWU9zitrHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/okta-dev-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/okta-dev-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "+HzW/Lfk415vpJGQPe4eMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "DuejxA/LeRLzR5mNzBpfkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 121,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

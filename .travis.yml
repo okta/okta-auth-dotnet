@@ -1,6 +1,0 @@
-language: csharp
-mono: latest
-# .NET Core
-dotnet: 3.1 
-script:
-  - ./build.sh

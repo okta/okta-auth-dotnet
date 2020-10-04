@@ -1,0 +1,2287 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IAuthenticationClient
+   | Okta .NET Authentication SDK Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IAuthenticationClient
+   | Okta .NET Authentication SDK Documentation ">
+    <meta name="generator" content="docfx 2.56.2.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/okta-dev-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Okta.Auth.Sdk.IAuthenticationClient">
+  
+  
+  <h1 id="Okta_Auth_Sdk_IAuthenticationClient" data-uid="Okta.Auth.Sdk.IAuthenticationClient" class="text-break">Interface IAuthenticationClient
+  </h1>
+  <div class="markdown level0 summary"><p>Interface for authentication clients</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_Configuration">IOktaClient.Configuration</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_CreatedScoped_Okta_Sdk_Abstractions_RequestContext_">IOktaClient.CreatedScoped(RequestContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_GetAsync__1_System_String_CancellationToken_">IOktaClient.GetAsync&lt;T&gt;(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_GetAsync__1_Okta_Sdk_Abstractions_HttpRequest_CancellationToken_">IOktaClient.GetAsync&lt;T&gt;(HttpRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_GetCollection__1_System_String_">IOktaClient.GetCollection&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_GetCollection__1_Okta_Sdk_Abstractions_HttpRequest_">IOktaClient.GetCollection&lt;T&gt;(HttpRequest)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PostAsync_System_String_System_Object_CancellationToken_">IOktaClient.PostAsync(String, Object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PostAsync__1_System_String_System_Object_CancellationToken_">IOktaClient.PostAsync&lt;TResponse&gt;(String, Object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PostAsync_Okta_Sdk_Abstractions_HttpRequest_CancellationToken_">IOktaClient.PostAsync(HttpRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PostAsync__1_Okta_Sdk_Abstractions_HttpRequest_CancellationToken_">IOktaClient.PostAsync&lt;TResponse&gt;(HttpRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PutAsync_System_String_System_Object_CancellationToken_">IOktaClient.PutAsync(String, Object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PutAsync__1_System_String_System_Object_CancellationToken_">IOktaClient.PutAsync&lt;TResponse&gt;(String, Object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PutAsync_Okta_Sdk_Abstractions_HttpRequest_CancellationToken_">IOktaClient.PutAsync(HttpRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_PutAsync__1_Okta_Sdk_Abstractions_HttpRequest_CancellationToken_">IOktaClient.PutAsync&lt;TResponse&gt;(HttpRequest, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_DeleteAsync_System_String_CancellationToken_">IOktaClient.DeleteAsync(String, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Okta.Sdk.Abstractions.IOktaClient.html#Okta_Sdk_Abstractions_IOktaClient_DeleteAsync_Okta_Sdk_Abstractions_HttpRequest_CancellationToken_">IOktaClient.DeleteAsync(HttpRequest, CancellationToken)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Okta.Auth.Sdk.html">Okta.Auth.Sdk</a></h6>
+  <h6><strong>Assembly</strong>: Okta.Auth.Sdk.dll</h6>
+  <h5 id="Okta_Auth_Sdk_IAuthenticationClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IAuthenticationClient : IOktaClient</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L177">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateFactorOptions,CancellationToken)">ActivateFactorAsync(ActivateFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Activates a factor
+<a href="https://developer.okta.com/docs/api/resources/authn#activate-factor">https://developer.okta.com/docs/api/resources/authn#activate-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ActivateFactorOptions.html">ActivateFactorOptions</a></td>
+        <td><span class="parametername">activateFactorOptions</span></td>
+        <td><p>The activate factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivatePushFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivatePushFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L186">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivatePushFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivatePushFactorOptions,CancellationToken)">ActivateFactorAsync(ActivatePushFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Activates a push factor
+<a href="https://developer.okta.com/docs/api/resources/authn#activate-push-factor">https://developer.okta.com/docs/api/resources/authn#activate-push-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ActivateFactorAsync(ActivatePushFactorOptions activatePushFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ActivatePushFactorOptions.html">ActivatePushFactorOptions</a></td>
+        <td><span class="parametername">activatePushFactorOptions</span></td>
+        <td><p>The activate push factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateU2fFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateU2fFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L195">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateU2fFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateU2fFactorOptions,CancellationToken)">ActivateFactorAsync(ActivateU2fFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Activates a U2F factor
+<a href="https://developer.okta.com/docs/api/resources/authn#activate-u2f-factor">https://developer.okta.com/docs/api/resources/authn#activate-u2f-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ActivateFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ActivateU2fFactorOptions.html">ActivateU2fFactorOptions</a></td>
+        <td><span class="parametername">activateFactorOptions</span></td>
+        <td><p>The activate U2F factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_AnswerRecoveryQuestionAsync_Okta_Auth_Sdk_AnswerRecoveryQuestionOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.AnswerRecoveryQuestionAsync(Okta.Auth.Sdk.AnswerRecoveryQuestionOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L204">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_AnswerRecoveryQuestionAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AnswerRecoveryQuestionAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_AnswerRecoveryQuestionAsync_Okta_Auth_Sdk_AnswerRecoveryQuestionOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AnswerRecoveryQuestionAsync(Okta.Auth.Sdk.AnswerRecoveryQuestionOptions,CancellationToken)">AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Answers the user’s recovery question
+<a href="https://developer.okta.com/docs/api/resources/authn#answer-recovery-question">https://developer.okta.com/docs/api/resources/authn#answer-recovery-question</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.AnswerRecoveryQuestionOptions.html">AnswerRecoveryQuestionOptions</a></td>
+        <td><span class="parametername">answerOptions</span></td>
+        <td><p>The answer recovery question options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_AuthenticateAsync_Okta_Auth_Sdk_AuthenticateOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.AuthenticateAsync(Okta.Auth.Sdk.AuthenticateOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L24">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_AuthenticateAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AuthenticateAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_AuthenticateAsync_Okta_Auth_Sdk_AuthenticateOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AuthenticateAsync(Okta.Auth.Sdk.AuthenticateOptions,CancellationToken)">AuthenticateAsync(AuthenticateOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Authenticates a user with username/password credentials
+<a href="https://developer.okta.com/docs/api/resources/authn#primary-authentication">https://developer.okta.com/docs/api/resources/authn#primary-authentication</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; AuthenticateAsync(AuthenticateOptions authenticateOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.AuthenticateOptions.html">AuthenticateOptions</a></td>
+        <td><span class="parametername">authenticateOptions</span></td>
+        <td><p>The authentication options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_AuthenticateAsync_Okta_Auth_Sdk_AuthenticateWithActivationTokenOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.AuthenticateAsync(Okta.Auth.Sdk.AuthenticateWithActivationTokenOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L33">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_AuthenticateAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AuthenticateAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_AuthenticateAsync_Okta_Auth_Sdk_AuthenticateWithActivationTokenOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AuthenticateAsync(Okta.Auth.Sdk.AuthenticateWithActivationTokenOptions,CancellationToken)">AuthenticateAsync(AuthenticateWithActivationTokenOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Authenticates a user with activation token
+<a href="https://developer.okta.com/docs/api/resources/authn#primary-authentication-with-activation-token">https://developer.okta.com/docs/api/resources/authn#primary-authentication-with-activation-token</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; AuthenticateAsync(AuthenticateWithActivationTokenOptions authenticateOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.AuthenticateWithActivationTokenOptions.html">AuthenticateWithActivationTokenOptions</a></td>
+        <td><span class="parametername">authenticateOptions</span></td>
+        <td><p>The authentication options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_CancelTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.CancelTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L276">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_CancelTransactionStateAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.CancelTransactionStateAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_CancelTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.CancelTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions,CancellationToken)">CancelTransactionStateAsync(TransactionStateOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Cancels the current transaction and revokes the state token.
+<a href="https://developer.okta.com/docs/api/resources/authn#cancel-transaction">https://developer.okta.com/docs/api/resources/authn#cancel-transaction</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; CancelTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.TransactionStateOptions.html">TransactionStateOptions</a></td>
+        <td><span class="parametername">transactionStateOptions</span></td>
+        <td><p>The transaction state options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ChangePasswordAsync_Okta_Auth_Sdk_ChangePasswordOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ChangePasswordAsync(Okta.Auth.Sdk.ChangePasswordOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L42">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ChangePasswordAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ChangePasswordAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ChangePasswordAsync_Okta_Auth_Sdk_ChangePasswordOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ChangePasswordAsync(Okta.Auth.Sdk.ChangePasswordOptions,CancellationToken)">ChangePasswordAsync(ChangePasswordOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Changes the user password
+<a href="https://developer.okta.com/docs/api/resources/authn#change-password">https://developer.okta.com/docs/api/resources/authn#change-password</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ChangePasswordOptions.html">ChangePasswordOptions</a></td>
+        <td><span class="parametername">passwordOptions</span></td>
+        <td><p>The Change Password options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollCallFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollCallFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L96">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollCallFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollCallFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollCallFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a call factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-call-factor">https://developer.okta.com/docs/api/resources/authn#enroll-okta-call-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollCallFactorOptions.html">EnrollCallFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll call factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollDuoFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollDuoFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L150">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollDuoFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollDuoFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollDuoFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a Duo factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-duo-factor">https://developer.okta.com/docs/api/resources/authn#enroll-duo-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollDuoFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollDuoFactorOptions.html">EnrollDuoFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll Duo factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollPushFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollPushFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L114">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollPushFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollPushFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollPushFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a push factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-push-factor">https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-push-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollPushFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollPushFactorOptions.html">EnrollPushFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll push factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollRsaFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollRsaFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L123">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollRsaFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollRsaFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollRsaFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a RSA factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-rsa-securid-factor">https://developer.okta.com/docs/api/resources/authn#enroll-rsa-securid-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollRsaFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollRsaFactorOptions.html">EnrollRsaFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll RSA factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollSecurityQuestionFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollSecurityQuestionFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L87">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollSecurityQuestionFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollSecurityQuestionFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollSecurityQuestionFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a security question factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-security-question-factor">https://developer.okta.com/docs/api/resources/authn#enroll-okta-security-question-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollSecurityQuestionFactorOptions.html">EnrollSecurityQuestionFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll security question factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollSmsFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollSmsFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L69">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollSmsFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollSmsFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollSmsFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a SMS factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-sms-factor">https://developer.okta.com/docs/api/resources/authn#enroll-okta-sms-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollSmsFactorOptions.html">EnrollSmsFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll SMS factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollSymantecFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollSymantecFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L132">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollSymantecFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollSymantecFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollSymantecFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a Symantec factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-symantec-vip-factor">https://developer.okta.com/docs/api/resources/authn#enroll-symantec-vip-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollSymantecFactorOptions.html">EnrollSymantecFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll Symantec factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollTotpFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollTotpFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L168">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollTotpFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollTotpFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollTotpFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a TOTP factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-totp-factor">https://developer.okta.com/docs/api/resources/authn#enroll-okta-verify-totp-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollTotpFactorOptions.html">EnrollTotpFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll TOTP factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollU2FFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollU2FFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L159">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollU2FFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollU2FFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollU2FFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a U2F factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-u2f-factor">https://developer.okta.com/docs/api/resources/authn#enroll-u2f-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollU2FFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollU2FFactorOptions.html">EnrollU2FFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll U2F factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollYubiKeyFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollYubiKeyFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L141">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollYubiKeyFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollYubiKeyFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollYubiKeyFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a YubiKey factor
+<a href="https://developer.okta.com/docs/api/resources/authn#enroll-yubikey-factor">https://developer.okta.com/docs/api/resources/authn#enroll-yubikey-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollYubiKeyFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollYubiKeyFactorOptions.html">EnrollYubiKeyFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll YubiKey factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ForgotPasswordAsync_Okta_Auth_Sdk_ForgotPasswordOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ForgotPasswordAsync(Okta.Auth.Sdk.ForgotPasswordOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L51">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ForgotPasswordAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ForgotPasswordAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ForgotPasswordAsync_Okta_Auth_Sdk_ForgotPasswordOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ForgotPasswordAsync(Okta.Auth.Sdk.ForgotPasswordOptions,CancellationToken)">ForgotPasswordAsync(ForgotPasswordOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new password recovery transaction for a given user and issues a recovery token that can be used to reset a user’s password.
+<a href="https://developer.okta.com/docs/api/resources/authn#forgot-password">https://developer.okta.com/docs/api/resources/authn#forgot-password</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ForgotPasswordAsync(ForgotPasswordOptions forgotPasswordOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ForgotPasswordOptions.html">ForgotPasswordOptions</a></td>
+        <td><span class="parametername">forgotPasswordOptions</span></td>
+        <td><p>The forgot password options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_GetPreviousTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.GetPreviousTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L258">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_GetPreviousTransactionStateAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.GetPreviousTransactionStateAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_GetPreviousTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.GetPreviousTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions,CancellationToken)">GetPreviousTransactionStateAsync(TransactionStateOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Moves the current transaction state back to the previous state.
+<a href="https://developer.okta.com/docs/api/resources/authn#previous-transaction-state">https://developer.okta.com/docs/api/resources/authn#previous-transaction-state</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; GetPreviousTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.TransactionStateOptions.html">TransactionStateOptions</a></td>
+        <td><span class="parametername">transactionStateOptions</span></td>
+        <td><p>The transaction state options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_GetTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.GetTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L249">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_GetTransactionStateAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.GetTransactionStateAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_GetTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.GetTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions,CancellationToken)">GetTransactionStateAsync(TransactionStateOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the current transaction state for a state token.
+<a href="https://developer.okta.com/docs/api/resources/authn#get-transaction-state">https://developer.okta.com/docs/api/resources/authn#get-transaction-state</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; GetTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.TransactionStateOptions.html">TransactionStateOptions</a></td>
+        <td><span class="parametername">transactionStateOptions</span></td>
+        <td><p>The transaction state options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ResendCallEnrollFactorAsync_Okta_Auth_Sdk_EnrollCallFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ResendCallEnrollFactorAsync(Okta.Auth.Sdk.EnrollCallFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L105">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ResendCallEnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendCallEnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ResendCallEnrollFactorAsync_Okta_Auth_Sdk_EnrollCallFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendCallEnrollFactorAsync(Okta.Auth.Sdk.EnrollCallFactorOptions,CancellationToken)">ResendCallEnrollFactorAsync(EnrollCallFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Resend a Call challenge.
+<a href="https://developer.okta.com/docs/api/resources/authn#request-example-for-resend-voice-call">https://developer.okta.com/docs/api/resources/authn#request-example-for-resend-voice-call</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ResendCallEnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollCallFactorOptions.html">EnrollCallFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll call factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ResendRecoveryChallengeAsync_Okta_Auth_Sdk_ResendRecoveryChallengeOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ResendRecoveryChallengeAsync(Okta.Auth.Sdk.ResendRecoveryChallengeOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L232">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ResendRecoveryChallengeAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendRecoveryChallengeAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ResendRecoveryChallengeAsync_Okta_Auth_Sdk_ResendRecoveryChallengeOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendRecoveryChallengeAsync(Okta.Auth.Sdk.ResendRecoveryChallengeOptions,CancellationToken)">ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Resend a recovery challenge for a factor (SMS/Call)
+<a href="https://developer.okta.com/docs/api/resources/authn#resend-sms-recovery-challenge">https://developer.okta.com/docs/api/resources/authn#resend-sms-recovery-challenge</a>
+<a href="https://developer.okta.com/docs/api/resources/authn#resend-call-recovery-challenge">https://developer.okta.com/docs/api/resources/authn#resend-call-recovery-challenge</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ResendRecoveryChallengeOptions.html">ResendRecoveryChallengeOptions</a></td>
+        <td><span class="parametername">resendRecoveryChallengeOptions</span></td>
+        <td><p>The resend recovery challenge options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ResendSmsEnrollFactorAsync_Okta_Auth_Sdk_EnrollSmsFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ResendSmsEnrollFactorAsync(Okta.Auth.Sdk.EnrollSmsFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L78">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ResendSmsEnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendSmsEnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ResendSmsEnrollFactorAsync_Okta_Auth_Sdk_EnrollSmsFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendSmsEnrollFactorAsync(Okta.Auth.Sdk.EnrollSmsFactorOptions,CancellationToken)">ResendSmsEnrollFactorAsync(EnrollSmsFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Resend a SMS challenge.
+<a href="https://developer.okta.com/docs/api/resources/authn#resend-sms-as-part-of-enrollment">https://developer.okta.com/docs/api/resources/authn#resend-sms-as-part-of-enrollment</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ResendSmsEnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollSmsFactorOptions.html">EnrollSmsFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll SMS factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ResendVerifyChallengeAsync_Okta_Auth_Sdk_ResendChallengeOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ResendVerifyChallengeAsync(Okta.Auth.Sdk.ResendChallengeOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L347">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ResendVerifyChallengeAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendVerifyChallengeAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ResendVerifyChallengeAsync_Okta_Auth_Sdk_ResendChallengeOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResendVerifyChallengeAsync(Okta.Auth.Sdk.ResendChallengeOptions,CancellationToken)">ResendVerifyChallengeAsync(ResendChallengeOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Resend a verify challenge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ResendVerifyChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ResendChallengeOptions.html">ResendChallengeOptions</a></td>
+        <td><span class="parametername">resendChallengeOptions</span></td>
+        <td><p>The resend challenge options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_ResetPasswordAsync_Okta_Auth_Sdk_ResetPasswordOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.ResetPasswordAsync(Okta.Auth.Sdk.ResetPasswordOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L60">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ResetPasswordAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResetPasswordAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ResetPasswordAsync_Okta_Auth_Sdk_ResetPasswordOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ResetPasswordAsync(Okta.Auth.Sdk.ResetPasswordOptions,CancellationToken)">ResetPasswordAsync(ResetPasswordOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Resets user password
+<a href="https://developer.okta.com/docs/api/resources/authn#reset-password">https://developer.okta.com/docs/api/resources/authn#reset-password</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ResetPasswordAsync(ResetPasswordOptions resetPasswordOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ResetPasswordOptions.html">ResetPasswordOptions</a></td>
+        <td><span class="parametername">resetPasswordOptions</span></td>
+        <td><p>The reset password options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_SkipTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.SkipTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L267">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_SkipTransactionStateAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.SkipTransactionStateAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_SkipTransactionStateAsync_Okta_Auth_Sdk_TransactionStateOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.SkipTransactionStateAsync(Okta.Auth.Sdk.TransactionStateOptions,CancellationToken)">SkipTransactionStateAsync(TransactionStateOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sends a skip link to skip the current transaction state and advance to the next state.
+<a href="https://developer.okta.com/docs/api/resources/authn#skip-transaction-state">https://developer.okta.com/docs/api/resources/authn#skip-transaction-state</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; SkipTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.TransactionStateOptions.html">TransactionStateOptions</a></td>
+        <td><span class="parametername">transactionStateOptions</span></td>
+        <td><p>The transaction state options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_UnlockAccountAsync_Okta_Auth_Sdk_UnlockAccountOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.UnlockAccountAsync(Okta.Auth.Sdk.UnlockAccountOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L240">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_UnlockAccountAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.UnlockAccountAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_UnlockAccountAsync_Okta_Auth_Sdk_UnlockAccountOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.UnlockAccountAsync(Okta.Auth.Sdk.UnlockAccountOptions,CancellationToken)">UnlockAccountAsync(UnlockAccountOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Unlocks an account <a href="https://developer.okta.com/docs/api/resources/authn#unlock-account">https://developer.okta.com/docs/api/resources/authn#unlock-account</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.UnlockAccountOptions.html">UnlockAccountOptions</a></td>
+        <td><span class="parametername">unlockAccountOptions</span></td>
+        <td><p>The unlock account options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyCallFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyCallFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L303">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyCallFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyCallFactorOptions,CancellationToken)">VerifyFactorAsync(VerifyCallFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies a call factor
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-call-factor">https://developer.okta.com/docs/api/resources/authn#verify-call-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyCallFactorOptions.html">VerifyCallFactorOptions</a></td>
+        <td><span class="parametername">verifyCallFactorOptions</span></td>
+        <td><p>The verify call factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyDuoFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyDuoFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L294">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyDuoFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyDuoFactorOptions,CancellationToken)">VerifyFactorAsync(VerifyDuoFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies a Duo factor
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-duo-factor">https://developer.okta.com/docs/api/resources/authn#verify-duo-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyDuoFactorOptions.html">VerifyDuoFactorOptions</a></td>
+        <td><span class="parametername">verifyDuoFactorOptions</span></td>
+        <td><p>The verify Duo factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyPushFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyPushFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L312">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyPushFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyPushFactorOptions,CancellationToken)">VerifyFactorAsync(VerifyPushFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies a push factor
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-push-factor">https://developer.okta.com/docs/api/resources/authn#verify-push-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyPushFactorOptions.html">VerifyPushFactorOptions</a></td>
+        <td><span class="parametername">verifyPushFactorOptions</span></td>
+        <td><p>The verify push factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifySecurityQuestionFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifySecurityQuestionFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L339">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifySecurityQuestionFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifySecurityQuestionFactorOptions,CancellationToken)">VerifyFactorAsync(VerifySecurityQuestionFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies an answer to a question factor.
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-security-question-factor">https://developer.okta.com/docs/api/resources/authn#verify-security-question-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifySecurityQuestionFactorOptions.html">VerifySecurityQuestionFactorOptions</a></td>
+        <td><span class="parametername">verifySecurityQuestionFactorOptions</span></td>
+        <td><p>The verify security question factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifySmsFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifySmsFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L330">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifySmsFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifySmsFactorOptions,CancellationToken)">VerifyFactorAsync(VerifySmsFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies a sms factor.
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-sms-factor">https://developer.okta.com/docs/api/resources/authn#verify-sms-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifySmsFactorOptions.html">VerifySmsFactorOptions</a></td>
+        <td><span class="parametername">verifySmsFactorOptions</span></td>
+        <td><p>The verify SMS factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyTotpFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyTotpFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L321">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyTotpFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyTotpFactorOptions,CancellationToken)">VerifyFactorAsync(VerifyTotpFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies a TOTP factor
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-totp-factor">https://developer.okta.com/docs/api/resources/authn#verify-totp-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyTotpFactorOptions.html">VerifyTotpFactorOptions</a></td>
+        <td><span class="parametername">verifyTotpFactorOptions</span></td>
+        <td><p>The verify TOTP factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyU2FFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyU2FFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L285">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyU2FFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyU2FFactorOptions,CancellationToken)">VerifyFactorAsync(VerifyU2FFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies a U2F factor
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-u2f-factor">https://developer.okta.com/docs/api/resources/authn#verify-u2f-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyU2FFactorOptions.html">VerifyU2FFactorOptions</a></td>
+        <td><span class="parametername">verifyU2FFactorOptions</span></td>
+        <td><p>The verify U2F factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyRecoveryFactorAsync_Okta_Auth_Sdk_VerifyRecoveryFactorOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyRecoveryFactorAsync(Okta.Auth.Sdk.VerifyRecoveryFactorOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L222">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyRecoveryFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyRecoveryFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyRecoveryFactorAsync_Okta_Auth_Sdk_VerifyRecoveryFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyRecoveryFactorAsync(Okta.Auth.Sdk.VerifyRecoveryFactorOptions,CancellationToken)">VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies Recovery for a factor (SMS/Call).
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-recovery-factor">https://developer.okta.com/docs/api/resources/authn#verify-recovery-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyRecoveryFactorOptions.html">VerifyRecoveryFactorOptions</a></td>
+        <td><span class="parametername">verifyFactorRecoveryOptions</span></td>
+        <td><p>The verify recovery factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient_VerifyRecoveryTokenAsync_Okta_Auth_Sdk_VerifyRecoveryTokenOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient.VerifyRecoveryTokenAsync(Okta.Auth.Sdk.VerifyRecoveryTokenOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L213">View Source</a>
+  </span>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyRecoveryTokenAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyRecoveryTokenAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyRecoveryTokenAsync_Okta_Auth_Sdk_VerifyRecoveryTokenOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyRecoveryTokenAsync(Okta.Auth.Sdk.VerifyRecoveryTokenOptions,CancellationToken)">VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Validates a recovery token that was distributed to the end user to continue the recovery transaction.
+<a href="https://developer.okta.com/docs/api/resources/authn#verify-recovery-token">https://developer.okta.com/docs/api/resources/authn#verify-recovery-token</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyRecoveryTokenOptions.html">VerifyRecoveryTokenOptions</a></td>
+        <td><span class="parametername">verifyRecoveryTokenOptions</span></td>
+        <td><p>The verify recovery token options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/new/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/apiSpec/new?filename=Okta_Auth_Sdk_IAuthenticationClient.md&amp;value=---%0Auid%3A%20Okta.Auth.Sdk.IAuthenticationClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/andriizhegurov-okta/okta-auth-dotnet/blob/OKTA-330325-Ensure-primary-authentication-expiration-is-5-minutes-from-authentication/Okta.Auth.Sdk/IAuthenticationClient.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &copy; 2020 Okta, Inc.<br>Generated with <b>DocFx</b>.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
