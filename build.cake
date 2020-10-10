@@ -119,15 +119,6 @@ Task("Info")
     Information("Building using {0} version of Cake", cakeVersion);
 });
 
-// Define top-level tasks
-Task("Default")
-    .IsDependentOn("Info")
-    .IsDependentOn("Clean")
-    .IsDependentOn("Restore")
-    .IsDependentOn("Build")
-    .IsDependentOn("Test")
-    .IsDependentOn("Pack");
-
 Task("BuildDocs")
 .IsDependentOn("Build")
 .Does(() =>
@@ -189,6 +180,15 @@ Task("CreateRootRedirector")
     FileWriteText("./docs/temp/index.html",
         @"<meta http-equiv=""refresh"" content=""0; url=https://developer.okta.com/okta-auth-dotnet/latest/"">");
 });
+
+// Define top-level tasks
+Task("Default")
+    .IsDependentOn("Info")
+    .IsDependentOn("Clean")
+    .IsDependentOn("Restore")
+    .IsDependentOn("Build")
+    .IsDependentOn("Test")
+    .IsDependentOn("Pack");
 
 Task("Docs")
     .IsDependentOn("BuildDocs")
