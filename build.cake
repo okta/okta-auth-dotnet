@@ -127,32 +127,6 @@ Task("BuildDocs")
                  "./docs/docfx.json");
 });
 
-Task("CopyDocsToVersionedDirectories")
-.IsDependentOn("BuildDocs")
-.IsDependentOn("CloneExistingDocs")
-.Does(() =>
-{
-    if (DirectoryExists("./docs/temp/latest"))
-    {
-        DeleteDirectory("./docs/temp/latest", recursive: true);
-    }
-    Information("Copying docs to docs/temp/latest");
-    CopyDirectory("./docs/_site/", "./docs/temp/latest/");
-
-    var travisTag = EnvironmentVariable("TRAVIS_TAG");
-    if (string.IsNullOrEmpty(travisTag))
-    {
-        Console.WriteLine("TRAVIS_TAG not set, won't copy docs to a tagged directory");
-        return;
-    }
-
-    var taggedVersion = travisTag.TrimStart('v');
-    var tagDocsDirectory = string.Format("./docs/temp/{0}", taggedVersion);
-
-    Information("Copying docs to " + tagDocsDirectory);
-    CopyDirectory("./docs/_site/", tagDocsDirectory);
-});
-
 Task("CloneExistingDocs")
 .Does(() =>
 {
@@ -179,6 +153,32 @@ Task("CreateRootRedirector")
 {
     FileWriteText("./docs/temp/index.html",
         @"<meta http-equiv=""refresh"" content=""0; url=https://developer.okta.com/okta-auth-dotnet/latest/"">");
+});
+
+Task("CopyDocsToVersionedDirectories")
+.IsDependentOn("BuildDocs")
+.IsDependentOn("CloneExistingDocs")
+.Does(() =>
+{
+    if (DirectoryExists("./docs/temp/latest"))
+    {
+        DeleteDirectory("./docs/temp/latest", recursive: true);
+    }
+    Information("Copying docs to docs/temp/latest");
+    CopyDirectory("./docs/_site/", "./docs/temp/latest/");
+
+    var travisTag = EnvironmentVariable("TRAVIS_TAG");
+    if (string.IsNullOrEmpty(travisTag))
+    {
+        Console.WriteLine("TRAVIS_TAG not set, won't copy docs to a tagged directory");
+        return;
+    }
+
+    var taggedVersion = travisTag.TrimStart('v');
+    var tagDocsDirectory = string.Format("./docs/temp/{0}", taggedVersion);
+
+    Information("Copying docs to " + tagDocsDirectory);
+    CopyDirectory("./docs/_site/", tagDocsDirectory);
 });
 
 // Define top-level tasks
