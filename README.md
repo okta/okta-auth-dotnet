@@ -2,6 +2,7 @@
 [![Support](https://img.shields.io/badge/support-Developer%20Forum-blue.svg)][devforum]
 
 
+
 # Okta .NET Authentication SDK
 
 * [Release status](#release-status)
@@ -28,6 +29,7 @@ We also publish these other libraries for .NET:
  
 * [Okta ASP.NET middleware](https://github.com/okta/okta-aspnet)
 * [Okta .NET management SDK](https://github.com/okta/okta-sdk-dotnet)
+* [Okta SDK Abstractions](https://github.com/okta/okta-sdk-abstractions-dotnet)
 
 You can learn more on the [Okta + .NET][lang-landing] page in our documentation.
 
@@ -68,6 +70,9 @@ The SDK is compatible with:
 
 ### Install using The Package Manager Console
 Simply run `install-package Okta.Auth.Sdk`. Done!
+
+> **NOTE:** This SDK uses the [Okta SDK Abstractions](https://github.com/okta/okta-sdk-abstractions-dotnet). 
+
 
 You'll also need:
 
