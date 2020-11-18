@@ -60,6 +60,7 @@ The SDK is compatible with:
 * .NET Standard 2.0 and 2.1
 * .NET Framework 4.6.1 or higher
 * .NET Core 3.0 or higher
+* .NET 5.0
  
 
 ### Install using Nuget Package Manager
