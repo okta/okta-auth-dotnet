@@ -33,7 +33,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.ActivateU2fFactorOptions.html",
-          "hash": "0cAp9mMX/mouXCUx9ezEJA=="
+          "hash": "xFP5dycalNwwSCKBvhPToA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html",
+          "hash": "x0DLT7hUo26G1IPF6aQmjg=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.AuthenticationClient.html",
-          "hash": "hnLESjOaqaHlCVHx8bovJg=="
+          "hash": "obVNWyWcWx/ZLhXV49M2Cw=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.AuthenticationResponse.html",
-          "hash": "QrXI+py10ZuFupXopXByyg=="
+          "hash": "AtHONSJokPZgqEz+7H6fTQ=="
         }
       },
       "is_incremental": false,
@@ -233,6 +245,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html",
+          "hash": "v67Wl0ewt3UO0ZsF9IYwfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Okta.Auth.Sdk.EnrollYubiKeyFactorOptions.yml",
       "output": {
         ".html": {
@@ -249,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Factor.html",
-          "hash": "uMPSVZnh9dE+hAQgRr/Frg=="
+          "hash": "HIHWo9N6OCvKv/4YDFBxlg=="
         }
       },
       "is_incremental": false,
@@ -285,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.FactorType.html",
-          "hash": "M3ACq5hh1DJK3SshuYUf4w=="
+          "hash": "Z2PmImOq0AVJl/yj7B7atw=="
         }
       },
       "is_incremental": false,
@@ -309,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.IAuthenticationClient.html",
-          "hash": "3fpBxjQX7Ktn2zT6tuEzxQ=="
+          "hash": "McFKjEtNjRSiDEuSQM9LXQ=="
         }
       },
       "is_incremental": false,
@@ -333,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ActivateFactorRequest.html",
-          "hash": "p0fuOTGCtSGmSu6x+cRpXQ=="
+          "hash": "TDS+hkgYGEMui3DdkZqiTg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +369,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ActivateU2FFactorRequest.html",
-          "hash": "R7Z5/B1qXM5TGBvdq+MOlQ=="
+          "hash": "BrFVK3IagEWH3e/2XtEG2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html",
+          "hash": "yROfBhCGjbA/AGUOt7zWeA=="
         }
       },
       "is_incremental": false,
@@ -357,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.AnswerRecoveryQuestionRequest.html",
-          "hash": "B97reRZvlr8Wn5dsdr7cag=="
+          "hash": "Vc+lrc0qtZvTB+OkvSLVeQ=="
         }
       },
       "is_incremental": false,
@@ -369,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequest.html",
-          "hash": "pv7/CVUzJdXYVcn0lkPrFw=="
+          "hash": "PsX0SvR33FXbpItRRmjWRA=="
         }
       },
       "is_incremental": false,
@@ -381,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequestContext.html",
-          "hash": "D6evPVp6I++XT/M8NPAYqw=="
+          "hash": "YonuWOOh3QAlG0Rg8q6Ybw=="
         }
       },
       "is_incremental": false,
@@ -393,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.AuthenticationRequestOptions.html",
-          "hash": "Gq0uVRGJVouNJ3RnW4j6LA=="
+          "hash": "5Z/PQmDA/HkHIJBwDV9Cqg=="
         }
       },
       "is_incremental": false,
@@ -405,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ChangePasswordRequest.html",
-          "hash": "ownqEDLvyVfsk+axuik2UQ=="
+          "hash": "azBeVDT+MXxBBTI0A7Pa/Q=="
         }
       },
       "is_incremental": false,
@@ -417,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.EnrollFactorRequest.html",
-          "hash": "LgpkYEXuUijBYT0AaZLKJw=="
+          "hash": "guACfilYV/EQSwF28hwbhQ=="
         }
       },
       "is_incremental": false,
@@ -429,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ForgotPasswordRequest.html",
-          "hash": "BGeoaHO2AB9NwC+CH8hTig=="
+          "hash": "oSPWQN9C9Sy1bslDkykLIA=="
         }
       },
       "is_incremental": false,
@@ -441,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ResendChallengeRequest.html",
-          "hash": "1FDgEL7lcDRqgmmoMHnzSQ=="
+          "hash": "e8eL5jEqT9no2sFj7iGNvQ=="
         }
       },
       "is_incremental": false,
@@ -453,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ResendRecoveryChallengeRequest.html",
-          "hash": "e16+UbWlwHQoiKIswi/R0g=="
+          "hash": "DW/Xp6AxhCbmBKibNFbGJw=="
         }
       },
       "is_incremental": false,
@@ -465,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.ResetPasswordRequest.html",
-          "hash": "Dml/s0Sk/tKQBKXu9iuQNg=="
+          "hash": "lyT9xzSGqe7agu7HBpU0FQ=="
         }
       },
       "is_incremental": false,
@@ -477,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.TransactionStateRequest.html",
-          "hash": "p7NCLo+0dnMjURXMlQzlNw=="
+          "hash": "7Qnbd/Qb9xfXhfkslhMARA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.UnlockAccountRequest.html",
-          "hash": "CObxTA6iuJrwsbl/rZ9KPw=="
+          "hash": "3Hsc0IJwfGoUl8ZvrITkgA=="
         }
       },
       "is_incremental": false,
@@ -501,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyCallFactorRequest.html",
-          "hash": "EZ23q6nI7ItXBtBVEsyWuQ=="
+          "hash": "LVNUJB24zNL43t6crauDzw=="
         }
       },
       "is_incremental": false,
@@ -513,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyDuoFactorRequest.html",
-          "hash": "Nb+KPltkQ+siskYg8+4Czg=="
+          "hash": "DIq1ED/lzdijs+/xjdCMRg=="
         }
       },
       "is_incremental": false,
@@ -525,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyPushFactorRequest.html",
-          "hash": "Y3UFxEoVytixr80umQqIPg=="
+          "hash": "E0TE8HIypTequOO6eOxq3g=="
         }
       },
       "is_incremental": false,
@@ -537,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyRecoveryFactorRequest.html",
-          "hash": "hANiLWs8P3rUJpx+taFC+Q=="
+          "hash": "8s0xU8jtcvSUOvJOMHixFQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyRecoveryTokenRequest.html",
-          "hash": "pyecEoxiHYyP5SgeTBL16A=="
+          "hash": "aF6WVyiqXc5L0wwUk9E7dQ=="
         }
       },
       "is_incremental": false,
@@ -561,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifySecurityQuestionFactorRequest.html",
-          "hash": "tUEUW9AHQJFUhmJBArqaeA=="
+          "hash": "Q/I3HqjsL6G7Bqekay8R2w=="
         }
       },
       "is_incremental": false,
@@ -573,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifySmsFactorRequest.html",
-          "hash": "u/UN6c9bz1IZO6ehF+Zd7g=="
+          "hash": "UNoBsmIoKUfIe9nscpK2Ew=="
         }
       },
       "is_incremental": false,
@@ -585,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyTotpFactorRequest.html",
-          "hash": "bLEkVIV+wt+RznwM49jEoQ=="
+          "hash": "8FBkJK7iyP9ZDzc/nQ1Z2A=="
         }
       },
       "is_incremental": false,
@@ -597,7 +633,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.VerifyU2fFactorRequest.html",
-          "hash": "YBrBy983wLC22WIjJXsuKg=="
+          "hash": "gnhZRrI45s7qMym1nI5lyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.html",
+          "hash": "8ZAbspVDYHpstNOg8mOi0g=="
         }
       },
       "is_incremental": false,
@@ -609,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Models.html",
-          "hash": "cjjBKkmPri9Use6D1wsUUQ=="
+          "hash": "TAIn0ivbL5QCx7wBsij+Hg=="
         }
       },
       "is_incremental": false,
@@ -681,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.Resource.html",
-          "hash": "mDCj/J995mUzOkYNBvdz4A=="
+          "hash": "byfG1bO5m8vEnAK5iU4m3Q=="
         }
       },
       "is_incremental": false,
@@ -821,11 +869,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html",
+          "hash": "KXrqaCueH16i6cVKo6pS4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Okta.Auth.Sdk.yml",
       "output": {
         ".html": {
           "relative_path": "api/Okta.Auth.Sdk.html",
-          "hash": "93pZ93M1pYAIJz6dwnQUbg=="
+          "hash": "kSufL2a7nwxsIcgePohOfQ=="
         }
       },
       "is_incremental": false,
@@ -849,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.ApiError.html",
-          "hash": "3hZl2AVQcqKIlfO/VoDrkw=="
+          "hash": "pBzsN8ZHC9GYdCSw9svbGA=="
         }
       },
       "is_incremental": false,
@@ -861,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.ApiErrorCause.html",
-          "hash": "S/ROsirUFm13hUkYT0EwSw=="
+          "hash": "DywWk2F87C5dLADO3YCmJw=="
         }
       },
       "is_incremental": false,
@@ -873,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.BaseOktaClient.html",
-          "hash": "P6kY6CzcMsN8NfZ8b/KChg=="
+          "hash": "vks81vXBefEAqS7HsLTj0A=="
         }
       },
       "is_incremental": false,
@@ -885,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.BaseResource.html",
-          "hash": "kgAjqSyqmAUGyTobhGUSFw=="
+          "hash": "fVgNgT3mZ/oxBS8QMh3wow=="
         }
       },
       "is_incremental": false,
@@ -897,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.CastingListAdapter-1.html",
-          "hash": "8FNo4YXdVsxpfC/Y5Asx+w=="
+          "hash": "AjKkRBKlyXQgoi0NG2vzuw=="
         }
       },
       "is_incremental": false,
@@ -909,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.CollectionAsyncEnumerator-1.html",
-          "hash": "cMLx5/M/sRE200UaoDQzaQ=="
+          "hash": "XJVY0M4dU4axnmF0hno3gw=="
         }
       },
       "is_incremental": false,
@@ -921,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.CollectionClient-1.html",
-          "hash": "4nxmyI6pDGm3YZMHhWYIMw=="
+          "hash": "LMW6pQ9LV51mB5PU6b1P7A=="
         }
       },
       "is_incremental": false,
@@ -981,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.DefaultDataStore.html",
-          "hash": "payi9DUSX19X8NIfpZ7v+A=="
+          "hash": "QAXn/j2yIcIIpHkGBnvy5w=="
         }
       },
       "is_incremental": false,
@@ -993,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.DefaultHttpClient.html",
-          "hash": "o4KE5HK1NMO2S4D2QH3/MA=="
+          "hash": "O3mzU7QYKxPeJ8zOBpkfCg=="
         }
       },
       "is_incremental": false,
@@ -1005,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.DefaultProxy.html",
-          "hash": "sFHXTelv9YZvuUKkcxlV9Q=="
+          "hash": "5PbnntWxbzeawpTvc+LRsw=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.DefaultRequestExecutor.html",
-          "hash": "HYfDpsDfdLjzpCGhEkV2vw=="
+          "hash": "VNGDZIkysRngY0ysSk6Hdg=="
         }
       },
       "is_incremental": false,
@@ -1113,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.ICollectionClient-1.html",
-          "hash": "y3z3nyhFFo36dyEMsoYzvg=="
+          "hash": "EEERQVniKMVJxX8MSMxCmg=="
         }
       },
       "is_incremental": false,
@@ -1305,7 +1365,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.RecursiveDictionaryConverter.html",
-          "hash": "d/4cbUkNCdRtKyf0JkARXg=="
+          "hash": "EuYIC8yMenQUVQSKyUP/hw=="
         }
       },
       "is_incremental": false,
@@ -1329,7 +1389,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.ResourceFactory.html",
-          "hash": "EoHw2knmYtt/IlToTggKaQ=="
+          "hash": "LWC93BDAL3wyy9qG5X56Bw=="
         }
       },
       "is_incremental": false,
@@ -1341,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.ResourceSerializingConverter.html",
-          "hash": "cld5GVhfmbghfvU8hdRUZg=="
+          "hash": "6guRY/9ButEb0EsRkiM83w=="
         }
       },
       "is_incremental": false,
@@ -1377,7 +1437,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.html",
-          "hash": "V4/54rRjxg7hhfll4JIvfw=="
+          "hash": "KS3gkTTyGB/ryavhBh/FNA=="
         }
       },
       "is_incremental": false,
@@ -1461,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "v+NP3llBhkS9iLayLXFpfQ=="
+          "hash": "950RyetSCL54R2RWuI60WA=="
         }
       },
       "is_incremental": false,
@@ -1558,7 +1618,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 120,
+          "total_file_count": 125,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

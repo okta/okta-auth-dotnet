@@ -142,6 +142,64 @@ references:
   isSpec: "True"
   fullName: Okta.Auth.Sdk.ActivateU2fFactorOptions.StateToken
   nameWithType: ActivateU2fFactorOptions.StateToken
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions
+  name: ActivateWebAuthnFactorOptions
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html
+  commentId: T:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions
+  nameWithType: ActivateWebAuthnFactorOptions
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.Attestation
+  name: Attestation
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_Attestation
+  commentId: P:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.Attestation
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.Attestation
+  nameWithType: ActivateWebAuthnFactorOptions.Attestation
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.Attestation*
+  name: Attestation
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_Attestation_
+  commentId: Overload:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.Attestation
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.Attestation
+  nameWithType: ActivateWebAuthnFactorOptions.Attestation
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.ClientData
+  name: ClientData
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_ClientData
+  commentId: P:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.ClientData
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.ClientData
+  nameWithType: ActivateWebAuthnFactorOptions.ClientData
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.ClientData*
+  name: ClientData
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_ClientData_
+  commentId: Overload:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.ClientData
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.ClientData
+  nameWithType: ActivateWebAuthnFactorOptions.ClientData
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.FactorId
+  name: FactorId
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_FactorId
+  commentId: P:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.FactorId
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.FactorId
+  nameWithType: ActivateWebAuthnFactorOptions.FactorId
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.FactorId*
+  name: FactorId
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_FactorId_
+  commentId: Overload:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.FactorId
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.FactorId
+  nameWithType: ActivateWebAuthnFactorOptions.FactorId
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.StateToken
+  name: StateToken
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_StateToken
+  commentId: P:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.StateToken
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.StateToken
+  nameWithType: ActivateWebAuthnFactorOptions.StateToken
+- uid: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.StateToken*
+  name: StateToken
+  href: api/Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html#Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_StateToken_
+  commentId: Overload:Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.StateToken
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.StateToken
+  nameWithType: ActivateWebAuthnFactorOptions.StateToken
 - uid: Okta.Auth.Sdk.AnswerRecoveryQuestionOptions
   name: AnswerRecoveryQuestionOptions
   href: api/Okta.Auth.Sdk.AnswerRecoveryQuestionOptions.html
@@ -411,6 +469,12 @@ references:
   commentId: M:Okta.Auth.Sdk.AuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateU2fFactorOptions,CancellationToken)
   fullName: Okta.Auth.Sdk.AuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateU2fFactorOptions, CancellationToken)
   nameWithType: AuthenticationClient.ActivateFactorAsync(ActivateU2fFactorOptions, CancellationToken)
+- uid: Okta.Auth.Sdk.AuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions,CancellationToken)
+  name: ActivateFactorAsync(ActivateWebAuthnFactorOptions, CancellationToken)
+  href: api/Okta.Auth.Sdk.AuthenticationClient.html#Okta_Auth_Sdk_AuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_CancellationToken_
+  commentId: M:Okta.Auth.Sdk.AuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions,CancellationToken)
+  fullName: Okta.Auth.Sdk.AuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions, CancellationToken)
+  nameWithType: AuthenticationClient.ActivateFactorAsync(ActivateWebAuthnFactorOptions, CancellationToken)
 - uid: Okta.Auth.Sdk.AuthenticationClient.ActivateFactorAsync*
   name: ActivateFactorAsync
   href: api/Okta.Auth.Sdk.AuthenticationClient.html#Okta_Auth_Sdk_AuthenticationClient_ActivateFactorAsync_
@@ -530,6 +594,12 @@ references:
   commentId: M:Okta.Auth.Sdk.AuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollU2FFactorOptions,CancellationToken)
   fullName: Okta.Auth.Sdk.AuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollU2FFactorOptions, CancellationToken)
   nameWithType: AuthenticationClient.EnrollFactorAsync(EnrollU2FFactorOptions, CancellationToken)
+- uid: Okta.Auth.Sdk.AuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions,CancellationToken)
+  name: EnrollFactorAsync(EnrollWebAuthnFactorOptions, CancellationToken)
+  href: api/Okta.Auth.Sdk.AuthenticationClient.html#Okta_Auth_Sdk_AuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_CancellationToken_
+  commentId: M:Okta.Auth.Sdk.AuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions,CancellationToken)
+  fullName: Okta.Auth.Sdk.AuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions, CancellationToken)
+  nameWithType: AuthenticationClient.EnrollFactorAsync(EnrollWebAuthnFactorOptions, CancellationToken)
 - uid: Okta.Auth.Sdk.AuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollYubiKeyFactorOptions,CancellationToken)
   name: EnrollFactorAsync(EnrollYubiKeyFactorOptions, CancellationToken)
   href: api/Okta.Auth.Sdk.AuthenticationClient.html#Okta_Auth_Sdk_AuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollYubiKeyFactorOptions_CancellationToken_
@@ -715,6 +785,12 @@ references:
   commentId: M:Okta.Auth.Sdk.AuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyU2FFactorOptions,CancellationToken)
   fullName: Okta.Auth.Sdk.AuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyU2FFactorOptions, CancellationToken)
   nameWithType: AuthenticationClient.VerifyFactorAsync(VerifyU2FFactorOptions, CancellationToken)
+- uid: Okta.Auth.Sdk.AuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions,CancellationToken)
+  name: VerifyFactorAsync(VerifyWebAuthnFactorOptions, CancellationToken)
+  href: api/Okta.Auth.Sdk.AuthenticationClient.html#Okta_Auth_Sdk_AuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_CancellationToken_
+  commentId: M:Okta.Auth.Sdk.AuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions,CancellationToken)
+  fullName: Okta.Auth.Sdk.AuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions, CancellationToken)
+  nameWithType: AuthenticationClient.VerifyFactorAsync(VerifyWebAuthnFactorOptions, CancellationToken)
 - uid: Okta.Auth.Sdk.AuthenticationClient.VerifyFactorAsync*
   name: VerifyFactorAsync
   href: api/Okta.Auth.Sdk.AuthenticationClient.html#Okta_Auth_Sdk_AuthenticationClient_VerifyFactorAsync_
@@ -1457,6 +1533,38 @@ references:
   isSpec: "True"
   fullName: Okta.Auth.Sdk.EnrollU2FFactorOptions.StateToken
   nameWithType: EnrollU2FFactorOptions.StateToken
+- uid: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions
+  name: EnrollWebAuthnFactorOptions
+  href: api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html
+  commentId: T:Okta.Auth.Sdk.EnrollWebAuthnFactorOptions
+  fullName: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions
+  nameWithType: EnrollWebAuthnFactorOptions
+- uid: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider
+  name: Provider
+  href: api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html#Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_Provider
+  commentId: P:Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider
+  fullName: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider
+  nameWithType: EnrollWebAuthnFactorOptions.Provider
+- uid: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider*
+  name: Provider
+  href: api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html#Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_Provider_
+  commentId: Overload:Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider
+  nameWithType: EnrollWebAuthnFactorOptions.Provider
+- uid: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken
+  name: StateToken
+  href: api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html#Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_StateToken
+  commentId: P:Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken
+  fullName: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken
+  nameWithType: EnrollWebAuthnFactorOptions.StateToken
+- uid: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken*
+  name: StateToken
+  href: api/Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html#Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_StateToken_
+  commentId: Overload:Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken
+  nameWithType: EnrollWebAuthnFactorOptions.StateToken
 - uid: Okta.Auth.Sdk.EnrollYubiKeyFactorOptions
   name: EnrollYubiKeyFactorOptions
   href: api/Okta.Auth.Sdk.EnrollYubiKeyFactorOptions.html
@@ -1820,6 +1928,12 @@ references:
   commentId: F:Okta.Auth.Sdk.FactorType.Web
   fullName: Okta.Auth.Sdk.FactorType.Web
   nameWithType: FactorType.Web
+- uid: Okta.Auth.Sdk.FactorType.WebAuthn
+  name: WebAuthn
+  href: api/Okta.Auth.Sdk.FactorType.html#Okta_Auth_Sdk_FactorType_WebAuthn
+  commentId: F:Okta.Auth.Sdk.FactorType.WebAuthn
+  fullName: Okta.Auth.Sdk.FactorType.WebAuthn
+  nameWithType: FactorType.WebAuthn
 - uid: Okta.Auth.Sdk.ForgotPasswordOptions
   name: ForgotPasswordOptions
   href: api/Okta.Auth.Sdk.ForgotPasswordOptions.html
@@ -1915,6 +2029,12 @@ references:
   commentId: M:Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateU2fFactorOptions,CancellationToken)
   fullName: Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateU2fFactorOptions, CancellationToken)
   nameWithType: IAuthenticationClient.ActivateFactorAsync(ActivateU2fFactorOptions, CancellationToken)
+- uid: Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions,CancellationToken)
+  name: ActivateFactorAsync(ActivateWebAuthnFactorOptions, CancellationToken)
+  href: api/Okta.Auth.Sdk.IAuthenticationClient.html#Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_CancellationToken_
+  commentId: M:Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions,CancellationToken)
+  fullName: Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions, CancellationToken)
+  nameWithType: IAuthenticationClient.ActivateFactorAsync(ActivateWebAuthnFactorOptions, CancellationToken)
 - uid: Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync*
   name: ActivateFactorAsync
   href: api/Okta.Auth.Sdk.IAuthenticationClient.html#Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_
@@ -2034,6 +2154,12 @@ references:
   commentId: M:Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollU2FFactorOptions,CancellationToken)
   fullName: Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollU2FFactorOptions, CancellationToken)
   nameWithType: IAuthenticationClient.EnrollFactorAsync(EnrollU2FFactorOptions, CancellationToken)
+- uid: Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions,CancellationToken)
+  name: EnrollFactorAsync(EnrollWebAuthnFactorOptions, CancellationToken)
+  href: api/Okta.Auth.Sdk.IAuthenticationClient.html#Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_CancellationToken_
+  commentId: M:Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions,CancellationToken)
+  fullName: Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions, CancellationToken)
+  nameWithType: IAuthenticationClient.EnrollFactorAsync(EnrollWebAuthnFactorOptions, CancellationToken)
 - uid: Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollYubiKeyFactorOptions,CancellationToken)
   name: EnrollFactorAsync(EnrollYubiKeyFactorOptions, CancellationToken)
   href: api/Okta.Auth.Sdk.IAuthenticationClient.html#Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollYubiKeyFactorOptions_CancellationToken_
@@ -2219,6 +2345,12 @@ references:
   commentId: M:Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyU2FFactorOptions,CancellationToken)
   fullName: Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyU2FFactorOptions, CancellationToken)
   nameWithType: IAuthenticationClient.VerifyFactorAsync(VerifyU2FFactorOptions, CancellationToken)
+- uid: Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions,CancellationToken)
+  name: VerifyFactorAsync(VerifyWebAuthnFactorOptions, CancellationToken)
+  href: api/Okta.Auth.Sdk.IAuthenticationClient.html#Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_CancellationToken_
+  commentId: M:Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions,CancellationToken)
+  fullName: Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions, CancellationToken)
+  nameWithType: IAuthenticationClient.VerifyFactorAsync(VerifyWebAuthnFactorOptions, CancellationToken)
 - uid: Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*
   name: VerifyFactorAsync
   href: api/Okta.Auth.Sdk.IAuthenticationClient.html#Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_
@@ -2432,6 +2564,51 @@ references:
   isSpec: "True"
   fullName: Okta.Auth.Sdk.Models.ActivateU2FFactorRequest.StateToken
   nameWithType: ActivateU2FFactorRequest.StateToken
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest
+  name: ActivateWebAuthnFactorRequest
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html
+  commentId: T:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest
+  nameWithType: ActivateWebAuthnFactorRequest
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.Attestation
+  name: Attestation
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_ActivateWebAuthnFactorRequest_Attestation
+  commentId: P:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.Attestation
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.Attestation
+  nameWithType: ActivateWebAuthnFactorRequest.Attestation
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.Attestation*
+  name: Attestation
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_ActivateWebAuthnFactorRequest_Attestation_
+  commentId: Overload:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.Attestation
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.Attestation
+  nameWithType: ActivateWebAuthnFactorRequest.Attestation
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.ClientData
+  name: ClientData
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_ActivateWebAuthnFactorRequest_ClientData
+  commentId: P:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.ClientData
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.ClientData
+  nameWithType: ActivateWebAuthnFactorRequest.ClientData
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.ClientData*
+  name: ClientData
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_ActivateWebAuthnFactorRequest_ClientData_
+  commentId: Overload:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.ClientData
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.ClientData
+  nameWithType: ActivateWebAuthnFactorRequest.ClientData
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.StateToken
+  name: StateToken
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_ActivateWebAuthnFactorRequest_StateToken
+  commentId: P:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.StateToken
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.StateToken
+  nameWithType: ActivateWebAuthnFactorRequest.StateToken
+- uid: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.StateToken*
+  name: StateToken
+  href: api/Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_ActivateWebAuthnFactorRequest_StateToken_
+  commentId: Overload:Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.StateToken
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.Models.ActivateWebAuthnFactorRequest.StateToken
+  nameWithType: ActivateWebAuthnFactorRequest.StateToken
 - uid: Okta.Auth.Sdk.Models.AnswerRecoveryQuestionRequest
   name: AnswerRecoveryQuestionRequest
   href: api/Okta.Auth.Sdk.Models.AnswerRecoveryQuestionRequest.html
@@ -3286,6 +3463,25 @@ references:
   isSpec: "True"
   fullName: Okta.Auth.Sdk.Models.VerifyU2fFactorRequest.StateToken
   nameWithType: VerifyU2fFactorRequest.StateToken
+- uid: Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest
+  name: VerifyWebAuthnFactorRequest
+  href: api/Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.html
+  commentId: T:Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest
+  fullName: Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest
+  nameWithType: VerifyWebAuthnFactorRequest
+- uid: Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.StateToken
+  name: StateToken
+  href: api/Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_VerifyWebAuthnFactorRequest_StateToken
+  commentId: P:Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.StateToken
+  fullName: Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.StateToken
+  nameWithType: VerifyWebAuthnFactorRequest.StateToken
+- uid: Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.StateToken*
+  name: StateToken
+  href: api/Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.html#Okta_Auth_Sdk_Models_VerifyWebAuthnFactorRequest_StateToken_
+  commentId: Overload:Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.StateToken
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.Models.VerifyWebAuthnFactorRequest.StateToken
+  nameWithType: VerifyWebAuthnFactorRequest.StateToken
 - uid: Okta.Auth.Sdk.OktaDefaults
   name: OktaDefaults
   href: api/Okta.Auth.Sdk.OktaDefaults.html
@@ -4040,6 +4236,38 @@ references:
   isSpec: "True"
   fullName: Okta.Auth.Sdk.VerifyU2FFactorOptions.StateToken
   nameWithType: VerifyU2FFactorOptions.StateToken
+- uid: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions
+  name: VerifyWebAuthnFactorOptions
+  href: api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html
+  commentId: T:Okta.Auth.Sdk.VerifyWebAuthnFactorOptions
+  fullName: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions
+  nameWithType: VerifyWebAuthnFactorOptions
+- uid: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.FactorId
+  name: FactorId
+  href: api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html#Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_FactorId
+  commentId: P:Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.FactorId
+  fullName: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.FactorId
+  nameWithType: VerifyWebAuthnFactorOptions.FactorId
+- uid: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.FactorId*
+  name: FactorId
+  href: api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html#Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_FactorId_
+  commentId: Overload:Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.FactorId
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.FactorId
+  nameWithType: VerifyWebAuthnFactorOptions.FactorId
+- uid: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.StateToken
+  name: StateToken
+  href: api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html#Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_StateToken
+  commentId: P:Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.StateToken
+  fullName: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.StateToken
+  nameWithType: VerifyWebAuthnFactorOptions.StateToken
+- uid: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.StateToken*
+  name: StateToken
+  href: api/Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html#Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_StateToken_
+  commentId: Overload:Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.StateToken
+  isSpec: "True"
+  fullName: Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.StateToken
+  nameWithType: VerifyWebAuthnFactorOptions.StateToken
 - uid: Okta.Sdk.Abstractions
   name: Okta.Sdk.Abstractions
   href: api/Okta.Sdk.Abstractions.html
@@ -4231,11 +4459,11 @@ references:
   commentId: M:Okta.Sdk.Abstractions.BaseOktaClient.#ctor
   fullName: Okta.Sdk.Abstractions.BaseOktaClient.BaseOktaClient()
   nameWithType: BaseOktaClient.BaseOktaClient()
-- uid: Okta.Sdk.Abstractions.BaseOktaClient.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILogger,Okta.Sdk.Abstractions.UserAgentBuilder,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
+- uid: Okta.Sdk.Abstractions.BaseOktaClient.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,ILogger,Okta.Sdk.Abstractions.UserAgentBuilder,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
   name: BaseOktaClient(OktaClientConfiguration, HttpClient, ILogger, UserAgentBuilder, AbstractResourceTypeResolverFactory)
-  href: api/Okta.Sdk.Abstractions.BaseOktaClient.html#Okta_Sdk_Abstractions_BaseOktaClient__ctor_Okta_Sdk_Abstractions_Configuration_OktaClientConfiguration_System_Net_Http_HttpClient_Microsoft_Extensions_Logging_ILogger_Okta_Sdk_Abstractions_UserAgentBuilder_Okta_Sdk_Abstractions_AbstractResourceTypeResolverFactory_
-  commentId: M:Okta.Sdk.Abstractions.BaseOktaClient.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILogger,Okta.Sdk.Abstractions.UserAgentBuilder,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
-  fullName: Okta.Sdk.Abstractions.BaseOktaClient.BaseOktaClient(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration, System.Net.Http.HttpClient, Microsoft.Extensions.Logging.ILogger, Okta.Sdk.Abstractions.UserAgentBuilder, Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
+  href: api/Okta.Sdk.Abstractions.BaseOktaClient.html#Okta_Sdk_Abstractions_BaseOktaClient__ctor_Okta_Sdk_Abstractions_Configuration_OktaClientConfiguration_System_Net_Http_HttpClient_ILogger_Okta_Sdk_Abstractions_UserAgentBuilder_Okta_Sdk_Abstractions_AbstractResourceTypeResolverFactory_
+  commentId: M:Okta.Sdk.Abstractions.BaseOktaClient.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,ILogger,Okta.Sdk.Abstractions.UserAgentBuilder,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
+  fullName: Okta.Sdk.Abstractions.BaseOktaClient.BaseOktaClient(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration, System.Net.Http.HttpClient, ILogger, Okta.Sdk.Abstractions.UserAgentBuilder, Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
   nameWithType: BaseOktaClient.BaseOktaClient(OktaClientConfiguration, HttpClient, ILogger, UserAgentBuilder, AbstractResourceTypeResolverFactory)
 - uid: Okta.Sdk.Abstractions.BaseOktaClient.#ctor(Okta.Sdk.Abstractions.IDataStore,Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,Okta.Sdk.Abstractions.RequestContext)
   name: BaseOktaClient(IDataStore, OktaClientConfiguration, RequestContext)
@@ -4653,13 +4881,13 @@ references:
   isSpec: "True"
   fullName: Okta.Sdk.Abstractions.BaseResource.GetStringProperty
   nameWithType: BaseResource.GetStringProperty
-- uid: Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient,Okta.Sdk.Abstractions.ResourceFactory,System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger)
+- uid: Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient,Okta.Sdk.Abstractions.ResourceFactory,System.Collections.Generic.IDictionary{System.String,System.Object},ILogger)
   name: Initialize(IOktaClient, ResourceFactory, IDictionary<String, Object>, ILogger)
-  href: api/Okta.Sdk.Abstractions.BaseResource.html#Okta_Sdk_Abstractions_BaseResource_Initialize_Okta_Sdk_Abstractions_IOktaClient_Okta_Sdk_Abstractions_ResourceFactory_System_Collections_Generic_IDictionary_System_String_System_Object__Microsoft_Extensions_Logging_ILogger_
-  commentId: M:Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient,Okta.Sdk.Abstractions.ResourceFactory,System.Collections.Generic.IDictionary{System.String,System.Object},Microsoft.Extensions.Logging.ILogger)
+  href: api/Okta.Sdk.Abstractions.BaseResource.html#Okta_Sdk_Abstractions_BaseResource_Initialize_Okta_Sdk_Abstractions_IOktaClient_Okta_Sdk_Abstractions_ResourceFactory_System_Collections_Generic_IDictionary_System_String_System_Object__ILogger_
+  commentId: M:Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient,Okta.Sdk.Abstractions.ResourceFactory,System.Collections.Generic.IDictionary{System.String,System.Object},ILogger)
   name.vb: Initialize(IOktaClient, ResourceFactory, IDictionary(Of String, Object), ILogger)
-  fullName: Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient, Okta.Sdk.Abstractions.ResourceFactory, System.Collections.Generic.IDictionary<System.String, System.Object>, Microsoft.Extensions.Logging.ILogger)
-  fullName.vb: Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient, Okta.Sdk.Abstractions.ResourceFactory, System.Collections.Generic.IDictionary(Of System.String, System.Object), Microsoft.Extensions.Logging.ILogger)
+  fullName: Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient, Okta.Sdk.Abstractions.ResourceFactory, System.Collections.Generic.IDictionary<System.String, System.Object>, ILogger)
+  fullName.vb: Okta.Sdk.Abstractions.BaseResource.Initialize(Okta.Sdk.Abstractions.IOktaClient, Okta.Sdk.Abstractions.ResourceFactory, System.Collections.Generic.IDictionary(Of System.String, System.Object), ILogger)
   nameWithType: BaseResource.Initialize(IOktaClient, ResourceFactory, IDictionary<String, Object>, ILogger)
   nameWithType.vb: BaseResource.Initialize(IOktaClient, ResourceFactory, IDictionary(Of String, Object), ILogger)
 - uid: Okta.Sdk.Abstractions.BaseResource.Initialize*
@@ -4707,13 +4935,13 @@ references:
   fullName.vb: Okta.Sdk.Abstractions.CastingListAdapter(Of T)
   nameWithType: CastingListAdapter<T>
   nameWithType.vb: CastingListAdapter(Of T)
-- uid: Okta.Sdk.Abstractions.CastingListAdapter`1.#ctor(System.Collections.Generic.IList{System.Object},Okta.Sdk.Abstractions.ResourceFactory,Microsoft.Extensions.Logging.ILogger)
+- uid: Okta.Sdk.Abstractions.CastingListAdapter`1.#ctor(System.Collections.Generic.IList{System.Object},Okta.Sdk.Abstractions.ResourceFactory,ILogger)
   name: CastingListAdapter(IList<Object>, ResourceFactory, ILogger)
-  href: api/Okta.Sdk.Abstractions.CastingListAdapter-1.html#Okta_Sdk_Abstractions_CastingListAdapter_1__ctor_System_Collections_Generic_IList_System_Object__Okta_Sdk_Abstractions_ResourceFactory_Microsoft_Extensions_Logging_ILogger_
-  commentId: M:Okta.Sdk.Abstractions.CastingListAdapter`1.#ctor(System.Collections.Generic.IList{System.Object},Okta.Sdk.Abstractions.ResourceFactory,Microsoft.Extensions.Logging.ILogger)
+  href: api/Okta.Sdk.Abstractions.CastingListAdapter-1.html#Okta_Sdk_Abstractions_CastingListAdapter_1__ctor_System_Collections_Generic_IList_System_Object__Okta_Sdk_Abstractions_ResourceFactory_ILogger_
+  commentId: M:Okta.Sdk.Abstractions.CastingListAdapter`1.#ctor(System.Collections.Generic.IList{System.Object},Okta.Sdk.Abstractions.ResourceFactory,ILogger)
   name.vb: CastingListAdapter(IList(Of Object), ResourceFactory, ILogger)
-  fullName: Okta.Sdk.Abstractions.CastingListAdapter<T>.CastingListAdapter(System.Collections.Generic.IList<System.Object>, Okta.Sdk.Abstractions.ResourceFactory, Microsoft.Extensions.Logging.ILogger)
-  fullName.vb: Okta.Sdk.Abstractions.CastingListAdapter(Of T).CastingListAdapter(System.Collections.Generic.IList(Of System.Object), Okta.Sdk.Abstractions.ResourceFactory, Microsoft.Extensions.Logging.ILogger)
+  fullName: Okta.Sdk.Abstractions.CastingListAdapter<T>.CastingListAdapter(System.Collections.Generic.IList<System.Object>, Okta.Sdk.Abstractions.ResourceFactory, ILogger)
+  fullName.vb: Okta.Sdk.Abstractions.CastingListAdapter(Of T).CastingListAdapter(System.Collections.Generic.IList(Of System.Object), Okta.Sdk.Abstractions.ResourceFactory, ILogger)
   nameWithType: CastingListAdapter<T>.CastingListAdapter(IList<Object>, ResourceFactory, ILogger)
   nameWithType.vb: CastingListAdapter(Of T).CastingListAdapter(IList(Of Object), ResourceFactory, ILogger)
 - uid: Okta.Sdk.Abstractions.CastingListAdapter`1.#ctor*
@@ -5320,11 +5548,11 @@ references:
   commentId: T:Okta.Sdk.Abstractions.DefaultDataStore
   fullName: Okta.Sdk.Abstractions.DefaultDataStore
   nameWithType: DefaultDataStore
-- uid: Okta.Sdk.Abstractions.DefaultDataStore.#ctor(Okta.Sdk.Abstractions.IRequestExecutor,Okta.Sdk.Abstractions.ISerializer,Okta.Sdk.Abstractions.ResourceFactory,Microsoft.Extensions.Logging.ILogger,Okta.Sdk.Abstractions.UserAgentBuilder)
+- uid: Okta.Sdk.Abstractions.DefaultDataStore.#ctor(Okta.Sdk.Abstractions.IRequestExecutor,Okta.Sdk.Abstractions.ISerializer,Okta.Sdk.Abstractions.ResourceFactory,ILogger,Okta.Sdk.Abstractions.UserAgentBuilder)
   name: DefaultDataStore(IRequestExecutor, ISerializer, ResourceFactory, ILogger, UserAgentBuilder)
-  href: api/Okta.Sdk.Abstractions.DefaultDataStore.html#Okta_Sdk_Abstractions_DefaultDataStore__ctor_Okta_Sdk_Abstractions_IRequestExecutor_Okta_Sdk_Abstractions_ISerializer_Okta_Sdk_Abstractions_ResourceFactory_Microsoft_Extensions_Logging_ILogger_Okta_Sdk_Abstractions_UserAgentBuilder_
-  commentId: M:Okta.Sdk.Abstractions.DefaultDataStore.#ctor(Okta.Sdk.Abstractions.IRequestExecutor,Okta.Sdk.Abstractions.ISerializer,Okta.Sdk.Abstractions.ResourceFactory,Microsoft.Extensions.Logging.ILogger,Okta.Sdk.Abstractions.UserAgentBuilder)
-  fullName: Okta.Sdk.Abstractions.DefaultDataStore.DefaultDataStore(Okta.Sdk.Abstractions.IRequestExecutor, Okta.Sdk.Abstractions.ISerializer, Okta.Sdk.Abstractions.ResourceFactory, Microsoft.Extensions.Logging.ILogger, Okta.Sdk.Abstractions.UserAgentBuilder)
+  href: api/Okta.Sdk.Abstractions.DefaultDataStore.html#Okta_Sdk_Abstractions_DefaultDataStore__ctor_Okta_Sdk_Abstractions_IRequestExecutor_Okta_Sdk_Abstractions_ISerializer_Okta_Sdk_Abstractions_ResourceFactory_ILogger_Okta_Sdk_Abstractions_UserAgentBuilder_
+  commentId: M:Okta.Sdk.Abstractions.DefaultDataStore.#ctor(Okta.Sdk.Abstractions.IRequestExecutor,Okta.Sdk.Abstractions.ISerializer,Okta.Sdk.Abstractions.ResourceFactory,ILogger,Okta.Sdk.Abstractions.UserAgentBuilder)
+  fullName: Okta.Sdk.Abstractions.DefaultDataStore.DefaultDataStore(Okta.Sdk.Abstractions.IRequestExecutor, Okta.Sdk.Abstractions.ISerializer, Okta.Sdk.Abstractions.ResourceFactory, ILogger, Okta.Sdk.Abstractions.UserAgentBuilder)
   nameWithType: DefaultDataStore.DefaultDataStore(IRequestExecutor, ISerializer, ResourceFactory, ILogger, UserAgentBuilder)
 - uid: Okta.Sdk.Abstractions.DefaultDataStore.#ctor*
   name: DefaultDataStore
@@ -5442,13 +5670,13 @@ references:
   commentId: T:Okta.Sdk.Abstractions.DefaultHttpClient
   fullName: Okta.Sdk.Abstractions.DefaultHttpClient
   nameWithType: DefaultHttpClient
-- uid: Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable{System.Int32},Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,Microsoft.Extensions.Logging.ILogger)
+- uid: Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable{System.Int32},Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,ILogger)
   name: Create(Nullable<Int32>, ProxyConfiguration, ILogger)
-  href: api/Okta.Sdk.Abstractions.DefaultHttpClient.html#Okta_Sdk_Abstractions_DefaultHttpClient_Create_System_Nullable_System_Int32__Okta_Sdk_Abstractions_Configuration_ProxyConfiguration_Microsoft_Extensions_Logging_ILogger_
-  commentId: M:Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable{System.Int32},Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,Microsoft.Extensions.Logging.ILogger)
+  href: api/Okta.Sdk.Abstractions.DefaultHttpClient.html#Okta_Sdk_Abstractions_DefaultHttpClient_Create_System_Nullable_System_Int32__Okta_Sdk_Abstractions_Configuration_ProxyConfiguration_ILogger_
+  commentId: M:Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable{System.Int32},Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,ILogger)
   name.vb: Create(Nullable(Of Int32), ProxyConfiguration, ILogger)
-  fullName: Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable<System.Int32>, Okta.Sdk.Abstractions.Configuration.ProxyConfiguration, Microsoft.Extensions.Logging.ILogger)
-  fullName.vb: Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable(Of System.Int32), Okta.Sdk.Abstractions.Configuration.ProxyConfiguration, Microsoft.Extensions.Logging.ILogger)
+  fullName: Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable<System.Int32>, Okta.Sdk.Abstractions.Configuration.ProxyConfiguration, ILogger)
+  fullName.vb: Okta.Sdk.Abstractions.DefaultHttpClient.Create(System.Nullable(Of System.Int32), Okta.Sdk.Abstractions.Configuration.ProxyConfiguration, ILogger)
   nameWithType: DefaultHttpClient.Create(Nullable<Int32>, ProxyConfiguration, ILogger)
   nameWithType.vb: DefaultHttpClient.Create(Nullable(Of Int32), ProxyConfiguration, ILogger)
 - uid: Okta.Sdk.Abstractions.DefaultHttpClient.Create*
@@ -5464,11 +5692,11 @@ references:
   commentId: T:Okta.Sdk.Abstractions.DefaultProxy
   fullName: Okta.Sdk.Abstractions.DefaultProxy
   nameWithType: DefaultProxy
-- uid: Okta.Sdk.Abstractions.DefaultProxy.#ctor(Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,Microsoft.Extensions.Logging.ILogger)
+- uid: Okta.Sdk.Abstractions.DefaultProxy.#ctor(Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,ILogger)
   name: DefaultProxy(ProxyConfiguration, ILogger)
-  href: api/Okta.Sdk.Abstractions.DefaultProxy.html#Okta_Sdk_Abstractions_DefaultProxy__ctor_Okta_Sdk_Abstractions_Configuration_ProxyConfiguration_Microsoft_Extensions_Logging_ILogger_
-  commentId: M:Okta.Sdk.Abstractions.DefaultProxy.#ctor(Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,Microsoft.Extensions.Logging.ILogger)
-  fullName: Okta.Sdk.Abstractions.DefaultProxy.DefaultProxy(Okta.Sdk.Abstractions.Configuration.ProxyConfiguration, Microsoft.Extensions.Logging.ILogger)
+  href: api/Okta.Sdk.Abstractions.DefaultProxy.html#Okta_Sdk_Abstractions_DefaultProxy__ctor_Okta_Sdk_Abstractions_Configuration_ProxyConfiguration_ILogger_
+  commentId: M:Okta.Sdk.Abstractions.DefaultProxy.#ctor(Okta.Sdk.Abstractions.Configuration.ProxyConfiguration,ILogger)
+  fullName: Okta.Sdk.Abstractions.DefaultProxy.DefaultProxy(Okta.Sdk.Abstractions.Configuration.ProxyConfiguration, ILogger)
   nameWithType: DefaultProxy.DefaultProxy(ProxyConfiguration, ILogger)
 - uid: Okta.Sdk.Abstractions.DefaultProxy.#ctor*
   name: DefaultProxy
@@ -5522,11 +5750,11 @@ references:
   commentId: T:Okta.Sdk.Abstractions.DefaultRequestExecutor
   fullName: Okta.Sdk.Abstractions.DefaultRequestExecutor
   nameWithType: DefaultRequestExecutor
-- uid: Okta.Sdk.Abstractions.DefaultRequestExecutor.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILogger)
+- uid: Okta.Sdk.Abstractions.DefaultRequestExecutor.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,ILogger)
   name: DefaultRequestExecutor(OktaClientConfiguration, HttpClient, ILogger)
-  href: api/Okta.Sdk.Abstractions.DefaultRequestExecutor.html#Okta_Sdk_Abstractions_DefaultRequestExecutor__ctor_Okta_Sdk_Abstractions_Configuration_OktaClientConfiguration_System_Net_Http_HttpClient_Microsoft_Extensions_Logging_ILogger_
-  commentId: M:Okta.Sdk.Abstractions.DefaultRequestExecutor.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILogger)
-  fullName: Okta.Sdk.Abstractions.DefaultRequestExecutor.DefaultRequestExecutor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration, System.Net.Http.HttpClient, Microsoft.Extensions.Logging.ILogger)
+  href: api/Okta.Sdk.Abstractions.DefaultRequestExecutor.html#Okta_Sdk_Abstractions_DefaultRequestExecutor__ctor_Okta_Sdk_Abstractions_Configuration_OktaClientConfiguration_System_Net_Http_HttpClient_ILogger_
+  commentId: M:Okta.Sdk.Abstractions.DefaultRequestExecutor.#ctor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration,System.Net.Http.HttpClient,ILogger)
+  fullName: Okta.Sdk.Abstractions.DefaultRequestExecutor.DefaultRequestExecutor(Okta.Sdk.Abstractions.Configuration.OktaClientConfiguration, System.Net.Http.HttpClient, ILogger)
   nameWithType: DefaultRequestExecutor.DefaultRequestExecutor(OktaClientConfiguration, HttpClient, ILogger)
 - uid: Okta.Sdk.Abstractions.DefaultRequestExecutor.#ctor*
   name: DefaultRequestExecutor
@@ -6879,11 +7107,11 @@ references:
   isSpec: "True"
   fullName: Okta.Sdk.Abstractions.RecursiveDictionaryConverter.Create
   nameWithType: RecursiveDictionaryConverter.Create
-- uid: Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+- uid: Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson(JsonReader,System.Type,System.Object,JsonSerializer)
   name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Okta.Sdk.Abstractions.RecursiveDictionaryConverter.html#Okta_Sdk_Abstractions_RecursiveDictionaryConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer_
-  commentId: M:Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  fullName: Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
+  href: api/Okta.Sdk.Abstractions.RecursiveDictionaryConverter.html#Okta_Sdk_Abstractions_RecursiveDictionaryConverter_ReadJson_JsonReader_System_Type_System_Object_JsonSerializer_
+  commentId: M:Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson(JsonReader,System.Type,System.Object,JsonSerializer)
+  fullName: Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson(JsonReader, System.Type, System.Object, JsonSerializer)
   nameWithType: RecursiveDictionaryConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
 - uid: Okta.Sdk.Abstractions.RecursiveDictionaryConverter.ReadJson*
   name: ReadJson
@@ -6956,11 +7184,11 @@ references:
   commentId: T:Okta.Sdk.Abstractions.ResourceFactory
   fullName: Okta.Sdk.Abstractions.ResourceFactory
   nameWithType: ResourceFactory
-- uid: Okta.Sdk.Abstractions.ResourceFactory.#ctor(Okta.Sdk.Abstractions.IOktaClient,Microsoft.Extensions.Logging.ILogger,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
+- uid: Okta.Sdk.Abstractions.ResourceFactory.#ctor(Okta.Sdk.Abstractions.IOktaClient,ILogger,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
   name: ResourceFactory(IOktaClient, ILogger, AbstractResourceTypeResolverFactory)
-  href: api/Okta.Sdk.Abstractions.ResourceFactory.html#Okta_Sdk_Abstractions_ResourceFactory__ctor_Okta_Sdk_Abstractions_IOktaClient_Microsoft_Extensions_Logging_ILogger_Okta_Sdk_Abstractions_AbstractResourceTypeResolverFactory_
-  commentId: M:Okta.Sdk.Abstractions.ResourceFactory.#ctor(Okta.Sdk.Abstractions.IOktaClient,Microsoft.Extensions.Logging.ILogger,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
-  fullName: Okta.Sdk.Abstractions.ResourceFactory.ResourceFactory(Okta.Sdk.Abstractions.IOktaClient, Microsoft.Extensions.Logging.ILogger, Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
+  href: api/Okta.Sdk.Abstractions.ResourceFactory.html#Okta_Sdk_Abstractions_ResourceFactory__ctor_Okta_Sdk_Abstractions_IOktaClient_ILogger_Okta_Sdk_Abstractions_AbstractResourceTypeResolverFactory_
+  commentId: M:Okta.Sdk.Abstractions.ResourceFactory.#ctor(Okta.Sdk.Abstractions.IOktaClient,ILogger,Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
+  fullName: Okta.Sdk.Abstractions.ResourceFactory.ResourceFactory(Okta.Sdk.Abstractions.IOktaClient, ILogger, Okta.Sdk.Abstractions.AbstractResourceTypeResolverFactory)
   nameWithType: ResourceFactory.ResourceFactory(IOktaClient, ILogger, AbstractResourceTypeResolverFactory)
 - uid: Okta.Sdk.Abstractions.ResourceFactory.#ctor*
   name: ResourceFactory
@@ -7062,11 +7290,11 @@ references:
   isSpec: "True"
   fullName: Okta.Sdk.Abstractions.ResourceSerializingConverter.CanWrite
   nameWithType: ResourceSerializingConverter.CanWrite
-- uid: Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+- uid: Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson(JsonReader,System.Type,System.Object,JsonSerializer)
   name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Okta.Sdk.Abstractions.ResourceSerializingConverter.html#Okta_Sdk_Abstractions_ResourceSerializingConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer_
-  commentId: M:Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  fullName: Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
+  href: api/Okta.Sdk.Abstractions.ResourceSerializingConverter.html#Okta_Sdk_Abstractions_ResourceSerializingConverter_ReadJson_JsonReader_System_Type_System_Object_JsonSerializer_
+  commentId: M:Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson(JsonReader,System.Type,System.Object,JsonSerializer)
+  fullName: Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson(JsonReader, System.Type, System.Object, JsonSerializer)
   nameWithType: ResourceSerializingConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
 - uid: Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson*
   name: ReadJson
@@ -7075,11 +7303,11 @@ references:
   isSpec: "True"
   fullName: Okta.Sdk.Abstractions.ResourceSerializingConverter.ReadJson
   nameWithType: ResourceSerializingConverter.ReadJson
-- uid: Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+- uid: Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
   name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Okta.Sdk.Abstractions.ResourceSerializingConverter.html#Okta_Sdk_Abstractions_ResourceSerializingConverter_WriteJson_Newtonsoft_Json_JsonWriter_System_Object_Newtonsoft_Json_JsonSerializer_
-  commentId: M:Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  fullName: Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
+  href: api/Okta.Sdk.Abstractions.ResourceSerializingConverter.html#Okta_Sdk_Abstractions_ResourceSerializingConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
+  commentId: M:Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  fullName: Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
   nameWithType: ResourceSerializingConverter.WriteJson(JsonWriter, Object, JsonSerializer)
 - uid: Okta.Sdk.Abstractions.ResourceSerializingConverter.WriteJson*
   name: WriteJson
@@ -7284,11 +7512,11 @@ references:
   isSpec: "True"
   fullName: Okta.Sdk.Abstractions.StringEnumSerializingConverter.CanConvert
   nameWithType: StringEnumSerializingConverter.CanConvert
-- uid: Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+- uid: Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson(JsonReader,System.Type,System.Object,JsonSerializer)
   name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.html#Okta_Sdk_Abstractions_StringEnumSerializingConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_System_Object_Newtonsoft_Json_JsonSerializer_
-  commentId: M:Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  fullName: Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
+  href: api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.html#Okta_Sdk_Abstractions_StringEnumSerializingConverter_ReadJson_JsonReader_System_Type_System_Object_JsonSerializer_
+  commentId: M:Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson(JsonReader,System.Type,System.Object,JsonSerializer)
+  fullName: Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson(JsonReader, System.Type, System.Object, JsonSerializer)
   nameWithType: StringEnumSerializingConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
 - uid: Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson*
   name: ReadJson
@@ -7297,11 +7525,11 @@ references:
   isSpec: "True"
   fullName: Okta.Sdk.Abstractions.StringEnumSerializingConverter.ReadJson
   nameWithType: StringEnumSerializingConverter.ReadJson
-- uid: Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+- uid: Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
   name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.html#Okta_Sdk_Abstractions_StringEnumSerializingConverter_WriteJson_Newtonsoft_Json_JsonWriter_System_Object_Newtonsoft_Json_JsonSerializer_
-  commentId: M:Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  fullName: Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
+  href: api/Okta.Sdk.Abstractions.StringEnumSerializingConverter.html#Okta_Sdk_Abstractions_StringEnumSerializingConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
+  commentId: M:Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  fullName: Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
   nameWithType: StringEnumSerializingConverter.WriteJson(JsonWriter, Object, JsonSerializer)
 - uid: Okta.Sdk.Abstractions.StringEnumSerializingConverter.WriteJson*
   name: WriteJson

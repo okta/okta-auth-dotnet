@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ICollectionClient&lt;T&gt;
+    <title>Class EnrollWebAuthnFactorOptions
    | Okta .NET Authentication SDK Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ICollectionClient&lt;T&gt;
+    <meta name="title" content="Class EnrollWebAuthnFactorOptions
    | Okta .NET Authentication SDK Documentation ">
     <meta name="generator" content="docfx 2.51.0.0">
     
@@ -68,71 +68,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Okta.Sdk.Abstractions.ICollectionClient`1">
+            <article class="content wrap" id="_content" data-uid="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions">
   
   
-  <h1 id="Okta_Sdk_Abstractions_ICollectionClient_1" data-uid="Okta.Sdk.Abstractions.ICollectionClient`1" class="text-break">Interface ICollectionClient&lt;T&gt;
+  <h1 id="Okta_Auth_Sdk_EnrollWebAuthnFactorOptions" data-uid="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions" class="text-break">Class EnrollWebAuthnFactorOptions
   </h1>
-  <div class="markdown level0 summary"><p>A collection of <a class="xref" href="Okta.Sdk.Abstractions.BaseResource.html">BaseResource</a> that can be enumerated asynchronously.</p>
+  <div class="markdown level0 summary"><p>This class contains all the request parameters for performing an enroll WebAuthn factor request</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Okta.Sdk.Abstractions.html">Okta.Sdk.Abstractions</a></h6>
-  <h6><strong>Assembly</strong>: Okta.Sdk.Abstractions.dll</h6>
-  <h5 id="Okta_Sdk_Abstractions_ICollectionClient_1_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ICollectionClient&lt;T&gt; : IAsyncEnumerable&lt;T&gt; where T : IResource</code></pre>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EnrollWebAuthnFactorOptions</span></div>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The <a class="xref" href="Okta.Sdk.Abstractions.BaseResource.html">BaseResource</a> type in the collection.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Okta_Sdk_Abstractions_ICollectionClient_1_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Using this object with LINQ will automatically enumerate a paginated Okta collection.
-See <a href="https://developer.okta.com/docs/api/getting_started/design_principles.html#pagination">the API documentation on pagination</a>.</p>
-</div>
-  <h3 id="methods">Methods
+  <h6><strong>Namespace</strong>: <a class="xref" href="Okta.Auth.Sdk.html">Okta.Auth.Sdk</a></h6>
+  <h6><strong>Assembly</strong>: Okta.Auth.Sdk.dll</h6>
+  <h5 id="Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EnrollWebAuthnFactorOptions : object</code></pre>
+  </div>
+  <h3 id="properties">Properties
   </h3>
-  <a id="Okta_Sdk_Abstractions_ICollectionClient_1_GetPagedEnumerator_" data-uid="Okta.Sdk.Abstractions.ICollectionClient`1.GetPagedEnumerator*"></a>
-  <h4 id="Okta_Sdk_Abstractions_ICollectionClient_1_GetPagedEnumerator_System_Threading_CancellationToken_" data-uid="Okta.Sdk.Abstractions.ICollectionClient`1.GetPagedEnumerator(System.Threading.CancellationToken)">GetPagedEnumerator(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Returns an enumerator that can be used to retrieve items from an Okta collection page-by-page.
-Use this only if you need to enumerate collections manually; otherwise, use LINQ.</p>
+  <a id="Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_Provider_" data-uid="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider*"></a>
+  <h4 id="Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_Provider" data-uid="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.Provider">Provider</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the provider</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IPagedCollectionEnumerator&lt;T&gt; GetPagedEnumerator(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">public string Provider { get; set; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -142,15 +108,37 @@ Use this only if you need to enumerate collections manually; otherwise, use LINQ
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Okta.Sdk.Abstractions.IPagedCollectionEnumerator-1.html">IPagedCollectionEnumerator</a>&lt;T&gt;</td>
-        <td><p>An enumerator that retrieves items from an Okta collection page-by-page.</p>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The provider</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Okta_Sdk_Abstractions_ICollectionClient_1_GetPagedEnumerator_System_Threading_CancellationToken__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>/// See <a href="https://developer.okta.com/docs/api/getting_started/design_principles.html#pagination">the API documentation on pagination</a>.</p>
+  <a id="Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_StateToken_" data-uid="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken*"></a>
+  <h4 id="Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_StateToken" data-uid="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.StateToken">StateToken</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the state token</p>
 </div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string StateToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>The state token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

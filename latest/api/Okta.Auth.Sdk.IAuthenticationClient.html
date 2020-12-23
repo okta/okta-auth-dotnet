@@ -285,6 +285,56 @@
       </tr>
     </tbody>
   </table>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_ActivateFactorAsync_Okta_Auth_Sdk_ActivateWebAuthnFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.ActivateFactorAsync(Okta.Auth.Sdk.ActivateWebAuthnFactorOptions,CancellationToken)">ActivateFactorAsync(ActivateWebAuthnFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Activates a WebAuthn factor
+<a href="https://developer.okta.com/docs/api/resources/authn#activate-webauthn-factor">https://developer.okta.com/docs/api/resources/authn#activate-webauthn-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; ActivateFactorAsync(ActivateWebAuthnFactorOptions activateFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.ActivateWebAuthnFactorOptions.html">ActivateWebAuthnFactorOptions</a></td>
+        <td><span class="parametername">activateFactorOptions</span></td>
+        <td><p>The activate WebAuthn factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="Okta_Auth_Sdk_IAuthenticationClient_AnswerRecoveryQuestionAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AnswerRecoveryQuestionAsync*"></a>
   <h4 id="Okta_Auth_Sdk_IAuthenticationClient_AnswerRecoveryQuestionAsync_Okta_Auth_Sdk_AnswerRecoveryQuestionOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.AnswerRecoveryQuestionAsync(Okta.Auth.Sdk.AnswerRecoveryQuestionOptions,CancellationToken)">AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Answers the user’s recovery question
@@ -957,6 +1007,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Okta.Auth.Sdk.EnrollU2FFactorOptions.html">EnrollU2FFactorOptions</a></td>
+        <td><span class="parametername">factorOptions</span></td>
+        <td><p>The enroll U2F factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_EnrollFactorAsync_Okta_Auth_Sdk_EnrollWebAuthnFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.EnrollFactorAsync(Okta.Auth.Sdk.EnrollWebAuthnFactorOptions,CancellationToken)">EnrollFactorAsync(EnrollWebAuthnFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Enrolls a user with a WebAuthn factor
+<a href="https://developer.okta.com/docs/api/resources/authn/#enroll-webauthn-factor">https://developer.okta.com/docs/api/resources/authn/#enroll-webauthn-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; EnrollFactorAsync(EnrollWebAuthnFactorOptions factorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.EnrollWebAuthnFactorOptions.html">EnrollWebAuthnFactorOptions</a></td>
         <td><span class="parametername">factorOptions</span></td>
         <td><p>The enroll U2F factor options</p>
 </td>
@@ -1858,6 +1958,56 @@
         <td><a class="xref" href="Okta.Auth.Sdk.VerifyU2FFactorOptions.html">VerifyU2FFactorOptions</a></td>
         <td><span class="parametername">verifyU2FFactorOptions</span></td>
         <td><p>The verify U2F factor options</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a>&gt;</td>
+        <td><p>The <a class="xref" href="Okta.Auth.Sdk.IAuthenticationResponse.html">IAuthenticationResponse</a> response</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync*"></a>
+  <h4 id="Okta_Auth_Sdk_IAuthenticationClient_VerifyFactorAsync_Okta_Auth_Sdk_VerifyWebAuthnFactorOptions_CancellationToken_" data-uid="Okta.Auth.Sdk.IAuthenticationClient.VerifyFactorAsync(Okta.Auth.Sdk.VerifyWebAuthnFactorOptions,CancellationToken)">VerifyFactorAsync(VerifyWebAuthnFactorOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Verifies Recovery for a factor (WebAuthn).
+<a href="https://developer.okta.com/docs/reference/api/authn/#verify-webauthn-factor">https://developer.okta.com/docs/reference/api/authn/#verify-webauthn-factor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IAuthenticationResponse&gt; VerifyFactorAsync(VerifyWebAuthnFactorOptions verifyWebAuthnFactorOptions, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Okta.Auth.Sdk.VerifyWebAuthnFactorOptions.html">VerifyWebAuthnFactorOptions</a></td>
+        <td><span class="parametername">verifyWebAuthnFactorOptions</span></td>
+        <td><p>The verify recovery factor options</p>
 </td>
       </tr>
       <tr>
