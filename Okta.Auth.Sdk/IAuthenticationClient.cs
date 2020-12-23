@@ -21,7 +21,7 @@ namespace Okta.Auth.Sdk
         /// <param name="authenticateOptions">The authentication options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateOptions authenticateOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Authenticates a user with activation token
@@ -30,7 +30,7 @@ namespace Okta.Auth.Sdk
         /// <param name="authenticateOptions">The authentication options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateWithActivationTokenOptions authenticateOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> AuthenticateAsync(AuthenticateWithActivationTokenOptions authenticateOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Changes the user password
@@ -39,7 +39,7 @@ namespace Okta.Auth.Sdk
         /// <param name="passwordOptions">The Change Password options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ChangePasswordAsync(ChangePasswordOptions passwordOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Starts a new password recovery transaction for a given user and issues a recovery token that can be used to reset a user’s password.
@@ -48,7 +48,7 @@ namespace Okta.Auth.Sdk
         /// <param name="forgotPasswordOptions">The forgot password options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ForgotPasswordAsync(ForgotPasswordOptions forgotPasswordOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ForgotPasswordAsync(ForgotPasswordOptions forgotPasswordOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Resets user password
@@ -57,7 +57,7 @@ namespace Okta.Auth.Sdk
         /// <param name="resetPasswordOptions">The reset password options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResetPasswordAsync(ResetPasswordOptions resetPasswordOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResetPasswordAsync(ResetPasswordOptions resetPasswordOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a SMS factor
@@ -66,7 +66,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Resend a SMS challenge.
@@ -75,7 +75,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResendSmsEnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResendSmsEnrollFactorAsync(EnrollSmsFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a security question factor
@@ -84,7 +84,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll security question factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSecurityQuestionFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a call factor
@@ -93,7 +93,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Resend a Call challenge.
@@ -102,7 +102,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResendCallEnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResendCallEnrollFactorAsync(EnrollCallFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a push factor
@@ -111,7 +111,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollPushFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollPushFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a RSA factor
@@ -120,7 +120,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll RSA factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollRsaFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollRsaFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a Symantec factor
@@ -129,7 +129,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll Symantec factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollSymantecFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a YubiKey factor
@@ -138,7 +138,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll YubiKey factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollYubiKeyFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollYubiKeyFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a Duo factor
@@ -147,7 +147,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll Duo factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollDuoFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollDuoFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a U2F factor
@@ -156,7 +156,7 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollU2FFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollU2FFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Enrolls a user with a TOTP factor
@@ -165,7 +165,16 @@ namespace Okta.Auth.Sdk
         /// <param name="factorOptions">The enroll TOTP factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollTotpFactorOptions factorOptions, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Enrolls a user with a WebAuthn factor
+        /// <see href="https://developer.okta.com/docs/api/resources/authn/#enroll-webauthn-factor"/>
+        /// </summary>
+        /// <param name="factorOptions">The enroll U2F factor options</param>
+        /// <param name="cancellationToken">The cancellation token</param>
+        /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
+        Task<IAuthenticationResponse> EnrollFactorAsync(EnrollWebAuthnFactorOptions factorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Activates a factor
@@ -174,7 +183,7 @@ namespace Okta.Auth.Sdk
         /// <param name="activateFactorOptions">The activate factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ActivateFactorAsync(ActivateFactorOptions activateFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Activates a push factor
@@ -183,7 +192,7 @@ namespace Okta.Auth.Sdk
         /// <param name="activatePushFactorOptions">The activate push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ActivateFactorAsync(ActivatePushFactorOptions activatePushFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ActivateFactorAsync(ActivatePushFactorOptions activatePushFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Activates a U2F factor
@@ -192,7 +201,16 @@ namespace Okta.Auth.Sdk
         /// <param name="activateFactorOptions">The activate U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ActivateFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ActivateFactorAsync(ActivateU2fFactorOptions activateFactorOptions, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Activates a WebAuthn factor
+        /// <see href="https://developer.okta.com/docs/api/resources/authn#activate-webauthn-factor"/>
+        /// </summary>
+        /// <param name="activateFactorOptions">The activate WebAuthn factor options</param>
+        /// <param name="cancellationToken">The cancellation token</param>
+        /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
+        Task<IAuthenticationResponse> ActivateFactorAsync(ActivateWebAuthnFactorOptions activateFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Answers the user’s recovery question
@@ -201,7 +219,7 @@ namespace Okta.Auth.Sdk
         /// <param name="answerOptions">The answer recovery question options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> AnswerRecoveryQuestionAsync(AnswerRecoveryQuestionOptions answerOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Validates a recovery token that was distributed to the end user to continue the recovery transaction.
@@ -210,7 +228,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyRecoveryTokenOptions">The verify recovery token options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyRecoveryTokenAsync(VerifyRecoveryTokenOptions verifyRecoveryTokenOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies Recovery for a factor (SMS/Call).
@@ -219,7 +237,17 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyFactorRecoveryOptions">The verify recovery factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyRecoveryFactorAsync(VerifyRecoveryFactorOptions verifyFactorRecoveryOptions, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Verifies Recovery for a factor (WebAuthn).
+        /// <see href="https://developer.okta.com/docs/reference/api/authn/#verify-webauthn-factor"/>
+        /// </summary>
+        /// <param name="verifyWebAuthnFactorOptions">The verify recovery factor options</param>
+        /// <param name="cancellationToken">The cancellation token</param>
+        /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyWebAuthnFactorOptions verifyWebAuthnFactorOptions, CancellationToken cancellationToken = default);
+
 
         /// <summary>
         /// Resend a recovery challenge for a factor (SMS/Call)
@@ -229,7 +257,7 @@ namespace Okta.Auth.Sdk
         /// <param name="resendRecoveryChallengeOptions">The resend recovery challenge options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResendRecoveryChallengeAsync(ResendRecoveryChallengeOptions resendRecoveryChallengeOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Unlocks an account <see href="https://developer.okta.com/docs/api/resources/authn#unlock-account"/>
@@ -237,7 +265,7 @@ namespace Okta.Auth.Sdk
         /// <param name="unlockAccountOptions">The unlock account options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> UnlockAccountAsync(UnlockAccountOptions unlockAccountOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Retrieves the current transaction state for a state token.
@@ -246,7 +274,7 @@ namespace Okta.Auth.Sdk
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> GetTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> GetTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Moves the current transaction state back to the previous state.
@@ -255,7 +283,7 @@ namespace Okta.Auth.Sdk
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> GetPreviousTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> GetPreviousTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Sends a skip link to skip the current transaction state and advance to the next state.
@@ -264,7 +292,7 @@ namespace Okta.Auth.Sdk
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> SkipTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> SkipTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Cancels the current transaction and revokes the state token.
@@ -273,7 +301,7 @@ namespace Okta.Auth.Sdk
         /// <param name="transactionStateOptions">The transaction state options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> CancelTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> CancelTransactionStateAsync(TransactionStateOptions transactionStateOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies a U2F factor
@@ -282,7 +310,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyU2FFactorOptions">The verify U2F factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyU2FFactorOptions verifyU2FFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies a Duo factor
@@ -291,7 +319,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyDuoFactorOptions">The verify Duo factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyDuoFactorOptions verifyDuoFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies a call factor
@@ -300,7 +328,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyCallFactorOptions">The verify call factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyCallFactorOptions verifyCallFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies a push factor
@@ -309,7 +337,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyPushFactorOptions">The verify push factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyPushFactorOptions verifyPushFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies a TOTP factor
@@ -318,7 +346,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifyTotpFactorOptions">The verify TOTP factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifyTotpFactorOptions verifyTotpFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies a sms factor.
@@ -327,7 +355,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifySmsFactorOptions">The verify SMS factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifySmsFactorOptions verifySmsFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Verifies an answer to a question factor.
@@ -336,7 +364,7 @@ namespace Okta.Auth.Sdk
         /// <param name="verifySecurityQuestionFactorOptions">The verify security question factor options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> VerifyFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> VerifyFactorAsync(VerifySecurityQuestionFactorOptions verifySecurityQuestionFactorOptions, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Resend a verify challenge
@@ -344,6 +372,6 @@ namespace Okta.Auth.Sdk
         /// <param name="resendChallengeOptions">The resend challenge options</param>
         /// <param name="cancellationToken">The cancellation token</param>
         /// <returns>The <see cref="IAuthenticationResponse"/> response</returns>
-        Task<IAuthenticationResponse> ResendVerifyChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default(CancellationToken));
+        Task<IAuthenticationResponse> ResendVerifyChallengeAsync(ResendChallengeOptions resendChallengeOptions, CancellationToken cancellationToken = default);
     }
 }
