@@ -6,7 +6,7 @@
 namespace Okta.Auth.Sdk
 {
     /// <summary>
-    /// This class contains all the request parameters for performing an activate push factor request
+    /// This class contains all the request parameters for performing an activate U2F factor request
     /// </summary>
     public class ActivateU2fFactorOptions
     {

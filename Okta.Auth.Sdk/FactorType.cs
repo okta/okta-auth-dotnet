@@ -42,7 +42,7 @@ namespace Okta.Auth.Sdk
         public static readonly FactorType Call = new FactorType("call");
 
         /// <summary>
-        /// Call
+        /// Push
         /// </summary>
         public static readonly FactorType Push = new FactorType("push");
 
@@ -75,5 +75,9 @@ namespace Okta.Auth.Sdk
         /// U2F
         /// </summary>
         public static readonly FactorType U2f = new FactorType("u2f");
-    }
+
+        /// <summary>
+        /// WebAuthn
+        /// </summary>
+        public static readonly FactorType WebAuthn = new FactorType("webauthn");    }
 }

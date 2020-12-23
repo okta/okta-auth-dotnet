@@ -694,6 +694,30 @@ namespace Okta.Auth.Sdk.UnitTests
         }
 
         [Fact]
+        public async Task SendWellStructuredRequestForEnrollWebAuthnFactor()
+        {
+            var enrollOptions = new EnrollWebAuthnFactorOptions()
+            {
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.EnrollFactorAsync(enrollOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"factorType\":\"webauthn\",\"provider\":\"FIDO\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
         public async Task SendWellStructuredRequestForActivateFactor()
         {
             var activateFactorOptions = new ActivateFactorOptions()
@@ -743,6 +767,33 @@ namespace Okta.Auth.Sdk.UnitTests
                 "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/lifecycle/activate",
                 Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
                 "{\"stateToken\":\"foo\",\"clientData\":\"baz\",\"registrationData\":\"bar\"}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForActivateWebAuthnFactor()
+        {
+            var activateFactorOptions = new ActivateWebAuthnFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+                Attestation = "o2NmbXRmc...KewyAHuDkRolcCnVaCcmQ==",
+                ClientData = "baz",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.ActivateFactorAsync(activateFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/lifecycle/activate",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\",\"clientData\":\"baz\",\"attestation\":\"o2NmbXRmc...KewyAHuDkRolcCnVaCcmQ==\"}",
                 CancellationToken.None);
         }
 
@@ -928,6 +979,31 @@ namespace Okta.Auth.Sdk.UnitTests
                 "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
                 Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
                 "{\"stateToken\":\"foo\",\"clientData\":\"bar\",\"signatureData\":\"baz\",\"rememberDevice\":true}",
+                CancellationToken.None);
+        }
+
+        [Fact]
+        public async Task SendWellStructuredRequestForVerifyWebAuthnFactor()
+        {
+            var verifyFactorOptions = new VerifyWebAuthnFactorOptions()
+            {
+                FactorId = "ostf1fmaMGJLMNGNLIVG",
+                StateToken = "foo",
+            };
+
+            var mockRequestExecutor = Substitute.For<IRequestExecutor>();
+            mockRequestExecutor
+                .PostAsync(Arg.Any<string>(), Arg.Any<IEnumerable<KeyValuePair<string, string>>>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+                .Returns(new HttpResponse<string>() { StatusCode = 200 });
+
+            var authnClient = new TesteableAuthnClient(mockRequestExecutor);
+
+            await authnClient.VerifyFactorAsync(verifyFactorOptions);
+
+            await mockRequestExecutor.Received().PostAsync(
+                "/api/v1/authn/factors/ostf1fmaMGJLMNGNLIVG/verify",
+                Arg.Any<IEnumerable<KeyValuePair<string, string>>>(),
+                "{\"stateToken\":\"foo\"}",
                 CancellationToken.None);
         }
 
