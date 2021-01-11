@@ -44,7 +44,7 @@ namespace Okta.Sdk.Abstractions
         {
             var sdkToken = $"{_oktaSdkUserAgentName}/{GetSdkVersion()}";
 
-            var runtimeToken = $"runtime/{UserAgentHelper.GetRuntimeVersion()}";
+            var runtimeToken = $"runtime/{Sanitize(UserAgentHelper.GetRuntimeVersion())}";
 
             var operatingSystemToken = $"os/{Sanitize(RuntimeInformation.OSDescription)}";
 
@@ -61,7 +61,7 @@ namespace Okta.Sdk.Abstractions
             return $"{_sdkVersion.Major}.{_sdkVersion.Minor}.{_sdkVersion.Build}";
         }
 
-        private static readonly char[] IllegalCharacters = new char[] { '/', ':', ';' };
+        private static readonly char[] IllegalCharacters = new char[] { '/', ':', ';', '(', ')' };
 
         private static string Sanitize(string input)
             => IllegalCharacters.Aggregate(input, (current, bad) => current.Replace(bad, '-'));
