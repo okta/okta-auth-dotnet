@@ -11,11 +11,13 @@ namespace Okta.Auth.Sdk.UnitTests.Internal
     {
         private readonly string _returnThis;
         private readonly int _statusCode;
+        private readonly KeyValuePair<string, IEnumerable<string>>[] _headers;
 
         public string OktaDomain => throw new NotImplementedException();
 
         public MockedStringRequestExecutor(string returnThis, int statusCode = 200)
         {
+            _headers = new[] { new KeyValuePair<string, IEnumerable<string>> ( "Content-Type", new[] { "application/json" } ) }; 
             _returnThis = returnThis;
             _statusCode = statusCode;
         }
@@ -23,6 +25,7 @@ namespace Okta.Auth.Sdk.UnitTests.Internal
         public Task<HttpResponse<string>> GetAsync(string href, IEnumerable<KeyValuePair<string, string>> headers, CancellationToken cancellationToken)
             => Task.FromResult(new HttpResponse<string>
             {
+                Headers = _headers,
                 StatusCode = _statusCode,
                 Payload = _returnThis,
             });
@@ -30,6 +33,7 @@ namespace Okta.Auth.Sdk.UnitTests.Internal
         public Task<HttpResponse<string>> PostAsync(string href, IEnumerable<KeyValuePair<string, string>> headers, string body, CancellationToken cancellationToken)
             => Task.FromResult(new HttpResponse<string>
             {
+                Headers = _headers,
                 StatusCode = _statusCode,
                 Payload = _returnThis,
             });

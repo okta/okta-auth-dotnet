@@ -91,7 +91,6 @@ Task("Pack")
 {
 	var projects = new List<string>()
 	{
-		"Okta.Sdk.Abstractions",
 		"Okta.Auth.Sdk"
 	};
 	
