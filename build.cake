@@ -4,6 +4,13 @@
 #addin nuget:?package=Cake.FileHelpers&version=3.3.0
 #tool nuget:?package=docfx.console&version=2.51.0
 
+// Get a tag version name 
+public string GetTaggedVersion()
+{
+    var travisTag = EnvironmentVariable("TRAVIS_TAG");
+    return travisTag?.TrimStart('v');
+}
+
 // Helper method for setting a lot of file attributes at once
 public FilePath[] SetFileAttributes(FilePathCollection files, System.IO.FileAttributes fileAttributes)
 {
@@ -154,6 +161,18 @@ Task("CreateRootRedirector")
         @"<meta http-equiv=""refresh"" content=""0; url=https://developer.okta.com/okta-auth-dotnet/latest/"">");
 });
 
+Task("PrepareVersionsList").
+IsDependentOn("CopyDocsToVersionedDirectories").
+Does(()=>
+{
+    var versionDirectories = System.IO.Directory.GetDirectories("./docs/temp", "*", new EnumerationOptions() { AttributesToSkip = FileAttributes.Hidden })
+        .Select(d => $"\"{System.IO.Path.GetFileName(d)}\"");
+        
+    var versions = string.Join(',', versionDirectories);
+
+    FileWriteText("./docs/temp/versions.json", $"{{\"versions\":[{versions}]}}");
+});
+
 Task("CopyDocsToVersionedDirectories")
 .IsDependentOn("BuildDocs")
 .IsDependentOn("CloneExistingDocs")
@@ -166,14 +185,13 @@ Task("CopyDocsToVersionedDirectories")
     Information("Copying docs to docs/temp/latest");
     CopyDirectory("./docs/_site/", "./docs/temp/latest/");
 
-    var travisTag = EnvironmentVariable("TRAVIS_TAG");
-    if (string.IsNullOrEmpty(travisTag))
+    var taggedVersion = GetTaggedVersion();
+    if (string.IsNullOrEmpty(taggedVersion))
     {
         Console.WriteLine("TRAVIS_TAG not set, won't copy docs to a tagged directory");
         return;
     }
 
-    var taggedVersion = travisTag.TrimStart('v');
     var tagDocsDirectory = string.Format("./docs/temp/{0}", taggedVersion);
 
     Information("Copying docs to " + tagDocsDirectory);
@@ -193,7 +211,8 @@ Task("Docs")
     .IsDependentOn("BuildDocs")
     .IsDependentOn("CloneExistingDocs")
     .IsDependentOn("CopyDocsToVersionedDirectories")
-    .IsDependentOn("CreateRootRedirector");
+    .IsDependentOn("CreateRootRedirector")
+    .IsDependentOn("PrepareVersionsList");
 
 // Default task
 var target = Argument("target", "Default");
