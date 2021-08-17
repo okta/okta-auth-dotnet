@@ -61,7 +61,7 @@ In the table below, you can see the methods available in the IDX client and thei
 | `ForgotPasswordAsync` | `RecoverPasswordAsync` |   Initiates the password recovery flow.  |
 | `ResetPasswordAsync` | `ChangePasswordAsync` |   Changes user''s password. In addition to the `changePasswordOptions`, you need to pass an `IdxContext`.  |
 |`EnrollFactorAsync`|`EnrollAuthenticatorAsync`| Triggers the authenticator enrollment flow. Previously, you had to have called `SelectEnrollAuthenticatorAsync`. <br /> In addition to the `enrollAuthenticatorOptions`, you aneed to pass an `IdxContext`. |
-|`ResendSmsEnrollFactorAsync` <br /> `ResendCallEnrollFactorAsync` <br /> `ResendRecoveryChallengeAsync` <br /> ResendVerifyChallengeAsync | `ResendCodeAsync`| Resends Code. You need to pass an `IdxContext`. |
+|`ResendSmsEnrollFactorAsync` <br /> `ResendCallEnrollFactorAsync` <br /> `ResendRecoveryChallengeAsync` <br /> `ResendVerifyChallengeAsync` | `ResendCodeAsync`| Resends Code. You need to pass an `IdxContext`. |
 |`ActivateFactorAsync` <br /> `VerifyRecoveryFactorAsync`| `VerifyAuthenticatorAsync` | Verifies an authenticator. In addition to `verifyAuthenticatorOptions`, you need to pass an `IdxContext`.  |
 |`SkipTransactionStateAsync`| `SkipAuthenticatorSelectionAsync`| Skips an optional authenticator during enrollment/verification. You need to pass an `IdxContext`. |
 |`AnswerRecoveryQuestionAsync` <br /> `CancelTransactionStateAsync`| N/A| Out of Scope |
