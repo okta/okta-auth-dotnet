@@ -51,7 +51,7 @@ var client = new IdxClient(new IdxConfiguration()
 
 ## New methods
  
-In the table below, you can see the methods available in the IDX client and their equivalent ones in the Auth SDK. For guidance about usage, check out [here](https://github.com/okta/okta-idx-dotnet/#usage-guide).
+In the table below are the methods available in the IDX client and the equivalent from the Auth SDK. For guidance about usage, check out [here](https://github.com/okta/okta-idx-dotnet/#usage-guide).
 
 
 | Before   |      Now      |   |
