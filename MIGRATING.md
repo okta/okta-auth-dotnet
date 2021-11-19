@@ -31,7 +31,7 @@ For more information check out the [IDX SDK Repository](https://github.com/okta/
 
 ## New configuration model
 
-In order to use the `IdxClient`, you will need to configure additional properties. For more information, check out our [embedded Auth guide](https://developer.okta.com/docs/guides/oie-embedded-sdk-overview/main/#get-started-with-the-sdk).
+In order to use the `IdxClient`, you need to configure additional properties. For more information, check out our [embedded Auth guide](https://developer.okta.com/docs/guides/oie-embedded-sdk-overview/main/#get-started-with-the-sdk).
 
 The simplest way to construct a client is via code:
 
