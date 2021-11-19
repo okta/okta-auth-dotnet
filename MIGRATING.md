@@ -6,7 +6,7 @@ This library uses semantic versioning and follows Okta's [library version policy
 
 The previous version of this library, [Okta.Auth.Sdk](https://www.nuget.org/packages/Okta.Auth.Sdk), has been rewritten from the ground up as [Okta.Idx.Sdk](https://www.nuget.org/packages/Okta.Idx.Sdk). This was done to take advantage of the [OIE features](https://www.okta.com/platform/identity-engine/) available via the IDX API. 
 
-Since we’re using a different set of APIs and patterns, a new library was published starting with 1.0.0. The last published version of the Auth.SDK is 2.0.3.
+The new library version is 1.0.0 because of the use of different APIs and patterns. The last published version of the Auth.SDK is 2.0.3.
 
 ## Getting started
 
