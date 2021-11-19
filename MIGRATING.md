@@ -4,7 +4,7 @@ This library uses semantic versioning and follows Okta's [library version policy
 
 ## Migrating from .NET Auth SDK 2.x to .NET IDX SDK 1.x
 
-The previous version of this library, [Okta.Auth.Sdk](https://www.nuget.org/packages/Okta.Auth.Sdk), has been rewritten from the ground up as [Okta.Idx.Sdk](https://www.nuget.org/packages/Okta.Idx.Sdk). This was done to take advantage of the [OIE features](https://www.okta.com/platform/identity-engine/) available via the IDX API. 
+This library, [Okta.Idx.Sdk](https://www.nuget.org/packages/Okta.Idx.Sdk) is a ground up rewrite of the previous version, [Okta.Auth.Sdk](https://www.nuget.org/packages/Okta.Auth.Sdk).  The new library takes advantage of the [OIE features](https://www.okta.com/platform/identity-engine/) available via the IDX API. 
 
 The new library version is 1.0.0 because of the use of different APIs and patterns. The last published version of the Auth.SDK is 2.0.3.
 
