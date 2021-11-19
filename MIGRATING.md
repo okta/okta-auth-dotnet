@@ -74,7 +74,7 @@ Similar to the Auth SDK, the IDX client returns a response with an authenticatio
 
 ## Handling errors
 
-The SDK throws an OktaException everytime the server responds with an invalid status code, or there is an internal error. You can get more information by calling exception.Message.
+The SDK throws an OktaException when the server responds with an invalid status code, or there is an internal error. Get more information by calling exception.Message.
 
 ## Getting help
 
