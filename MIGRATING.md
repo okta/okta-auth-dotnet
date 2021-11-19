@@ -70,7 +70,7 @@ In the table below, you can see the methods available in the IDX client and thei
 
 ## Authentication Response
 
-Similar to the Auth SDK, the IDX client return a response with an authentication status that indicates how to proceed with the authentication flow. Check out the Authentication Status section [here](https://github.com/okta/okta-idx-dotnet#authentication-status) for more details.
+Similar to the Auth SDK, the IDX client returns a response with an authentication status that indicates how to proceed with the authentication flow. Check out the Authentication Status section [here](https://github.com/okta/okta-idx-dotnet#authentication-status) for more details.
 
 ## Handling errors
 
