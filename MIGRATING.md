@@ -47,7 +47,7 @@ var client = new IdxClient(new IdxConfiguration()
 
 ```
 
-> Note: For additional configuration sources check out the [IDX SDK configuration reference](https://github.com/oktaokta-idx-dotnet#configuration-reference).
+> Note: For additional configuration sources check out the [IDX SDK configuration reference](https://github.com/okta/okta-idx-dotnet#configuration-reference).
 
 ## New methods
  
