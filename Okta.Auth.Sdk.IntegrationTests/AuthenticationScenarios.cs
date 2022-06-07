@@ -132,7 +132,7 @@ namespace Okta.Auth.Sdk.IntegrationTests
             try
             {
                 Func<Task> act = async () => await authClient.AuthenticateAsync(authnOptions);
-                act.Should().Throw<OktaApiException>();
+                await act.Should().ThrowAsync<OktaApiException>();
             }
             finally
             {

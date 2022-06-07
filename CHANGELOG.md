@@ -8,6 +8,13 @@ Running changelog of releases since `2.0.1`
 
 - Update NuGet reference to the latest Okta.Sdk.Abstractions v4.0.2
 
+## v2.0.4
+
+
+### Updates
+
+- Update NuGet reference to the latest Okta.Sdk.Abstractions v4.0.2
+
 ## v2.0.3
 
 
