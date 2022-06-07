@@ -608,7 +608,7 @@ var unlockAccountOptions = new UnlockAccountOptions()
 await authnClient.UnlockAccountAsync(unlockAccountOptions);
 ```
 
-The Authentication Client object allows you to send custom requests that you can construct and set your desired headers. Check out [Call other API endpoints](Call-other-API-endpoints) section for more details.
+The Authentication Client object allows you to send custom requests that you can construct and set your desired headers. Check out [Call other API endpoints](#call-other-api-endpoints) section for more details.
 
 ## Call other API endpoints
 
