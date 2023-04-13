@@ -23,7 +23,7 @@ jobs:
           steps:
             - general-platform-helpers/step-artifacts-prepare-and-upload-windows:
                 files-to-upload: "artifacts"
-                location: "com/okta/okta-auth-dotnet"
+                location: "com/okta/devex/okta-auth-dotnet"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
