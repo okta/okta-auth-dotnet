@@ -60,6 +60,7 @@ workflows:
             - semgrep-prepare
   "Snyk":
     jobs:
+      - build
       - general-platform-helpers/job-snyk-prepare:
           name: prepare-snyk
           requires:
