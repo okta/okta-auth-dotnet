@@ -24,7 +24,7 @@ jobs:
       - persist_to_workspace: # Allows for sharing of build-workspace (containing downloaded dependencies) (optional)
           root: ~/project
           paths:
-            - src
+            - Okta.Auth.Sdk
             - .git
       - when:
           condition:
