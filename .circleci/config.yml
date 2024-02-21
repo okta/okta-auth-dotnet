@@ -51,13 +51,13 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  "Circle CI Build":
+  "Build and Scan":
     jobs:
       - build
-  "Snyk":
-    jobs:
       - general-platform-helpers/job-snyk-prepare:
           name: prepare-snyk
+          requires:
+            - build
       - snyk-scan:
           name: execute-snyk
           requires:
