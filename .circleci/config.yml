@@ -58,8 +58,6 @@ workflows:
     jobs:
       - general-platform-helpers/job-snyk-prepare:
           name: prepare-snyk
-          requires:
-            - build
       - snyk-scan:
           name: execute-snyk
           requires:
