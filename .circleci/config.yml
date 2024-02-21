@@ -54,6 +54,8 @@ workflows:
   "Circle CI Build":
     jobs:
       - build
+  "Snyk":
+    jobs:
       - general-platform-helpers/job-snyk-prepare:
           name: prepare-snyk
           requires:
@@ -70,14 +72,3 @@ workflows:
           name: "Scan with Semgrep"
           requires:
             - semgrep-prepare
-  # "Snyk":
-  #   jobs:
-  #     - build
-  #     - general-platform-helpers/job-snyk-prepare:
-  #         name: prepare-snyk
-  #         requires:
-  #           - build
-  #     - snyk-scan:
-  #         name: execute-snyk
-  #         requires:
-  #           - prepare-snyk
