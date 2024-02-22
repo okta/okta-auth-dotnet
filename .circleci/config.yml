@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   windows: circleci/windows@5.0
-  general-platform-helpers: okta/general-platform-helpers@1.8
+  general-platform-helpers: okta/general-platform-helpers@1.9
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
@@ -15,8 +15,17 @@ jobs:
     steps:
       - checkout      
       - run:
+          name: "Install required components"
+          command: |
+              choco install -y dotnetcore-sdk
+      - run:
           name: "build okta auth SDK"
           command: .\build.ps1
+      - persist_to_workspace: # Allows for sharing of build-workspace (containing downloaded dependencies) (optional)
+          root: ~/project
+          paths:
+            - Okta.Auth.Sdk
+            - .git
       - when:
           condition:
             equal: [ "<<pipeline.git.branch>>", "master" ]
@@ -24,10 +33,40 @@ jobs:
             - general-platform-helpers/step-artifacts-prepare-and-upload-windows:
                 files-to-upload: "artifacts"
                 location: "com/okta/devex/okta-auth-dotnet"
+  snyk-scan:
+    docker:
+      - image: cimg/python:3.10
 
+    steps:
+      - attach_workspace: # Allows for sharing of build-workspace (containing downloaded dependencies) (optional)
+          at: ~/project
+      - general-platform-helpers/step-load-dependencies
+      - general-platform-helpers/step-run-snyk-monitor:
+          scan-all-projects: true
+          skip-unresolved: false
+          run-on-non-main: true
+          detection-depth: 4
+            
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  "Circle CI Build":
+  "Build and Scan":
     jobs:
       - build
+      - general-platform-helpers/job-snyk-prepare:
+          name: prepare-snyk
+          requires:
+            - build
+      - snyk-scan:
+          name: execute-snyk
+          requires:
+            - prepare-snyk
+  "Semgrep":
+    jobs:
+      - general-platform-helpers/job-semgrep-prepare:
+          name: semgrep-prepare
+      - general-platform-helpers/job-semgrep-scan:
+          name: "Scan with Semgrep"
+          requires:
+            - semgrep-prepare
+
