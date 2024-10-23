@@ -110,7 +110,7 @@ workflows:
     jobs:
       - reversing-labs:
           context:
-            - okta-dcp 
+            - static-analysis
   "Build and Scan":
     jobs:
       - build
