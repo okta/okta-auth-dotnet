@@ -59,10 +59,3 @@ workflows:
             - static-analysis
           requires:
             - build
-  "Semgrep":
-    jobs:
-      - general-platform-helpers/job-semgrep-scan:
-          name: "Scan with Semgrep"
-          context:
-            - static-analysis
-
