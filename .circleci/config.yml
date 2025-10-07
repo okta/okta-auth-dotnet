@@ -27,7 +27,7 @@ jobs:
 
       - run:
           name: build Binary to scan
-          command: dotnet build ./src/Okta.Idx.Sdk.sln
+          command: dotnet build ./Okta.Auth.Sdk.sln
 
       # Necessary to Install rl wrapper
       - run:
