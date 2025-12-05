@@ -90,7 +90,7 @@ jobs:
     environment:
       CIRCLE_CI: True
     steps:
-      - checkout      
+      - checkout
       - run:
           name: "Install required components"
           command: |
@@ -99,16 +99,18 @@ jobs:
           name: "Build Okta Auth SDK"
           command: .\build.ps1
       - persist_to_workspace: # Allows for sharing of build-workspace (containing downloaded dependencies)
-          root: .
+          root: ~/project
           paths:
-            - .
-      - when:
-          condition:
-            equal: [ "<<pipeline.git.branch>>", "master" ]
-          steps:
-            - general-platform-helpers/step-artifacts-prepare-and-upload-windows:
-                files-to-upload: "artifacts"
-                location: "com/okta/devex/okta-auth-dotnet"
+            - Okta.Auth.Sdk
+            - .git
+      # Commented out due to CircleCI API error: pipeline/None/workflow
+      # - when:
+      #     condition:
+      #       equal: [ "<<pipeline.git.branch>>", "master" ]
+      #     steps:
+      #       - general-platform-helpers/step-artifacts-prepare-and-upload-windows:
+      #           files-to-upload: "artifacts"
+      #           location: "com/okta/devex/okta-auth-dotnet"
 
   snyk-scan:
     docker:
